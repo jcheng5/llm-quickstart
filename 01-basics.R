@@ -1,0 +1,12 @@
+library(dotenv) # Will read OPENAI_API_KEY from .env file
+library(elmer)
+
+chat <- new_chat_openai(
+    model = "gpt-4o-mini",
+    system_prompt = "You are a terse assistant.",
+    echo = TRUE # Should chat responses be logged to stdout?
+)
+chat$chat("What is the capital of the moon?")
+
+# The `chat` object is stateful, so this continues the existing conversation
+chat$chat("Are you sure about that?")

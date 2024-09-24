@@ -1,0 +1,224 @@
+---
+title: "LLM Quick Start"
+format: 
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    chalkboard: true
+editor:
+  render-on-save: true
+---
+
+# Setup {.smaller}
+
+- Clone https://github.com/jcheng5/llm-quickstart
+- Grab your OpenAI API key; see the thread in `#hackathon-01`
+
+- For R
+  - `install.packages(c("elmer", "dotenv"))`
+- For Python
+  - `pip install -r requirements.txt`
+
+# Introduction
+
+## Framing LLMs
+
+::: {.incremental}
+- Our focus: Practical, actionable information
+- We will treat LLMs as black boxes
+- Don't focus on how they work (yet)
+  - Leads to bad intuition about their capabilities
+  - Better to start with a highly empirical approach
+:::
+
+# Basic Terminology
+
+## Types of LLM Interactions
+
+::: {.incremental}
+- Completion
+  - Single input, single output
+  - Example: "Four score and seven " => "years ago, "
+- Chat
+  - Request/response with an "assistant" persona
+  - Example: "How did the Gettysburg Address begin?" => "Four score and seven years ago..."
+:::
+
+## Tokens
+
+::: {.incremental}
+- Fundamental units of text for LLMs
+- Words, parts of words, or individual characters
+  - "hello" → 1 token
+  - "unconventional" → 2-3 tokens
+  - 4K video frame → 3072 tokens
+- Important for:
+  - Model input/output limits
+  - API pricing is usually by token
+:::
+
+# Anatomy of a Conversation
+
+## LLM Conversations are HTTP Requests
+
+::: {.incremental}
+- Each interaction is a separate HTTP API request
+- The API server is entirely stateless (despite conversations being inherently stateful!)
+:::
+
+## Example Conversation
+
+::: {style="text-align: right;"}
+"What's the capital of the moon?"
+:::
+
+`"There isn't one."`
+
+::: {style="text-align: right;"}
+"Are you sure?"
+:::
+
+`"Yes, I am sure."`
+
+## Example Request
+
+```{.bash code-line-numbers="|5|6-9|7|8"}
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-4o",
+    "messages": [
+        {"role": "system", "content": "You are a terse assistant."},
+        {"role": "user", "content": "What is the capital of the moon?"}
+    ]
+}'
+```
+
+- System prompt: behind-the-scenes instructions and information for the model
+- User prompt: a question or statement for the model to respond to
+
+## Example Response (abridged)
+
+```{.json code-line-numbers="|3-6|7|12"}
+{
+  "choices": [{
+    "message": {
+      "role": "assistant",
+      "content": "The moon does not have a capital. It is not inhabited or governed.",
+    },
+    "finish_reason": "stop"
+  }],
+  "usage": {
+    "prompt_tokens": 9,
+    "completion_tokens": 12,
+    "total_tokens": 21,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}
+```
+
+## Example Request
+
+```{.bash code-line-numbers="|9|10"}
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-4o",
+    "messages": [
+      {"role": "system", "content": "You are a terse assistant."},
+      {"role": "user", "content": "What is the capital of the moon?"},
+      {"role": "assistant", "content": "The moon does not have a capital. It is not inhabited or governed."},
+      {"role": "user", "content": "Are you sure?"}
+    ]
+}'
+```
+
+## Example Response (abridged)
+
+```{.json code-line-numbers="|3-6"}
+{
+  "choices": [{
+    "message": {
+      "role": "assistant",
+      "content": "Yes, I am sure. The moon has no capital or formal governance."
+    },
+    "finish_reason": "stop"
+  }],
+  "usage": {
+    "prompt_tokens": 52,
+    "completion_tokens": 15,
+    "total_tokens": 67,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}
+```
+
+# Your Turn
+
+## Instructions
+
+Open and run one of these options:
+
+- `01-basics.R`
+- `01-basics-openai.py` (low level library)
+- `01-basics-langchain.py` (high level framework)
+
+If it errors, now is the time to debug.
+
+If it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through.
+
+## Summary
+
+- A message is an object with a `role` ("system", "user", "assistant") and a `content` string
+- A chat conversation is a growing list of messages
+- The OpenAI chat API is a stateless HTTP endpoint: takes a list of messages as input, returns a new message as output
+
+# Web UI demo
+
+# Tool Calling
+
+## What is Tool Calling?
+
+::: {.incremental}
+
+- Allows LLMs to interact with other systems
+- Sounds complicated? It isn't!
+- Supported by most of the newest LLMs, but not all (notably, not the new OpenAI `o1` models, yet)
+
+:::
+
+## How It Works
+
+::: {.incremental}
+- [Not like this](https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIAkHsDu1j3uaBjAhucIA7Ac2gBEB5AUQGUA5QTAIAVaReAJwGsAoL7TVNtACqAZ0hsuAW2zBxIXABNIIkEQIhM8AiOgAxAIwA2AOwBBaKZEqRwbAWBcADtjahMIZ-ejxHkAokgZAAtxADp2Ih5RcQBaAD5La1t7AC5oAG8AHQJoaDZ0SDSAIgBXMTYigBps3M17P2BigHUgmQByHWAQlkCu8TzVIOBoAiRoGT0-RGwAT2gABRcOAH4q7IBfLkSQGztgeJ8p3pC2cLYiNIBxSmYAegDg8VvMErY2Btuy24AGACZf-QAVlCACsRFouId-McwhF4ttdqkMkVZJJHEU0oZAZVoEU6gowCAtCIMbiRCUCAQZkVNgjkvs4tE2Gksjk8gVitgrDt6Ws2XVZEiigBJYAdaBY6BKIjvZTjAgKaDkykzQAoBNhoAAjQIlUAAMxKGAUswAhEUNkA) - with the assistant executing stuff
+- [Yes like this](https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIAkHsDu1j3uaBjAhucIA7Ac2gBEB5AUQGVpF4AnAawCgWAHbB0TETg4NHjtIBRJGzAAFpAYA6RkRbZMqBtACqAZ1ksAtpNkhcAE0haQRAiEzwCW6ADEAjADYA7AEFonrRa3A2AJs2rIAtAB8vv6BAgBc0ADeADoE0NAM6JAJAEQArjoMOQA0qem2AqLAuQDqUpIA5A7SMOKSMuoMllKCBEjQkk6iiNgAntAAClxMAPwlZSho4FoJANpEkMAA+ph5DAxVW20tDAC6qQC+LNEgAUHAkaEMCQDCngAy79Ab27v7h8cOgAKHIABgATODnABWHIAShYT0iwmGEhOCgYRASAHFKAAVaAAekBskJfwOAkJBUJEKh0LkACstHYWCixGiOhiiI9CglEjlgJA9OwcglXNDitAchUTGAQHYtKKpVo8gQCKMclckVE-LdYtVoAAlfEaQ0AOSSAqFIrFEqlMrlCqVORVao1VxudwEPNkfIWmSguWwuq9wHmaSwdkF8SlAElgE1oOLoGYiAdzAMCCZoK71YAUAmw0AARhI8qAAGZ5DAmMYAQhylyAA)
+  - User asks assistant a question; includes metadata for available tools
+  - Assistant asks the user to invoke a tool, passing its desired arguments
+  - User invokes the tool, and returns the output to the assistant
+  - Assistant incorporates the tool's output as additional context for formulating a response
+:::
+
+## How It Works
+
+Another way to think of it:
+
+- The client can perform tasks that the assistant can't do
+- Tools put control into the hands of the assistant—it decides when to use them, and what arguments to pass in, and what to do with the results
+- Having an "intelligent-ish" coordinator of tools is a surprisingly general, powerful capability!
+
+# Your Turn {.smaller}
+
+Take a minute to look at _one of_ the following docs. See if you can get them to run, and try to understand the code.
+
+- R: [`elmer` docs](https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling) (anticlimactically easy)
+- Python: [`openai` docs](https://platform.openai.com/docs/guides/function-calling) (tedious, low-level, but understandable)
+- Python: [`langchain` docs](https://python.langchain.com/docs/how_to/tool_results_pass_to_model/) (not bad)
+
+# Customizing Knowledge and Behavior

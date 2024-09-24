@@ -1,0 +1,85 @@
+---
+title: "AI Hackathon"
+subtitle: "2024-09-24 – Cohort 1"
+format: 
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    chalkboard: true
+editor:
+  render-on-save: true
+---
+
+# Welcome
+
+Before we begin, please join `#hackathon-01` in Slack!
+
+## Who's Here
+
+::: {.columns}
+::: {.column width="50%"}
+**Participants:**
+
+- Amanda Gadrow
+- Hadley Wickham
+- Hassan Kibirige
+- Jon Keane
+- Jonathan Yoder
+- Kelly O'Briant
+- Kristin Bott
+- Max Kuhn
+:::
+::: {.column width="50%"}
+**Organizers:**
+
+- Andrew Holz
+- Joe Cheng
+- Winston Chang
+:::
+:::
+
+## Your Turn
+
+- What do you do at Posit?
+- How have you used LLMs/AI tools up until now?
+- What was your skepticism/enthusiasm score (1 to 5)?
+- In one or two sentences, how do you feel about AI?
+
+## The Plan
+
+::: {.incremental}
+- **Now:** Quick Start course on LLMs. You will leave having run some LLM requests at least.
+- **Next 48 hours:** Hack on stuff! "Rules" on the next slide.
+- **Thursday:** Show and tell, share lessons learned, reflections.
+:::
+
+## Hack On Stuff
+
+- **Does NOT have to be relevant to your day job, or Posit, or data science.**  
+  This exercise is about learning and engagement, not ROI.
+- **Does NOT have to be a finished product/demo/app/API.**  
+  Showing some things you did in a notebook is fine as long as YOU found it interesting.
+- **Does NOT have to use Posit products.**  
+  You may use any framework, any language,any service that you have access to.
+
+## Hack On Stuff
+
+- **Does NOT have to be an original idea.**  
+  You can build on existing projects, improve on existing demos, etc.
+- **Does NOT even have to be coding.**  
+  Do a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground > Assistants, or assemble a useful NotebookLM and see what its limits are.
+- **Does NOT have to be a success.**  
+  Negative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried.
+
+## Let It Rip
+
+All that said... also feel free to throw down, and make something super cool!
+
+## A Caveat From IT
+
+No _proprietary_ code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)
+
+- Sending open source code to these services is fine though.
+
+- Sending proprietary code/data to _local_ models is also fine. Ask in `#hackathon-01` if you need help setting up a local model.
