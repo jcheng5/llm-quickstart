@@ -6,8 +6,7 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-99.9.9">
 
   <title>LLM Quick Start</title>
@@ -41,7 +40,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -69,7 +68,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -83,7 +82,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -94,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-614b5beebb58f47b92bc1ac53271adaa.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -405,7 +404,7 @@
 <li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-01</code></p></li>
 <li><p>For R</p>
 <ul>
-<li><code>install.packages(c("elmer", "dotenv"))</code></li>
+<li><code>pak::pak(c("hadley/elmer", "dotenv"))</code></li>
 </ul></li>
 <li><p>For Python</p>
 <ul>
@@ -571,6 +570,28 @@
 <span id="cb4-16"><a></a>  <span class="fu">}</span></span>
 <span id="cb4-17"><a></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
+<section id="choose-a-package" class="title-slide slide level1 smaller center">
+<h1>Choose a Package</h1>
+<ul>
+<li>Python:
+<ul>
+<li><code>openai</code> - low-level, but solid</li>
+<li><code>langchain</code> - high-level, all models, sprawling scope… but polarizing architecture, steep learning curve, and supposedly questionable code quality
+<ul>
+<li>Evolved from v0.1, v0.2, and now <code>langgraph</code></li>
+</ul></li>
+<li>Many, many other options are available</li>
+</ul></li>
+<li>R:
+<ul>
+<li><code>hadley/elmer</code> high-level, easy, much less ambitious than langchain
+<ul>
+<li>OpenAI only for now, but Anthropic and Google coming soon</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
 <section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your Turn</h1>
@@ -649,15 +670,111 @@
 </ul>
 </section>
 
+<section>
 <section id="customizing-knowledge-and-behavior" class="title-slide slide level1 center">
-<h1>Customizing Knowledge and Behavior</h1>
+<h1>Customizing knowledge and behavior</h1>
+<ul>
+<li><strong>The problem</strong>: LLMs don’t know your specific data</li>
+<li>Some solutions
+<ul>
+<li>Prompt engineering</li>
+<li>Retrieval-Augmented Generation</li>
+<li>Fine tuning</li>
+</ul></li>
+</ul>
+</section>
+<section id="choosing-a-model" class="slide level2">
+<h2>Choosing a model</h2>
+<ul>
+<li>OpenAI ChatGPT</li>
+<li>Anthropic Claude</li>
+<li>Google Gemini</li>
+<li>Meta Llama (Can run locally, or access via API)</li>
+</ul>
+</section>
+<section id="openai-models" class="slide level2">
+<h2>OpenAI models</h2>
+<ul>
+<li><strong>GPT-4o</strong>: best general purpose model</li>
+<li><strong>GPT-4o-mini</strong>: similar to 4o, but faster and cheaper (and dumber)</li>
+<li><strong>o1-preview</strong>: uses chain of thought (available via API only for high usage tiers)</li>
+<li><strong>o1-mini</strong></li>
+</ul>
+</section>
+<section id="anthropic-models" class="slide level2">
+<h2>Anthropic models</h2>
+<ul>
+<li><strong>Claude 3.5 Sonnet</strong>: best model for code generation</li>
+<li>Comparison: <a href="https://context.ai/compare/gpt-4o/claude-3-5-sonnet" class="uri">https://context.ai/compare/gpt-4o/claude-3-5-sonnet</a></li>
+</ul>
+</section>
+<section id="llama-models" class="slide level2">
+<h2>Llama models</h2>
+<ul>
+<li>Open weights: you can download the model</li>
+<li>Can run locally, for example with ollama</li>
+<li><strong>Llama 3.1 405b</strong>: 229GB</li>
+<li><strong>Llama 3.1 70b</strong>: 40GB</li>
+<li><strong>Llama 3.1 8b</strong>: 4.7GB (can run comfortably on Macbook Pro)</li>
+<li>Can access these models via API with Groq, Openrouter</li>
+</ul>
+</section>
+<section id="api-access-for-open-weight-models" class="slide level2">
+<h2>API access for open weight models</h2>
+<ul>
+<li>Openrouter</li>
+<li>Groq</li>
+<li>Hugging Face</li>
+</ul>
+</section>
+<section id="prompt-engineering" class="slide level2">
+<h2>Prompt Engineering</h2>
+<ul>
+<li>Prompt stuffing (putting information in a prompt)
+<ul>
+<li>Shiny Assitant:
+<ul>
+<li><a href="https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md" class="uri">https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md</a></li>
+<li><a href="https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md" class="uri">https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md</a></li>
+</ul></li>
+<li>FastHTML: <a href="https://docs.fastht.ml/llms-ctx.txt" class="uri">https://docs.fastht.ml/llms-ctx.txt</a></li>
+</ul></li>
+<li>Tell it how to respond</li>
+<li>Add positive examples (negative examples don’t work well)</li>
+</ul>
+</section>
+<section id="rag-retrieval-augmented-generation" class="slide level2">
+<h2>RAG: Retrieval Augmented Generation</h2>
+<ul>
+<li>RAG encompasses a wide range of techniques</li>
+<li>Usually is implemented with a vector database</li>
+<li>Steps:
+<ul>
+<li>User sends query to system</li>
+<li>System <strong>retrieves</strong> relevant text via search</li>
+<li>System sends text and query to LLM</li>
+<li>LLM responds with answer</li>
+</ul></li>
+</ul>
+</section>
+<section id="fine-tuning" class="slide level2">
+<h2>Fine tuning</h2>
+<ul>
+<li>Train an existing model with new information</li>
+<li>Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)</li>
+<li>Data must be provided in chat conversation format, with query and response
+<ul>
+<li>Can’t just feed it documents - this makes fine-tuning more difficult in practice</li>
+</ul></li>
+<li>Supposedly not very effective unless you have a lot of training data</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -902,18 +1019,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -945,7 +1051,47 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/jcheng5\.github\.io\/llm-quickstart\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -982,7 +1128,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

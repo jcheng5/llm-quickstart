@@ -98,6 +98,62 @@
     "text": "How It Works\nAnother way to think of it:\n\nThe client can perform tasks that the assistant can’t do\nTools put control into the hands of the assistant—it decides when to use them, and what arguments to pass in, and what to do with the results\nHaving an “intelligent-ish” coordinator of tools is a surprisingly general, powerful capability!"
   },
   {
+    "objectID": "quickstart.html#choosing-a-model",
+    "href": "quickstart.html#choosing-a-model",
+    "title": "LLM Quick Start",
+    "section": "Choosing a model",
+    "text": "Choosing a model\n\nOpenAI ChatGPT\nAnthropic Claude\nGoogle Gemini\nMeta Llama (Can run locally, or access via API)"
+  },
+  {
+    "objectID": "quickstart.html#openai-models",
+    "href": "quickstart.html#openai-models",
+    "title": "LLM Quick Start",
+    "section": "OpenAI models",
+    "text": "OpenAI models\n\nGPT-4o: best general purpose model\nGPT-4o-mini: similar to 4o, but faster and cheaper (and dumber)\no1-preview: uses chain of thought (available via API only for high usage tiers)\no1-mini"
+  },
+  {
+    "objectID": "quickstart.html#anthropic-models",
+    "href": "quickstart.html#anthropic-models",
+    "title": "LLM Quick Start",
+    "section": "Anthropic models",
+    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nComparison: https://context.ai/compare/gpt-4o/claude-3-5-sonnet"
+  },
+  {
+    "objectID": "quickstart.html#llama-models",
+    "href": "quickstart.html#llama-models",
+    "title": "LLM Quick Start",
+    "section": "Llama models",
+    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.1 405b: 229GB\nLlama 3.1 70b: 40GB\nLlama 3.1 8b: 4.7GB (can run comfortably on Macbook Pro)\nCan access these models via API with Groq, Openrouter"
+  },
+  {
+    "objectID": "quickstart.html#api-access-for-open-weight-models",
+    "href": "quickstart.html#api-access-for-open-weight-models",
+    "title": "LLM Quick Start",
+    "section": "API access for open weight models",
+    "text": "API access for open weight models\n\nOpenrouter\nGroq\nHugging Face"
+  },
+  {
+    "objectID": "quickstart.html#prompt-engineering",
+    "href": "quickstart.html#prompt-engineering",
+    "title": "LLM Quick Start",
+    "section": "Prompt Engineering",
+    "text": "Prompt Engineering\n\nPrompt stuffing (putting information in a prompt)\n\nShiny Assitant:\n\nhttps://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md\nhttps://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md\n\nFastHTML: https://docs.fastht.ml/llms-ctx.txt\n\nTell it how to respond\nAdd positive examples (negative examples don’t work well)"
+  },
+  {
+    "objectID": "quickstart.html#rag-retrieval-augmented-generation",
+    "href": "quickstart.html#rag-retrieval-augmented-generation",
+    "title": "LLM Quick Start",
+    "section": "RAG: Retrieval Augmented Generation",
+    "text": "RAG: Retrieval Augmented Generation\n\nRAG encompasses a wide range of techniques\nUsually is implemented with a vector database\nSteps:\n\nUser sends query to system\nSystem retrieves relevant text via search\nSystem sends text and query to LLM\nLLM responds with answer"
+  },
+  {
+    "objectID": "quickstart.html#fine-tuning",
+    "href": "quickstart.html#fine-tuning",
+    "title": "LLM Quick Start",
+    "section": "Fine tuning",
+    "text": "Fine tuning\n\nTrain an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents - this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
+  },
+  {
     "objectID": "intro.html#whos-here",
     "href": "intro.html#whos-here",
     "title": "AI Hackathon",
