@@ -83,3 +83,5 @@ No _proprietary_ code or data is allowed to be sent to any LLM service (except C
 - Sending open source code to these services is fine though.
 
 - Sending proprietary code/data to _local_ models is also fine. Ask in `#hackathon-01` if you need help setting up a local model.
+
+# Next: [Quick Start](quickstart.qmd)
