@@ -137,7 +137,7 @@
     "href": "quickstart.html#prompt-engineering",
     "title": "LLM Quick Start",
     "section": "Prompt Engineering",
-    "text": "Prompt Engineering\n\nPrompt stuffing (putting information in a prompt)\nTell it how to respond\nAdd positive examples (negative examples don’t work well)\nExamples\n\nShiny Assitant:\n\nMain prompt\nPython supplement\n\nFastHTML LLM prompt"
+    "text": "Prompt Engineering\n\nPrompt stuffing (putting information in a prompt)\nTell it how to respond\nAdd positive examples (negative examples don’t work well)\nExamples\n\nSidebot\nFastHTML LLM prompt"
   },
   {
     "objectID": "quickstart.html#rag-retrieval-augmented-generation",
