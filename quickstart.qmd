@@ -16,7 +16,7 @@ editor:
 - Grab your OpenAI API key; see the thread in `#hackathon-01`
 
 - For R
-  - `install.packages(c("elmer", "dotenv"))`
+  - `pak::pak(c("hadley/elmer", "dotenv"))`
 - For Python
   - `pip install -r requirements.txt`
 
