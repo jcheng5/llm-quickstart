@@ -278,12 +278,14 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 ## Prompt Engineering
 
 - Prompt stuffing (putting information in a prompt)
-  - Shiny Assitant:
-    - <https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md>
-    - <https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md>
-  - FastHTML: <https://docs.fastht.ml/llms-ctx.txt>
 - Tell it how to respond
 - Add positive examples (negative examples don't work well)
+- Examples
+  - Shiny Assitant:
+    - [Main prompt](https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md)
+    - [Python supplement](https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md)
+  - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
+
 
 ## RAG: Retrieval Augmented Generation
 
