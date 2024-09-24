@@ -160,6 +160,17 @@ curl https://api.openai.com/v1/chat/completions \
 }
 ```
 
+# Choose a Package {.smaller}
+
+- Python:
+  - `openai` - low-level, but solid
+  - `langchain` - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
+    - Evolved from v0.1, v0.2, and now `langgraph`
+  - Many, many other options are available
+- R:
+  - `hadley/elmer` high-level, easy, much less ambitious than langchain
+    - OpenAI only for now, but Anthropic and Google coming soon
+
 # Your Turn
 
 ## Instructions
