@@ -137,7 +137,7 @@
     "href": "quickstart.html#prompt-engineering",
     "title": "LLM Quick Start",
     "section": "Prompt Engineering",
-    "text": "Prompt Engineering\n\nPrompt stuffing (putting information in a prompt)\n\nShiny Assitant:\n\nhttps://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md\nhttps://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md\n\nFastHTML: https://docs.fastht.ml/llms-ctx.txt\n\nTell it how to respond\nAdd positive examples (negative examples don’t work well)"
+    "text": "Prompt Engineering\n\nPrompt stuffing (putting information in a prompt)\nTell it how to respond\nAdd positive examples (negative examples don’t work well)\nExamples\n\nShiny Assitant:\n\nMain prompt\nPython supplement\n\nFastHTML LLM prompt"
   },
   {
     "objectID": "quickstart.html#rag-retrieval-augmented-generation",
