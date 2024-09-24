@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "quickstart.html#framing-llms",
+    "href": "quickstart.html#framing-llms",
+    "title": "LLM Quick Start",
+    "section": "Framing LLMs",
+    "text": "Framing LLMs\n\n\nOur focus: Practical, actionable information\nWe will treat LLMs as black boxes\nDon’t focus on how they work (yet)\n\nLeads to bad intuition about their capabilities\nBetter to start with a highly empirical approach"
+  },
+  {
+    "objectID": "quickstart.html#types-of-llm-interactions",
+    "href": "quickstart.html#types-of-llm-interactions",
+    "title": "LLM Quick Start",
+    "section": "Types of LLM Interactions",
+    "text": "Types of LLM Interactions\n\n\nCompletion\n\nSingle input, single output\nExample: “Four score and seven” =&gt; “years ago,”\n\nChat\n\nRequest/response with an “assistant” persona\nExample: “How did the Gettysburg Address begin?” =&gt; “Four score and seven years ago…”"
+  },
+  {
+    "objectID": "quickstart.html#tokens",
+    "href": "quickstart.html#tokens",
+    "title": "LLM Quick Start",
+    "section": "Tokens",
+    "text": "Tokens\n\n\nFundamental units of text for LLMs\nWords, parts of words, or individual characters\n\n“hello” → 1 token\n“unconventional” → 2-3 tokens\n4K video frame → 3072 tokens\n\nImportant for:\n\nModel input/output limits\nAPI pricing is usually by token"
+  },
+  {
+    "objectID": "quickstart.html#llm-conversations-are-http-requests",
+    "href": "quickstart.html#llm-conversations-are-http-requests",
+    "title": "LLM Quick Start",
+    "section": "LLM Conversations are HTTP Requests",
+    "text": "LLM Conversations are HTTP Requests\n\n\nEach interaction is a separate HTTP API request\nThe API server is entirely stateless (despite conversations being inherently stateful!)"
+  },
+  {
+    "objectID": "quickstart.html#example-conversation",
+    "href": "quickstart.html#example-conversation",
+    "title": "LLM Quick Start",
+    "section": "Example Conversation",
+    "text": "Example Conversation\n\n“What’s the capital of the moon?”\n\n\"There isn't one.\"\n\n“Are you sure?”\n\n\"Yes, I am sure.\""
+  },
+  {
+    "objectID": "quickstart.html#example-request",
+    "href": "quickstart.html#example-request",
+    "title": "LLM Quick Start",
+    "section": "Example Request",
+    "text": "Example Request\ncurl https://api.openai.com/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -d '{\n    \"model\": \"gpt-4o\",\n    \"messages\": [\n        {\"role\": \"system\", \"content\": \"You are a terse assistant.\"},\n        {\"role\": \"user\", \"content\": \"What is the capital of the moon?\"}\n    ]\n}'\n\nSystem prompt: behind-the-scenes instructions and information for the model\nUser prompt: a question or statement for the model to respond to"
+  },
+  {
+    "objectID": "quickstart.html#example-response-abridged",
+    "href": "quickstart.html#example-response-abridged",
+    "title": "LLM Quick Start",
+    "section": "Example Response (abridged)",
+    "text": "Example Response (abridged)\n{\n  \"choices\": [{\n    \"message\": {\n      \"role\": \"assistant\",\n      \"content\": \"The moon does not have a capital. It is not inhabited or governed.\",\n    },\n    \"finish_reason\": \"stop\"\n  }],\n  \"usage\": {\n    \"prompt_tokens\": 9,\n    \"completion_tokens\": 12,\n    \"total_tokens\": 21,\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  }\n}"
+  },
+  {
+    "objectID": "quickstart.html#example-request-1",
+    "href": "quickstart.html#example-request-1",
+    "title": "LLM Quick Start",
+    "section": "Example Request",
+    "text": "Example Request\ncurl https://api.openai.com/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -d '{\n    \"model\": \"gpt-4o\",\n    \"messages\": [\n      {\"role\": \"system\", \"content\": \"You are a terse assistant.\"},\n      {\"role\": \"user\", \"content\": \"What is the capital of the moon?\"},\n      {\"role\": \"assistant\", \"content\": \"The moon does not have a capital. It is not inhabited or governed.\"},\n      {\"role\": \"user\", \"content\": \"Are you sure?\"}\n    ]\n}'"
+  },
+  {
+    "objectID": "quickstart.html#example-response-abridged-1",
+    "href": "quickstart.html#example-response-abridged-1",
+    "title": "LLM Quick Start",
+    "section": "Example Response (abridged)",
+    "text": "Example Response (abridged)\n{\n  \"choices\": [{\n    \"message\": {\n      \"role\": \"assistant\",\n      \"content\": \"Yes, I am sure. The moon has no capital or formal governance.\"\n    },\n    \"finish_reason\": \"stop\"\n  }],\n  \"usage\": {\n    \"prompt_tokens\": 52,\n    \"completion_tokens\": 15,\n    \"total_tokens\": 67,\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  }\n}"
+  },
+  {
+    "objectID": "quickstart.html#instructions",
+    "href": "quickstart.html#instructions",
+    "title": "LLM Quick Start",
+    "section": "Instructions",
+    "text": "Instructions\nOpen and run one of these options:\n\n01-basics.R\n01-basics-openai.py (low level library)\n01-basics-langchain.py (high level framework)\n\nIf it errors, now is the time to debug.\nIf it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through."
+  },
+  {
+    "objectID": "quickstart.html#summary",
+    "href": "quickstart.html#summary",
+    "title": "LLM Quick Start",
+    "section": "Summary",
+    "text": "Summary\n\nA message is an object with a role (“system”, “user”, “assistant”) and a content string\nA chat conversation is a growing list of messages\nThe OpenAI chat API is a stateless HTTP endpoint: takes a list of messages as input, returns a new message as output"
+  },
+  {
+    "objectID": "quickstart.html#what-is-tool-calling",
+    "href": "quickstart.html#what-is-tool-calling",
+    "title": "LLM Quick Start",
+    "section": "What is Tool Calling?",
+    "text": "What is Tool Calling?\n\n\nAllows LLMs to interact with other systems\nSounds complicated? It isn’t!\nSupported by most of the newest LLMs, but not all (notably, not the new OpenAI o1 models, yet)"
+  },
+  {
+    "objectID": "quickstart.html#how-it-works",
+    "href": "quickstart.html#how-it-works",
+    "title": "LLM Quick Start",
+    "section": "How It Works",
+    "text": "How It Works\n\n\nNot like this - with the assistant executing stuff\nYes like this\n\nUser asks assistant a question; includes metadata for available tools\nAssistant asks the user to invoke a tool, passing its desired arguments\nUser invokes the tool, and returns the output to the assistant\nAssistant incorporates the tool’s output as additional context for formulating a response"
+  },
+  {
+    "objectID": "quickstart.html#how-it-works-1",
+    "href": "quickstart.html#how-it-works-1",
+    "title": "LLM Quick Start",
+    "section": "How It Works",
+    "text": "How It Works\nAnother way to think of it:\n\nThe client can perform tasks that the assistant can’t do\nTools put control into the hands of the assistant—it decides when to use them, and what arguments to pass in, and what to do with the results\nHaving an “intelligent-ish” coordinator of tools is a surprisingly general, powerful capability!"
+  },
+  {
+    "objectID": "intro.html#whos-here",
+    "href": "intro.html#whos-here",
+    "title": "AI Hackathon",
+    "section": "Who’s Here",
+    "text": "Who’s Here\n\n\nParticipants:\n\nAmanda Gadrow\nHadley Wickham\nHassan Kibirige\nJon Keane\nJonathan Yoder\nKelly O’Briant\nKristin Bott\nMax Kuhn\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+  },
+  {
+    "objectID": "intro.html#your-turn",
+    "href": "intro.html#your-turn",
+    "title": "AI Hackathon",
+    "section": "Your Turn",
+    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat was your skepticism/enthusiasm score (1 to 5)?\nIn one or two sentences, how do you feel about AI?"
+  },
+  {
+    "objectID": "intro.html#the-plan",
+    "href": "intro.html#the-plan",
+    "title": "AI Hackathon",
+    "section": "The Plan",
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having run some LLM requests at least.\nNext 48 hours: Hack on stuff! “Rules” on the next slide.\nThursday: Show and tell, share lessons learned, reflections."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff",
+    "href": "intro.html#hack-on-stuff",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff-1",
+    "href": "intro.html#hack-on-stuff-1",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+  },
+  {
+    "objectID": "intro.html#let-it-rip",
+    "href": "intro.html#let-it-rip",
+    "title": "AI Hackathon",
+    "section": "Let It Rip",
+    "text": "Let It Rip\nAll that said… also feel free to throw down, and make something super cool!"
+  },
+  {
+    "objectID": "intro.html#a-caveat-from-it",
+    "href": "intro.html#a-caveat-from-it",
+    "title": "AI Hackathon",
+    "section": "A Caveat From IT",
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-01 if you need help setting up a local model."
+  }
+]
