@@ -281,9 +281,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Tell it how to respond
 - Add positive examples (negative examples don't work well)
 - Examples
-  - Shiny Assitant:
-    - [Main prompt](https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md)
-    - [Python supplement](https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md)
+  - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
 
