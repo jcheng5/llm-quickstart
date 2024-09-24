@@ -1,6 +1,6 @@
 ---
 title: "LLM Quick Start"
-format: 
+format:
   revealjs:
     theme: simple
     transition: slide
@@ -232,4 +232,73 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Python: [`openai` docs](https://platform.openai.com/docs/guides/function-calling) (tedious, low-level, but understandable)
 - Python: [`langchain` docs](https://python.langchain.com/docs/how_to/tool_results_pass_to_model/) (not bad)
 
-# Customizing Knowledge and Behavior
+
+# Customizing knowledge and behavior
+
+- **The problem**: LLMs don't know your specific data
+- Some solutions
+  - Prompt engineering
+  - Retrieval-Augmented Generation
+  - Fine tuning
+
+## Choosing a model
+
+- OpenAI ChatGPT
+- Anthropic Claude
+- Google Gemini
+- Meta Llama (Can run locally, or access via API)
+
+## OpenAI models
+
+- **GPT-4o**: best general purpose model
+- **GPT-4o-mini**: similar to 4o, but faster and cheaper (and dumber)
+- **o1-preview**: uses chain of thought (available via API only for high usage tiers)
+- **o1-mini**
+
+## Anthropic models
+
+- **Claude 3.5 Sonnet**: best model for code generation
+- Comparison: <https://context.ai/compare/gpt-4o/claude-3-5-sonnet>
+
+## Llama models
+
+- Open weights: you can download the model
+- Can run locally, for example with ollama
+- **Llama 3.1 405b**: 229GB
+- **Llama 3.1 70b**: 40GB
+- **Llama 3.1 8b**: 4.7GB (can run comfortably on Macbook Pro)
+- Can access these models via API with Groq, Openrouter
+
+## API access for open weight models
+
+- Openrouter
+- Groq
+- Hugging Face
+
+## Prompt Engineering
+
+- Prompt stuffing (putting information in a prompt)
+  - Shiny Assitant:
+    - <https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt.md>
+    - <https://github.com/posit-dev/shiny-assistant/blob/main/app_prompt_python.md>
+  - FastHTML: <https://docs.fastht.ml/llms-ctx.txt>
+- Tell it how to respond
+- Add positive examples (negative examples don't work well)
+
+## RAG: Retrieval Augmented Generation
+
+- RAG encompasses a wide range of techniques
+- Usually is implemented with a vector database
+- Steps:
+  - User sends query to system
+  - System **retrieves** relevant text via search
+  - System sends text and query to LLM
+  - LLM responds with answer
+
+## Fine tuning
+
+- Train an existing model with new information
+- Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)
+- Data must be provided in chat conversation format, with query and response
+  - Can't just feed it documents - this makes fine-tuning more difficult in practice
+- Supposedly not very effective unless you have a lot of training data
