@@ -22,7 +22,7 @@ chat <- new_chat_openai(
   model = "gpt-4",
   system_prompt = paste(
     "You're hosting a quiz game show.
-    
+
     * Before you start, ask the user to choose a theme.
     * Ask simple questions and ask the user to answer them via multiple choice.
     * After the user answers, provide feedback and then move on to the next question.
@@ -50,4 +50,4 @@ chat$register_tool(
 )
 
 chat$chat("Begin", echo = TRUE) # Jump-start the conversation
-chat$console(quiet = TRUE) # Continue the conversation
+chat_console(chat, quiet = TRUE) # Continue the conversation
