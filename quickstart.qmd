@@ -220,8 +220,10 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 # Setting up your model
 
-- **The problem**: LLMs don't know your specific data
-- Some solutions
+- **The problem**
+  - LLMs don't know your specific information
+  - You want to customize how the LLM responds
+- **Some solutions**
   - Prompt engineering
   - Retrieval-Augmented Generation
   - Fine tuning
