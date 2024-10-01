@@ -218,7 +218,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Python: [`langchain` docs](https://python.langchain.com/docs/how_to/tool_results_pass_to_model/) (not bad)
 
 
-# Customizing knowledge and behavior
+# Setting up your model
 
 - **The problem**: LLMs don't know your specific data
 - Some solutions
@@ -249,44 +249,52 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 - Open weights: you can download the model
 - Can run locally, for example with ollama
-- **Llama 3.1 405b**: 229GB
-- **Llama 3.1 70b**: 40GB
-- **Llama 3.1 8b**: 4.7GB (can run comfortably on Macbook Pro)
-- Can access these models via API with Groq, Openrouter
-
-## API access for open weight models
-
-- Openrouter
-- Groq
-- Hugging Face
+- **Llama 3.2 405b**: text, 229GB
+- **Llama 3.2 90b**: vision + text, 50GB
+- **Llama 3.2 11b**: vision + text, 6GB (can run comfortably on Macbook Pro)
+- **Llama 3.2 3b**: text, 2GB
+- **Llama 3.1 1b**: text, 0.8GB
+- Can access these models via API with Groq, Openrouter, Hugging Face
 
 ## Prompt Engineering
 
-- Prompt stuffing (putting information in a prompt)
-- Tell it how to respond
+- Directing behavior/output
+- Adding context/knowledge
+
+## Directing behavior/output
+
+- "Respond with just the minimal information necessary."
+- "Explain your responses in detail."
+- "Think through this step-by-step."
+- "Carefully read and follow these instructions..."
+- "If the user asks a question related to data processing, produce R code to accomplish that task."
+- "Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so."
+
+## Adding context/knowledge to prompt
+
+- Add documentation files to prompt
 - Add positive examples (negative examples don't work well)
+- Docs must fit in context window
 - Examples
+  - [Elmer assistant](https://gist.github.com/jcheng5/060e5d1ee81841d6fcdff606402048ec#file-prompt-md) uses README files in prompt
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
-- Types of system prompt customizations
-  - Directing behavior/output
-  - Adding context/knowledge
 
 ## RAG: Retrieval Augmented Generation
 
-- (Just telling them this technique exists)
-- RAG encompasses a wide range of techniques
-- Usually is implemented with a vector database
+- In general, prompt engineering works better than RAG if docs fit in context window.
 - Steps:
-  - User sends query to system
-  - System **retrieves** relevant text via search
+  - User sends query to system: _"How do I ...?"_
+  - System **retrieves** relevant chunks of text via search
   - System sends text and query to LLM
+    - _<chunk 1>, <chunk 2>, <chunk 3>. How do I ...?_
   - LLM responds with answer
+- Search method usually involves a vector DB
 
 ## Fine tuning
 
 - Train an existing model with new information
 - Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)
 - Data must be provided in chat conversation format, with query and response
-  - Can't just feed it documents - this makes fine-tuning more difficult in practice
+  - Can't just feed it documents -- this makes fine-tuning more difficult in practice
 - Supposedly not very effective unless you have a lot of training data
