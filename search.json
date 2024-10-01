@@ -7,20 +7,6 @@
     "text": "Framing LLMs\n\n\nOur focus: Practical, actionable information\nWe will treat LLMs as black boxes\nDon’t focus on how they work (yet)\n\nLeads to bad intuition about their capabilities\nBetter to start with a highly empirical approach"
   },
   {
-    "objectID": "quickstart.html#types-of-llm-interactions",
-    "href": "quickstart.html#types-of-llm-interactions",
-    "title": "LLM Quick Start",
-    "section": "Types of LLM Interactions",
-    "text": "Types of LLM Interactions\n\n\nCompletion\n\nSingle input, single output\nExample: “Four score and seven” =&gt; “years ago,”\n\nChat\n\nRequest/response with an “assistant” persona\nExample: “How did the Gettysburg Address begin?” =&gt; “Four score and seven years ago…”"
-  },
-  {
-    "objectID": "quickstart.html#tokens",
-    "href": "quickstart.html#tokens",
-    "title": "LLM Quick Start",
-    "section": "Tokens",
-    "text": "Tokens\n\n\nFundamental units of text for LLMs\nWords, parts of words, or individual characters\n\n“hello” → 1 token\n“unconventional” → 2-3 tokens\n4K video frame → 3072 tokens\n\nImportant for:\n\nModel input/output limits\nAPI pricing is usually by token"
-  },
-  {
     "objectID": "quickstart.html#llm-conversations-are-http-requests",
     "href": "quickstart.html#llm-conversations-are-http-requests",
     "title": "LLM Quick Start",
@@ -61,6 +47,13 @@
     "title": "LLM Quick Start",
     "section": "Example Response (abridged)",
     "text": "Example Response (abridged)\n{\n  \"choices\": [{\n    \"message\": {\n      \"role\": \"assistant\",\n      \"content\": \"Yes, I am sure. The moon has no capital or formal governance.\"\n    },\n    \"finish_reason\": \"stop\"\n  }],\n  \"usage\": {\n    \"prompt_tokens\": 52,\n    \"completion_tokens\": 15,\n    \"total_tokens\": 67,\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0\n    }\n  }\n}"
+  },
+  {
+    "objectID": "quickstart.html#tokens",
+    "href": "quickstart.html#tokens",
+    "title": "LLM Quick Start",
+    "section": "Tokens",
+    "text": "Tokens\n\n\nFundamental units of text for LLMs\nWords, parts of words, or individual characters\n\n“hello” → 1 token\n“unconventional” → 3 tokens: un|con|ventional\n4K video frame at full res → 6885 tokens\n\nImportant for:\n\nModel input/output limits\nAPI pricing is usually by token (e.g. OpenAI pricing)"
   },
   {
     "objectID": "quickstart.html#instructions",
@@ -123,35 +116,42 @@
     "href": "quickstart.html#llama-models",
     "title": "LLM Quick Start",
     "section": "Llama models",
-    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.1 405b: 229GB\nLlama 3.1 70b: 40GB\nLlama 3.1 8b: 4.7GB (can run comfortably on Macbook Pro)\nCan access these models via API with Groq, Openrouter"
-  },
-  {
-    "objectID": "quickstart.html#api-access-for-open-weight-models",
-    "href": "quickstart.html#api-access-for-open-weight-models",
-    "title": "LLM Quick Start",
-    "section": "API access for open weight models",
-    "text": "API access for open weight models\n\nOpenrouter\nGroq\nHugging Face"
+    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.2 405b: text, 229GB\nLlama 3.2 90b: vision + text, 50GB\nLlama 3.2 11b: vision + text, 6GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.1 1b: text, 0.8GB\nCan access these models via API with Groq, Openrouter, Hugging Face"
   },
   {
     "objectID": "quickstart.html#prompt-engineering",
     "href": "quickstart.html#prompt-engineering",
     "title": "LLM Quick Start",
     "section": "Prompt Engineering",
-    "text": "Prompt Engineering\n\nPrompt stuffing (putting information in a prompt)\nTell it how to respond\nAdd positive examples (negative examples don’t work well)\nExamples\n\nSidebot\nFastHTML LLM prompt"
+    "text": "Prompt Engineering\n\nDirecting behavior/output\nAdding context/knowledge"
+  },
+  {
+    "objectID": "quickstart.html#directing-behavioroutput",
+    "href": "quickstart.html#directing-behavioroutput",
+    "title": "LLM Quick Start",
+    "section": "Directing behavior/output",
+    "text": "Directing behavior/output\n\n“Respond with just the minimal information necessary.”\n“Explain your responses in detail.”\n“Think through this step-by-step.”\n“Carefully read and follow these instructions…”\n“If the user asks a question related to data processing, produce R code to accomplish that task.”\n“Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so.”"
+  },
+  {
+    "objectID": "quickstart.html#adding-contextknowledge-to-prompt",
+    "href": "quickstart.html#adding-contextknowledge-to-prompt",
+    "title": "LLM Quick Start",
+    "section": "Adding context/knowledge to prompt",
+    "text": "Adding context/knowledge to prompt\n\nAdd documentation files to prompt\nAdd positive examples (negative examples don’t work well)\nDocs must fit in context window\nExamples\n\nElmer assistant uses README files in prompt\nSidebot\nFastHTML LLM prompt"
   },
   {
     "objectID": "quickstart.html#rag-retrieval-augmented-generation",
     "href": "quickstart.html#rag-retrieval-augmented-generation",
     "title": "LLM Quick Start",
     "section": "RAG: Retrieval Augmented Generation",
-    "text": "RAG: Retrieval Augmented Generation\n\nRAG encompasses a wide range of techniques\nUsually is implemented with a vector database\nSteps:\n\nUser sends query to system\nSystem retrieves relevant text via search\nSystem sends text and query to LLM\nLLM responds with answer"
+    "text": "RAG: Retrieval Augmented Generation\n\nIn general, prompt engineering works better than RAG if docs fit in context window.\nSteps:\n\nUser sends query to system: “How do I …?”\nSystem retrieves relevant chunks of text via search\nSystem sends text and query to LLM\n\n&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?\n\nLLM responds with answer\n\nSearch method usually involves a vector DB"
   },
   {
     "objectID": "quickstart.html#fine-tuning",
     "href": "quickstart.html#fine-tuning",
     "title": "LLM Quick Start",
     "section": "Fine tuning",
-    "text": "Fine tuning\n\nTrain an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents - this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
+    "text": "Fine tuning\n\nTrain an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
   },
   {
     "objectID": "intro.html#whos-here",

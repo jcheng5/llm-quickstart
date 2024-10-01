@@ -433,47 +433,6 @@
 </div>
 </section></section>
 <section>
-<section id="basic-terminology" class="title-slide slide level1 center">
-<h1>Basic Terminology</h1>
-
-</section>
-<section id="types-of-llm-interactions" class="slide level2">
-<h2>Types of LLM Interactions</h2>
-<div>
-<ul>
-<li class="fragment">Completion
-<ul>
-<li class="fragment">Single input, single output</li>
-<li class="fragment">Example: “Four score and seven” =&gt; “years ago,”</li>
-</ul></li>
-<li class="fragment">Chat
-<ul>
-<li class="fragment">Request/response with an “assistant” persona</li>
-<li class="fragment">Example: “How did the Gettysburg Address begin?” =&gt; “Four score and seven years ago…”</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="tokens" class="slide level2">
-<h2>Tokens</h2>
-<div>
-<ul>
-<li class="fragment">Fundamental units of text for LLMs</li>
-<li class="fragment">Words, parts of words, or individual characters
-<ul>
-<li class="fragment">“hello” → 1 token</li>
-<li class="fragment">“unconventional” → 2-3 tokens</li>
-<li class="fragment">4K video frame → 3072 tokens</li>
-</ul></li>
-<li class="fragment">Important for:
-<ul>
-<li class="fragment">Model input/output limits</li>
-<li class="fragment">API pricing is usually by token</li>
-</ul></li>
-</ul>
-</div>
-</section></section>
-<section>
 <section id="anatomy-of-a-conversation" class="title-slide slide level1 center">
 <h1>Anatomy of a Conversation</h1>
 
@@ -552,7 +511,7 @@
 </section>
 <section id="example-response-abridged-1" class="slide level2">
 <h2>Example Response (abridged)</h2>
-<div class="sourceCode" id="cb4" data-code-line-numbers="|3-6"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb4" data-code-line-numbers="|3-6|10-12"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a></a><span class="fu">{</span></span>
 <span id="cb4-2"><a></a>  <span class="dt">"choices"</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span></span>
 <span id="cb4-3"><a></a>    <span class="dt">"message"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb4-4"><a></a>      <span class="dt">"role"</span><span class="fu">:</span> <span class="st">"assistant"</span><span class="fu">,</span></span>
@@ -569,6 +528,25 @@
 <span id="cb4-15"><a></a>    <span class="fu">}</span></span>
 <span id="cb4-16"><a></a>  <span class="fu">}</span></span>
 <span id="cb4-17"><a></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tokens" class="slide level2">
+<h2>Tokens</h2>
+<div>
+<ul>
+<li class="fragment">Fundamental units of text for LLMs</li>
+<li class="fragment">Words, parts of words, or individual characters
+<ul>
+<li class="fragment">“hello” → 1 token</li>
+<li class="fragment">“unconventional” → 3 tokens: <code>un|con|ventional</code></li>
+<li class="fragment">4K video frame at full res → 6885 tokens</li>
+</ul></li>
+<li class="fragment">Important for:
+<ul>
+<li class="fragment">Model input/output limits</li>
+<li class="fragment">API pricing is usually by token (e.g.&nbsp;<a href="https://openai.com/api/pricing/">OpenAI pricing</a>)</li>
+</ul></li>
+</ul>
+</div>
 </section></section>
 <section id="choose-a-package" class="title-slide slide level1 smaller center">
 <h1>Choose a Package</h1>
@@ -616,11 +594,6 @@
 <li>The OpenAI chat API is a stateless HTTP endpoint: takes a list of messages as input, returns a new message as output</li>
 </ul>
 </section></section>
-<section id="web-ui-demo" class="title-slide slide level1 center">
-<h1>Web UI demo</h1>
-
-</section>
-
 <section>
 <section id="tool-calling" class="title-slide slide level1 center">
 <h1>Tool Calling</h1>
@@ -664,15 +637,15 @@
 <h1>Your Turn</h1>
 <p>Take a minute to look at <em>one of</em> the following docs. See if you can get them to run, and try to understand the code.</p>
 <ul>
-<li>R: <a href="https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling"><code>elmer</code> docs</a> (anticlimactically easy)</li>
+<li>R: <a href="https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling"><code>elmer</code> docs</a> (anticlimactically easy), or example <code>02-tools.R</code> in <code>llm-quickstart</code> repo</li>
 <li>Python: <a href="https://platform.openai.com/docs/guides/function-calling"><code>openai</code> docs</a> (tedious, low-level, but understandable)</li>
 <li>Python: <a href="https://python.langchain.com/docs/how_to/tool_results_pass_to_model/"><code>langchain</code> docs</a> (not bad)</li>
 </ul>
 </section>
 
 <section>
-<section id="customizing-knowledge-and-behavior" class="title-slide slide level1 center">
-<h1>Customizing knowledge and behavior</h1>
+<section id="setting-up-your-model" class="title-slide slide level1 center">
+<h1>Setting up your model</h1>
 <ul>
 <li><strong>The problem</strong>: LLMs don’t know your specific data</li>
 <li>Some solutions
@@ -713,28 +686,41 @@
 <ul>
 <li>Open weights: you can download the model</li>
 <li>Can run locally, for example with ollama</li>
-<li><strong>Llama 3.1 405b</strong>: 229GB</li>
-<li><strong>Llama 3.1 70b</strong>: 40GB</li>
-<li><strong>Llama 3.1 8b</strong>: 4.7GB (can run comfortably on Macbook Pro)</li>
-<li>Can access these models via API with Groq, Openrouter</li>
-</ul>
-</section>
-<section id="api-access-for-open-weight-models" class="slide level2">
-<h2>API access for open weight models</h2>
-<ul>
-<li>Openrouter</li>
-<li>Groq</li>
-<li>Hugging Face</li>
+<li><strong>Llama 3.2 405b</strong>: text, 229GB</li>
+<li><strong>Llama 3.2 90b</strong>: vision + text, 50GB</li>
+<li><strong>Llama 3.2 11b</strong>: vision + text, 6GB (can run comfortably on Macbook Pro)</li>
+<li><strong>Llama 3.2 3b</strong>: text, 2GB</li>
+<li><strong>Llama 3.1 1b</strong>: text, 0.8GB</li>
+<li>Can access these models via API with Groq, Openrouter, Hugging Face</li>
 </ul>
 </section>
 <section id="prompt-engineering" class="slide level2">
 <h2>Prompt Engineering</h2>
 <ul>
-<li>Prompt stuffing (putting information in a prompt)</li>
-<li>Tell it how to respond</li>
+<li>Directing behavior/output</li>
+<li>Adding context/knowledge</li>
+</ul>
+</section>
+<section id="directing-behavioroutput" class="slide level2">
+<h2>Directing behavior/output</h2>
+<ul>
+<li>“Respond with just the minimal information necessary.”</li>
+<li>“Explain your responses in detail.”</li>
+<li>“Think through this step-by-step.”</li>
+<li>“Carefully read and follow these instructions…”</li>
+<li>“If the user asks a question related to data processing, produce R code to accomplish that task.”</li>
+<li>“Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so.”</li>
+</ul>
+</section>
+<section id="adding-contextknowledge-to-prompt" class="slide level2">
+<h2>Adding context/knowledge to prompt</h2>
+<ul>
+<li>Add documentation files to prompt</li>
 <li>Add positive examples (negative examples don’t work well)</li>
+<li>Docs must fit in context window</li>
 <li>Examples
 <ul>
+<li><a href="https://gist.github.com/jcheng5/060e5d1ee81841d6fcdff606402048ec#file-prompt-md">Elmer assistant</a> uses README files in prompt</li>
 <li><a href="https://github.com/jcheng5/py-sidebot/blob/main/prompt.md">Sidebot</a></li>
 <li><a href="https://docs.fastht.ml/llms-ctx.txt">FastHTML LLM prompt</a></li>
 </ul></li>
@@ -743,15 +729,18 @@
 <section id="rag-retrieval-augmented-generation" class="slide level2">
 <h2>RAG: Retrieval Augmented Generation</h2>
 <ul>
-<li>RAG encompasses a wide range of techniques</li>
-<li>Usually is implemented with a vector database</li>
+<li>In general, prompt engineering works better than RAG if docs fit in context window.</li>
 <li>Steps:
 <ul>
-<li>User sends query to system</li>
-<li>System <strong>retrieves</strong> relevant text via search</li>
-<li>System sends text and query to LLM</li>
+<li>User sends query to system: <em>“How do I …?”</em></li>
+<li>System <strong>retrieves</strong> relevant chunks of text via search</li>
+<li>System sends text and query to LLM
+<ul>
+<li><em>&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?</em></li>
+</ul></li>
 <li>LLM responds with answer</li>
 </ul></li>
+<li>Search method usually involves a vector DB</li>
 </ul>
 </section>
 <section id="fine-tuning" class="slide level2">
@@ -761,7 +750,7 @@
 <li>Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)</li>
 <li>Data must be provided in chat conversation format, with query and response
 <ul>
-<li>Can’t just feed it documents - this makes fine-tuning more difficult in practice</li>
+<li>Can’t just feed it documents – this makes fine-tuning more difficult in practice</li>
 </ul></li>
 <li>Supposedly not very effective unless you have a lot of training data</li>
 </ul>
