@@ -158,7 +158,7 @@
     "href": "intro.html#whos-here",
     "title": "AI Hackathon",
     "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nAmanda Gadrow\nHadley Wickham\nHassan Kibirige\nJon Keane\nJonathan Yoder\nKelly O’Briant\nKristin Bott\nMax Kuhn\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+    "text": "Who’s Here\n\n\nParticipants:\n\nAaron Jacobs\nElliot Murphy\nGarrett Grolemund\nGeorge Stagg\nIsabella Velásquez\nJenny Bryan\nSimon Couch\nToni Noble\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
   },
   {
     "objectID": "intro.html#your-turn",
@@ -200,6 +200,6 @@
     "href": "intro.html#a-caveat-from-it",
     "title": "AI Hackathon",
     "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-01 if you need help setting up a local model."
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-02 if you need help setting up a local model."
   }
 ]
