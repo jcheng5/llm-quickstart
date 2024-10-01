@@ -32,32 +32,6 @@ editor:
   - Better to start with a highly empirical approach
 :::
 
-# Basic Terminology
-
-## Types of LLM Interactions
-
-::: {.incremental}
-- Completion
-  - Single input, single output
-  - Example: "Four score and seven " => "years ago, "
-- Chat
-  - Request/response with an "assistant" persona
-  - Example: "How did the Gettysburg Address begin?" => "Four score and seven years ago..."
-:::
-
-## Tokens
-
-::: {.incremental}
-- Fundamental units of text for LLMs
-- Words, parts of words, or individual characters
-  - "hello" → 1 token
-  - "unconventional" → 2-3 tokens
-  - 4K video frame → 3072 tokens
-- Important for:
-  - Model input/output limits
-  - API pricing is usually by token
-:::
-
 # Anatomy of a Conversation
 
 ## LLM Conversations are HTTP Requests
@@ -140,7 +114,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 ## Example Response (abridged)
 
-```{.json code-line-numbers="|3-6"}
+```{.json code-line-numbers="|3-6|10-12"}
 {
   "choices": [{
     "message": {
@@ -159,6 +133,19 @@ curl https://api.openai.com/v1/chat/completions \
   }
 }
 ```
+
+## Tokens
+
+::: {.incremental}
+- Fundamental units of text for LLMs
+- Words, parts of words, or individual characters
+  - "hello" → 1 token
+  - "unconventional" → 3 tokens: `un|con|ventional`
+  - 4K video frame at full res → 6885 tokens
+- Important for:
+  - Model input/output limits
+  - API pricing is usually by token (e.g. [OpenAI pricing](https://openai.com/api/pricing/))
+:::
 
 # Choose a Package {.smaller}
 
@@ -190,8 +177,6 @@ If it works, study the code and try to understand how it maps to the low-level H
 - A message is an object with a `role` ("system", "user", "assistant") and a `content` string
 - A chat conversation is a growing list of messages
 - The OpenAI chat API is a stateless HTTP endpoint: takes a list of messages as input, returns a new message as output
-
-# Web UI demo
 
 # Tool Calling
 
@@ -228,7 +213,7 @@ Another way to think of it:
 
 Take a minute to look at _one of_ the following docs. See if you can get them to run, and try to understand the code.
 
-- R: [`elmer` docs](https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling) (anticlimactically easy)
+- R: [`elmer` docs](https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
 - Python: [`openai` docs](https://platform.openai.com/docs/guides/function-calling) (tedious, low-level, but understandable)
 - Python: [`langchain` docs](https://python.langchain.com/docs/how_to/tool_results_pass_to_model/) (not bad)
 
@@ -283,10 +268,13 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Examples
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
-
+- Types of system prompt customizations
+  - Directing behavior/output
+  - Adding context/knowledge
 
 ## RAG: Retrieval Augmented Generation
 
+- (Just telling them this technique exists)
 - RAG encompasses a wide range of techniques
 - Usually is implemented with a vector database
 - Steps:
