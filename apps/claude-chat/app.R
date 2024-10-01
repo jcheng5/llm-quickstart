@@ -1,13 +1,13 @@
 library(dotenv)
 library(shiny)
-library(shinychat)  # jcheng5/shinychat
-library(elmer)      # hadley/elmer
+library(shinychat) # jcheng5/shinychat
+library(elmer) # hadley/elmer
 library(bslib)
 
-prompt <- paste(collapse = "\n", readLines("prompt.txt", warn=FALSE))
+prompt <- paste(collapse = "\n", readLines("prompt.txt", warn = FALSE))
 
 ui <- page_fluid(
-  titlePanel("Shiny + Claude"),
+  h2(class = "text-center pt-4", "Shiny + Claude"),
   chat_ui("chat")
 )
 
