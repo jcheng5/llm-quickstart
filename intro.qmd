@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-09-24 – Cohort 1"
+subtitle: "2024-10-01 – Cohort 2"
 format: 
   revealjs:
     theme: simple
@@ -23,14 +23,14 @@ editor:
 ::: {.column width="50%"}
 **Participants:**
 
-- Amanda Gadrow
-- Hadley Wickham
-- Hassan Kibirige
-- Jon Keane
-- Jonathan Yoder
-- Kelly O'Briant
-- Kristin Bott
-- Max Kuhn
+- Aaron Jacobs
+- Elliot Murphy
+- Garrett Grolemund
+- George Stagg
+- Isabella Velásquez
+- Jenny Bryan
+- Simon Couch
+- Toni Noble
 :::
 ::: {.column width="50%"}
 **Organizers:**
