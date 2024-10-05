@@ -12,8 +12,10 @@ ui <- page_fluid(
 )
 
 server <- function(input, output, session) {
-  # TODO: Update this with claude-3-5-sonnet-20240620 when Anthropic support is added
-  # chat <- new_chat_openai(model = "gpt-4o", system_prompt = prompt)
+  chat <- new_chat_claude(
+    model = "claude-3-5-sonnet-20240620",
+    system_prompt = prompt
+  )
   observeEvent(input$chat_user_input, {
     chat_append("chat", chat$stream_async(input$chat_user_input))
   })

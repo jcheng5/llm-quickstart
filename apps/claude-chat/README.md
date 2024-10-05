@@ -5,9 +5,17 @@ This is a Shiny application which provides a chat interface for Claude 3.5 Sonne
 
 This application is deployed at https://gallery.shinyapps.io/shiny-claude/.
 
-Currently only the Python version of the app is available. The R version will work once the elmer package adds support for Anthropic models.
+There is an R version of the application in app.R, and a Python version in app.py.
 
-First install the dependencies, then run the app:
+To run the R version, first install some packages, then run the app:
+
+```R
+# install.packages("pak")
+pak::pak(c("shiny", "hadley/elmer"))
+```
+
+
+To run the Python version, first install the dependencies, then run the app:
 
 ```bash
 # Run at the command prompt
