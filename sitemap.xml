@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jcheng5.github.io/llm-quickstart/quickstart.html</loc>
-    <lastmod>2024-10-01T16:44:52.104Z</lastmod>
+    <loc>https://jcheng5.github.io/llm-quickstart/llm-chat/basic-chat/prompt.html</loc>
+    <lastmod>2024-10-07T20:01:42.946Z</lastmod>
   </url>
   <url>
     <loc>https://jcheng5.github.io/llm-quickstart/intro.html</loc>
     <lastmod>2024-10-01T16:04:01.366Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcheng5.github.io/llm-quickstart/quickstart.html</loc>
+    <lastmod>2024-10-07T22:03:50.637Z</lastmod>
   </url>
 </urlset>

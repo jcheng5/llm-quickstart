@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "llm-chat/basic-chat/prompt.html",
+    "href": "llm-chat/basic-chat/prompt.html",
+    "title": "",
+    "section": "",
+    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
+  },
+  {
+    "objectID": "intro.html#whos-here",
+    "href": "intro.html#whos-here",
+    "title": "AI Hackathon",
+    "section": "Who’s Here",
+    "text": "Who’s Here\n\n\nParticipants:\n\nAaron Jacobs\nElliot Murphy\nGarrett Grolemund\nGeorge Stagg\nIsabella Velásquez\nJenny Bryan\nSimon Couch\nToni Noble\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+  },
+  {
+    "objectID": "intro.html#your-turn",
+    "href": "intro.html#your-turn",
+    "title": "AI Hackathon",
+    "section": "Your Turn",
+    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat was your skepticism/enthusiasm score (1 to 5)?\nIn one or two sentences, how do you feel about AI?"
+  },
+  {
+    "objectID": "intro.html#the-plan",
+    "href": "intro.html#the-plan",
+    "title": "AI Hackathon",
+    "section": "The Plan",
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having run some LLM requests at least.\nNext 48 hours: Hack on stuff! “Rules” on the next slide.\nThursday: Show and tell, share lessons learned, reflections."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff",
+    "href": "intro.html#hack-on-stuff",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff-1",
+    "href": "intro.html#hack-on-stuff-1",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+  },
+  {
+    "objectID": "intro.html#let-it-rip",
+    "href": "intro.html#let-it-rip",
+    "title": "AI Hackathon",
+    "section": "Let It Rip",
+    "text": "Let It Rip\nAll that said… also feel free to throw down, and make something super cool!"
+  },
+  {
+    "objectID": "intro.html#a-caveat-from-it",
+    "href": "intro.html#a-caveat-from-it",
+    "title": "AI Hackathon",
+    "section": "A Caveat From IT",
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-02 if you need help setting up a local model."
+  },
+  {
     "objectID": "quickstart.html#framing-llms",
     "href": "quickstart.html#framing-llms",
     "title": "LLM Quick Start",
@@ -116,7 +172,7 @@
     "href": "quickstart.html#llama-models",
     "title": "LLM Quick Start",
     "section": "Llama models",
-    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.2 405b: text, 229GB\nLlama 3.2 90b: vision + text, 50GB\nLlama 3.2 11b: vision + text, 6GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.1 1b: text, 0.8GB\nCan access these models via API with Groq, Openrouter, Hugging Face"
+    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.1 405b: text, 229GB\nLlama 3.2 90b: vision + text, 50GB\nLlama 3.2 11b: vision + text, 6GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.2 1b: text, 0.8GB\nCan access these models via API with Groq, Openrouter, Hugging Face"
   },
   {
     "objectID": "quickstart.html#prompt-engineering",
@@ -154,52 +210,10 @@
     "text": "Fine tuning\n\nTrain an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
   },
   {
-    "objectID": "intro.html#whos-here",
-    "href": "intro.html#whos-here",
-    "title": "AI Hackathon",
-    "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nAaron Jacobs\nElliot Murphy\nGarrett Grolemund\nGeorge Stagg\nIsabella Velásquez\nJenny Bryan\nSimon Couch\nToni Noble\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
-  },
-  {
-    "objectID": "intro.html#your-turn",
-    "href": "intro.html#your-turn",
-    "title": "AI Hackathon",
-    "section": "Your Turn",
-    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat was your skepticism/enthusiasm score (1 to 5)?\nIn one or two sentences, how do you feel about AI?"
-  },
-  {
-    "objectID": "intro.html#the-plan",
-    "href": "intro.html#the-plan",
-    "title": "AI Hackathon",
-    "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having run some LLM requests at least.\nNext 48 hours: Hack on stuff! “Rules” on the next slide.\nThursday: Show and tell, share lessons learned, reflections."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff",
-    "href": "intro.html#hack-on-stuff",
-    "title": "AI Hackathon",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff-1",
-    "href": "intro.html#hack-on-stuff-1",
-    "title": "AI Hackathon",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
-  },
-  {
-    "objectID": "intro.html#let-it-rip",
-    "href": "intro.html#let-it-rip",
-    "title": "AI Hackathon",
-    "section": "Let It Rip",
-    "text": "Let It Rip\nAll that said… also feel free to throw down, and make something super cool!"
-  },
-  {
-    "objectID": "intro.html#a-caveat-from-it",
-    "href": "intro.html#a-caveat-from-it",
-    "title": "AI Hackathon",
-    "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-02 if you need help setting up a local model."
+    "objectID": "quickstart.html#using-posit.cloud",
+    "href": "quickstart.html#using-posit.cloud",
+    "title": "LLM Quick Start",
+    "section": "Using posit.cloud",
+    "text": "Using posit.cloud\n\nPosit.cloud workspace with some examples\n\nContains LLM chat examples in R"
   }
 ]
