@@ -32,14 +32,14 @@
     "href": "intro.html#hack-on-stuff",
     "title": "AI Hackathon",
     "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
+    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science. This exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API. Showing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products. You may use any framework, any language,any service that you have access to."
   },
   {
     "objectID": "intro.html#hack-on-stuff-1",
     "href": "intro.html#hack-on-stuff-1",
     "title": "AI Hackathon",
     "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea. You can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding. Do a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success. Negative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
   },
   {
     "objectID": "intro.html#let-it-rip",
@@ -53,7 +53,7 @@
     "href": "intro.html#a-caveat-from-it",
     "title": "AI Hackathon",
     "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-02 if you need help setting up a local model."
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-03 if you need help setting up a local model."
   },
   {
     "objectID": "quickstart.html#framing-llms",
