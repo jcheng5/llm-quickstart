@@ -278,7 +278,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Add positive examples (negative examples don't work well)
 - Docs must fit in context window
 - Examples
-  - [Elmer assistant](https://gist.github.com/jcheng5/060e5d1ee81841d6fcdff606402048ec#file-prompt-md) uses README files in prompt
+  - [Elmer assistant](https://github.com/jcheng5/elmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
@@ -300,3 +300,8 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Data must be provided in chat conversation format, with query and response
   - Can't just feed it documents -- this makes fine-tuning more difficult in practice
 - Supposedly not very effective unless you have a lot of training data
+
+## Using posit.cloud
+
+- [Posit.cloud workspace](https://posit.cloud/spaces/564193/join?access_code=HFgo5wTL-yjjlV4v4bLbh9Hm9g6-0eiAqRbms4Sa) with some examples
+  - Contains [LLM chat examples](https://github.com/wch/llm-chat) in R
