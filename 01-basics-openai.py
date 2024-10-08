@@ -45,8 +45,3 @@ response2 = client.chat.completions.create(
 for chunk in response2:
     print(chunk.choices[0].delta.content, end="", flush=True)
 print()
-print(response2.get_final_completion())
-
-# Print and store this response as well
-print(response2.choices[0].message.content)
-messages.append(response2.choices[0].message)
