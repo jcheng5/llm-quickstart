@@ -305,3 +305,22 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 - [Posit.cloud workspace](https://posit.cloud/spaces/564193/join?access_code=HFgo5wTL-yjjlV4v4bLbh9Hm9g6-0eiAqRbms4Sa) with some examples
   - Contains [LLM chat examples](https://github.com/wch/llm-chat) in R
+
+# Getting structured output
+
+## Going beyond chat
+
+- **Structured output** can be easily consumed by code: JSON, YAML, CSV, etc.
+- **Unstructured output** cannot: text, images, etc.
+
+LLMs are good at generating unstructured output, but with a little effort, you can get structured output as well.
+
+## Several techniques (choose one) {.smaller}
+
+- **Post-processing:** Use a regular expression to extract structured data from the unstructured output (e.g. <code>/&grave;&grave;&grave;json\\n(.*?)\\n&grave;&grave;&grave;/</code>)
+- **System prompt:** Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples---it _really_ helps!
+- **Structured Output:** GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: [openai](https://platform.openai.com/docs/guides/structured-outputs), [LangChain](https://python.langchain.com/docs/how_to/structured_output/))
+- **Tool calling:** Create a tool to receive your output, e.g., `set_result(object)`, where its implementation sets some variable. (Works great for elmer.)
+- **LangChain:** Has its own [abstractions](https://python.langchain.com/docs/how_to/#output-parsers) for parsing unstructured output
+
+Ask `#hackathon-03` for help if you're stuck! (Or ask ChatGPT/Claude to make an example.)
