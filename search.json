@@ -256,7 +256,7 @@
     "href": "intro.html#the-plan",
     "title": "AI Hackathon",
     "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having run some LLM requests at least.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\nThursday: Show and tell, share lessons learned, reflections."
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\nThursday: Show & tell, share lessons learned, reflections.\n\n\n\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
   },
   {
     "objectID": "intro.html#hack-on-stuff",
