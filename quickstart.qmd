@@ -422,7 +422,7 @@ Assistant response:
 ## Using posit.cloud
 
 - [Posit.cloud workspace](https://posit.cloud/spaces/564193/join?access_code=HFgo5wTL-yjjlV4v4bLbh9Hm9g6-0eiAqRbms4Sa) with some examples
-  - Contains [LLM chat examples](https://github.com/wch/llm-chat) in R
+  - Contains examples from [https://github.com/jcheng5/llm-quickstart](https://github.com/jcheng5/llm-quickstart)
 
 # Getting structured output
 
