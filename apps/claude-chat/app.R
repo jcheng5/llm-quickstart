@@ -1,8 +1,8 @@
-library(dotenv)
 library(shiny)
-library(shinychat) # jcheng5/shinychat
-library(elmer) # hadley/elmer
+library(shinychat)
 library(bslib)
+
+dotenv::load_dot_env("../../.env")
 
 prompt <- paste(collapse = "\n", readLines("prompt.txt", warn = FALSE))
 
@@ -12,7 +12,7 @@ ui <- page_fluid(
 )
 
 server <- function(input, output, session) {
-  chat <- new_chat_claude(
+  chat <- elmer::chat_claude(
     model = "claude-3-5-sonnet-20240620",
     system_prompt = prompt
   )

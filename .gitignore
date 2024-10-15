@@ -3,3 +3,6 @@
 
 /.quarto/
 /_site/
+
+__pycache__
+rsconnect-python
