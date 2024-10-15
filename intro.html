@@ -6,7 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-99.9.9">
 
   <title>AI Hackathon</title>
@@ -28,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-614b5beebb58f47b92bc1ac53271adaa.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -327,7 +328,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">AI Hackathon</h1>
-  <p class="subtitle">2024-10-08 – Cohort 3</p>
+  <p class="subtitle">2024-10-15 – Cohort 4</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -337,24 +338,25 @@
 <section id="welcome" class="title-slide slide level1 center">
 <h1>Welcome</h1>
 <ul>
-<li>Before we begin, please join <code>#hackathon-03</code> in Slack!</li>
-<li>Also, please clone this repo: <a href="https://github.com/jcheng5/llm-quickstart">https://github.com/jcheng5/llm-quickstart</a></li>
+<li>Before we begin, please join <code>#hackathon-04</code> in Slack!</li>
+<li>Also, please clone this repo:<br>
+<a href="https://github.com/jcheng5/llm-quickstart">https://github.com/jcheng5/llm-quickstart</a></li>
 </ul>
 </section>
-<section id="whos-here" class="slide level2">
+<section id="whos-here" class="slide level2 smaller">
 <h2>Who’s Here</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Participants:</strong></p>
 <ul>
-<li>Aaron Jacobs</li>
-<li>Elliot Murphy</li>
-<li>Garrett Grolemund</li>
-<li>George Stagg</li>
-<li>Isabella Velásquez</li>
-<li>Jenny Bryan</li>
-<li>Simon Couch</li>
-<li>Toni Noble</li>
+<li>Alex Chisholm</li>
+<li>Brookelynn Ritter</li>
+<li>Clay Raynor</li>
+<li>Gordon Woodhull</li>
+<li>Hannah Frick</li>
+<li>Matt Lands</li>
+<li>Rachael Dempsey</li>
+<li>Taylor Hoover</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong>Organizers:</strong></p>
@@ -363,7 +365,8 @@
 <li>Joe Cheng</li>
 <li>Winston Chang</li>
 </ul>
-</div></div>
+</div>
+</div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your Turn</h2>
@@ -379,7 +382,7 @@
 <div>
 <ul>
 <li class="fragment"><strong>Now:</strong> Quick Start course on LLMs. You will leave having run some LLM requests at least.</li>
-<li class="fragment"><strong>Next 48 hours:</strong> Hack on stuff! “Rules” on the next slide.</li>
+<li class="fragment"><strong>Next 48 hours:</strong> Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.</li>
 <li class="fragment"><strong>Thursday:</strong> Show and tell, share lessons learned, reflections.</li>
 </ul>
 </div>
@@ -387,29 +390,50 @@
 <section id="hack-on-stuff" class="slide level2">
 <h2>Hack On Stuff</h2>
 <ul>
-<li><strong>Does NOT have to be relevant to your day job, or Posit, or data science.</strong> This exercise is about learning and engagement, not ROI.</li>
-<li><strong>Does NOT have to be a finished product/demo/app/API.</strong> Showing some things you did in a notebook is fine as long as YOU found it interesting.</li>
-<li><strong>Does NOT have to use Posit products.</strong> You may use any framework, any language,any service that you have access to.</li>
+<li><strong>Does NOT have to be relevant to your day job, or Posit, or data science.</strong><br>
+This exercise is about learning and engagement, not ROI.</li>
+<li><strong>Does NOT have to be a finished product/demo/app/API.</strong><br>
+Showing some things you did in a notebook is fine as long as YOU found it interesting.</li>
+<li><strong>Does NOT have to use Posit products.</strong><br>
+You may use any framework, any language,any service that you have access to.</li>
 </ul>
 </section>
 <section id="hack-on-stuff-1" class="slide level2">
 <h2>Hack On Stuff</h2>
 <ul>
-<li><strong>Does NOT have to be an original idea.</strong> You can build on existing projects, improve on existing demos, etc.</li>
-<li><strong>Does NOT even have to be coding.</strong> Do a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.</li>
-<li><strong>Does NOT have to be a success.</strong> Negative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried.</li>
+<li><strong>Does NOT have to be an original idea.</strong><br>
+You can build on existing projects, improve on existing demos, etc.</li>
+<li><strong>Does NOT even have to be coding.</strong><br>
+Do a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.</li>
+<li><strong>Does NOT have to be a success.</strong><br>
+Negative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried.</li>
+</ul>
+</section>
+<section id="not-a-contest" class="slide level2">
+<h2>Not a contest</h2>
+<ul>
+<li>This is not a competition. There are no prizes, no judging.</li>
+<li>Everyone is coming from different backgrounds and has different levels of experience with AI, with coding, etc.</li>
+<li>The goal is to learn, to have fun, and to engage with the technology—and share what you learned with others (and not just within this cohort).</li>
 </ul>
 </section>
 <section id="let-it-rip" class="slide level2">
 <h2>Let It Rip</h2>
-<p>All that said… also feel free to throw down, and make something super cool!</p>
+<ul>
+<li>All that said… also feel free to throw down, and make something super cool!</li>
+</ul>
+<div>
+<ul>
+<li class="fragment">Four hours is the minimum, not the maximum—if you’re having fun, keep going!</li>
+</ul>
+</div>
 </section>
 <section id="a-caveat-from-it" class="slide level2">
 <h2>A Caveat From IT</h2>
 <p>No <em>proprietary</em> code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)</p>
 <ul>
 <li><p>Sending open source code to these services is fine though.</p></li>
-<li><p>Sending proprietary code/data to <em>local</em> models is also fine. Ask in <code>#hackathon-03</code> if you need help setting up a local model.</p></li>
+<li><p>Sending proprietary code/data to <em>local</em> models is also fine. Ask in <code>#hackathon-04</code> if you need help setting up a local model.</p></li>
 </ul>
 </section></section>
 <section id="next-quick-start" class="title-slide slide level1 center">
@@ -633,6 +657,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -665,7 +727,18 @@
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -697,47 +770,7 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/jcheng5\.github\.io\/llm-quickstart\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -774,11 +807,7 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {

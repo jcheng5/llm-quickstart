@@ -1,66 +1,17 @@
 [
   {
-    "objectID": "llm-chat/basic-chat/prompt.html",
-    "href": "llm-chat/basic-chat/prompt.html",
+    "objectID": "apps/tool-chat/prompt.html",
+    "href": "apps/tool-chat/prompt.html",
     "title": "",
     "section": "",
-    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
-  },
-  {
-    "objectID": "intro.html#whos-here",
-    "href": "intro.html#whos-here",
-    "title": "AI Hackathon",
-    "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nAaron Jacobs\nElliot Murphy\nGarrett Grolemund\nGeorge Stagg\nIsabella Velásquez\nJenny Bryan\nSimon Couch\nToni Noble\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
-  },
-  {
-    "objectID": "intro.html#your-turn",
-    "href": "intro.html#your-turn",
-    "title": "AI Hackathon",
-    "section": "Your Turn",
-    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat was your skepticism/enthusiasm score (1 to 5)?\nIn one or two sentences, how do you feel about AI?"
-  },
-  {
-    "objectID": "intro.html#the-plan",
-    "href": "intro.html#the-plan",
-    "title": "AI Hackathon",
-    "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having run some LLM requests at least.\nNext 48 hours: Hack on stuff! “Rules” on the next slide.\nThursday: Show and tell, share lessons learned, reflections."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff",
-    "href": "intro.html#hack-on-stuff",
-    "title": "AI Hackathon",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science. This exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API. Showing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products. You may use any framework, any language,any service that you have access to."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff-1",
-    "href": "intro.html#hack-on-stuff-1",
-    "title": "AI Hackathon",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea. You can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding. Do a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success. Negative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
-  },
-  {
-    "objectID": "intro.html#let-it-rip",
-    "href": "intro.html#let-it-rip",
-    "title": "AI Hackathon",
-    "section": "Let It Rip",
-    "text": "Let It Rip\nAll that said… also feel free to throw down, and make something super cool!"
-  },
-  {
-    "objectID": "intro.html#a-caveat-from-it",
-    "href": "intro.html#a-caveat-from-it",
-    "title": "AI Hackathon",
-    "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-03 if you need help setting up a local model."
+    "text": "You are an assistant which can convert units and perform basic arithmetic with units."
   },
   {
     "objectID": "quickstart.html#framing-llms",
     "href": "quickstart.html#framing-llms",
     "title": "LLM Quick Start",
     "section": "Framing LLMs",
-    "text": "Framing LLMs\n\n\nOur focus: Practical, actionable information\nWe will treat LLMs as black boxes\nDon’t focus on how they work (yet)\n\nLeads to bad intuition about their capabilities\nBetter to start with a highly empirical approach"
+    "text": "Framing LLMs\n\n\nOur focus: Practical, actionable information\n\nOften, just enough knowledge so you know what to search for (or better yet, what to ask an LLM)\n\nWe will treat LLMs as black boxes\nDon’t focus on how they work (yet)\n\nLeads to bad intuition about their capabilities\nBetter to start with a highly empirical approach"
   },
   {
     "objectID": "quickstart.html#llm-conversations-are-http-requests",
@@ -126,6 +77,27 @@
     "text": "Summary\n\nA message is an object with a role (“system”, “user”, “assistant”) and a content string\nA chat conversation is a growing list of messages\nThe OpenAI chat API is a stateless HTTP endpoint: takes a list of messages as input, returns a new message as output"
   },
   {
+    "objectID": "quickstart.html#shiny-for-r",
+    "href": "quickstart.html#shiny-for-r",
+    "title": "LLM Quick Start",
+    "section": "Shiny for R",
+    "text": "Shiny for R\n{shinychat} package\nhttps://github.com/jcheng5/shinychat\n\nDesigned to be used with elmer\nThe elmer assistant is quite good for getting started"
+  },
+  {
+    "objectID": "quickstart.html#shiny-for-python",
+    "href": "quickstart.html#shiny-for-python",
+    "title": "LLM Quick Start",
+    "section": "Shiny for Python",
+    "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nAsk Shiny asssistant for help (ping me or Winston if you need us to approve your invite)\nDo NOT use the older ChatStream component"
+  },
+  {
+    "objectID": "quickstart.html#other-python-frameworks",
+    "href": "quickstart.html#other-python-frameworks",
+    "title": "LLM Quick Start",
+    "section": "Other Python frameworks",
+    "text": "Other Python frameworks\n\nStreamlit has an excellent chat component with a nice LangChain integration\nGradio has a chat component that is extremely easy to use"
+  },
+  {
     "objectID": "quickstart.html#what-is-tool-calling",
     "href": "quickstart.html#what-is-tool-calling",
     "title": "LLM Quick Start",
@@ -147,13 +119,6 @@
     "text": "How It Works\nAnother way to think of it:\n\nThe client can perform tasks that the assistant can’t do\nTools put control into the hands of the assistant—it decides when to use them, and what arguments to pass in, and what to do with the results\nHaving an “intelligent-ish” coordinator of tools is a surprisingly general, powerful capability!"
   },
   {
-    "objectID": "quickstart.html#choosing-a-model",
-    "href": "quickstart.html#choosing-a-model",
-    "title": "LLM Quick Start",
-    "section": "Choosing a model",
-    "text": "Choosing a model\n\nOpenAI ChatGPT\nAnthropic Claude\nGoogle Gemini\nMeta Llama (Can run locally, or access via API)"
-  },
-  {
     "objectID": "quickstart.html#openai-models",
     "href": "quickstart.html#openai-models",
     "title": "LLM Quick Start",
@@ -172,7 +137,7 @@
     "href": "quickstart.html#llama-models",
     "title": "LLM Quick Start",
     "section": "Llama models",
-    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.1 405b: text, 229GB\nLlama 3.2 90b: vision + text, 50GB\nLlama 3.2 11b: vision + text, 6GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.2 1b: text, 0.8GB\nCan access these models via API with Groq, Openrouter, Hugging Face"
+    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with ollama\nLlama 3.1 405b: text, 229GB\nLlama 3.2 90b: vision + text, 50GB\nLlama 3.2 11b: vision + text, 6GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.2 1b: text, 0.8GB\nCan also access these models via API with Groq, Openrouter, Hugging Face"
   },
   {
     "objectID": "quickstart.html#prompt-engineering",
@@ -189,6 +154,34 @@
     "text": "Directing behavior/output\n\n“Respond with just the minimal information necessary.”\n“Explain your responses in detail.”\n“Think through this step-by-step.”\n“Carefully read and follow these instructions…”\n“If the user asks a question related to data processing, produce R code to accomplish that task.”\n“Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so.”"
   },
   {
+    "objectID": "quickstart.html#using-examples-to-guide-behavior",
+    "href": "quickstart.html#using-examples-to-guide-behavior",
+    "title": "LLM Quick Start",
+    "section": "Using examples to guide behavior",
+    "text": "Using examples to guide behavior\n\nGoal: Extract ingredient list from recipe and return in a structured format.\nExample user input:\nIn a large bowl, cream together 1 cup of softened unsalted butter and ½ cup of white sugar until smooth. Beat in 1 egg and 1 teaspoon of vanilla extract. Gradually stir in 2 cups of all-purpose flour until the dough forms. Finally, fold in 1 cup of semisweet chocolate chips. Drop spoonfuls of dough onto an ungreased baking sheet and bake at 350°F (175°C) for 10-12 minutes, or until the edges are lightly browned. Let the cookies cool on the baking sheet for a few minutes before transferring to a wire rack to cool completely. Enjoy!"
+  },
+  {
+    "objectID": "quickstart.html#system-prompt-1-just-instructions",
+    "href": "quickstart.html#system-prompt-1-just-instructions",
+    "title": "LLM Quick Start",
+    "section": "System prompt 1: just instructions",
+    "text": "System prompt 1: just instructions\nThe user input contains a recipe. Extract a list of ingredients and return it in JSON format.\nAssistant response:\n{\n  \"ingredients\": [\n    \"1 cup of softened unsalted butter\",\n    \"½ cup of white sugar\",\n    \"1 egg\",\n    \"1 teaspoon of vanilla extract\",\n    \"2 cups of all-purpose flour\",\n    \"1 cup of semisweet chocolate chips\"\n  ]\n}"
+  },
+  {
+    "objectID": "quickstart.html#system-prompt-2-detailed-description-of-output",
+    "href": "quickstart.html#system-prompt-2-detailed-description-of-output",
+    "title": "LLM Quick Start",
+    "section": "System prompt 2: detailed description of output",
+    "text": "System prompt 2: detailed description of output\nThe user input contains a recipe. Extract a list of ingredients and return it in JSON format. It should be an array of objects, where each object has keys `ingredient`, `quantity`, and `unit`. Put each object on one line of output.\nAssistant response:\n[\n    {\"ingredient\": \"unsalted butter\", \"quantity\": 1, \"unit\": \"cup\"},\n    {\"ingredient\": \"white sugar\", \"quantity\": 1/2, \"unit\": \"cup\"},\n    {\"ingredient\": \"egg\", \"quantity\": 1, \"unit\": \"large\"},\n    {\"ingredient\": \"vanilla extract\", \"quantity\": 1, \"unit\": \"teaspoon\"},\n    {\"ingredient\": \"all-purpose flour\", \"quantity\": 2, \"unit\": \"cups\"},\n    {\"ingredient\": \"semisweet chocolate chips\", \"quantity\": 1, \"unit\": \"cup\"}\n]"
+  },
+  {
+    "objectID": "quickstart.html#system-prompt-3-one-shot-example",
+    "href": "quickstart.html#system-prompt-3-one-shot-example",
+    "title": "LLM Quick Start",
+    "section": "System prompt 3: one-shot example",
+    "text": "System prompt 3: one-shot example\nThe user input contains a recipe. Extract a list of ingredients and return it in JSON format.\n\nExample Output:\n\n```json\n[\n    { \"ingredient\": \"Flour\", \"quantity\": 1, \"unit\": \"cup\" },\n    { \"ingredient\": \"Vegetable oil\", \"quantity\": 0.5, \"unit\": \"tsp\" },\n    { \"ingredient\": \"Onion\", \"quantity\": 1, \"unit\": null },\n]\n```\nAssistant response:\n[\n    { \"ingredient\": \"Unsalted butter\", \"quantity\": 1, \"unit\": \"cup\" },\n    { \"ingredient\": \"White sugar\", \"quantity\": 0.5, \"unit\": \"cup\" },\n    { \"ingredient\": \"Egg\", \"quantity\": 1, \"unit\": null },\n    { \"ingredient\": \"Vanilla extract\", \"quantity\": 1, \"unit\": \"teaspoon\" },\n    { \"ingredient\": \"All-purpose flour\", \"quantity\": 2, \"unit\": \"cups\" },\n    { \"ingredient\": \"Semisweet chocolate chips\", \"quantity\": 1, \"unit\": \"cup\" }\n]"
+  },
+  {
     "objectID": "quickstart.html#adding-contextknowledge-to-prompt",
     "href": "quickstart.html#adding-contextknowledge-to-prompt",
     "title": "LLM Quick Start",
@@ -200,14 +193,21 @@
     "href": "quickstart.html#rag-retrieval-augmented-generation",
     "title": "LLM Quick Start",
     "section": "RAG: Retrieval Augmented Generation",
-    "text": "RAG: Retrieval Augmented Generation\n\nIn general, prompt engineering works better than RAG if docs fit in context window.\nSteps:\n\nUser sends query to system: “How do I …?”\nSystem retrieves relevant chunks of text via search\nSystem sends text and query to LLM\n\n&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?\n\nLLM responds with answer\n\nSearch method usually involves a vector DB"
+    "text": "RAG: Retrieval Augmented Generation\n\nUseful when documents don’t fit into context window\nSteps:\n\nUser sends query to app: “How do I …?”\nApp retrieves relevant chunks of text via search\nApp sends text and query to LLM\n\n&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?\n\nLLM responds with answer\n\nSearch method typically a semantic instead of keyword search, using vector DB\nLLM will only know about chunks that were retrieved; does not “know” entire corpus\nIn general, prompt engineering works better, if docs fit in context window"
   },
   {
     "objectID": "quickstart.html#fine-tuning",
     "href": "quickstart.html#fine-tuning",
     "title": "LLM Quick Start",
     "section": "Fine tuning",
-    "text": "Fine tuning\n\nTrain an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
+    "text": "Fine tuning\n\nUpdate weights for an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
+  },
+  {
+    "objectID": "quickstart.html#more-on-prompting-rag-fine-tuning",
+    "href": "quickstart.html#more-on-prompting-rag-fine-tuning",
+    "title": "LLM Quick Start",
+    "section": "More on prompting, RAG, fine tuning",
+    "text": "More on prompting, RAG, fine tuning\n\nTry prompting first, before RAG and fine tuning.\nOpenAI’s prompt engineering guide\nFine-tuning vs. RAG article"
   },
   {
     "objectID": "quickstart.html#using-posit.cloud",
@@ -215,5 +215,96 @@
     "title": "LLM Quick Start",
     "section": "Using posit.cloud",
     "text": "Using posit.cloud\n\nPosit.cloud workspace with some examples\n\nContains LLM chat examples in R"
+  },
+  {
+    "objectID": "quickstart.html#going-beyond-chat",
+    "href": "quickstart.html#going-beyond-chat",
+    "title": "LLM Quick Start",
+    "section": "Going beyond chat",
+    "text": "Going beyond chat\n\nStructured output can be easily consumed by code: JSON, YAML, CSV, etc.\nUnstructured output cannot: text, images, etc.\n\nLLMs are good at generating unstructured output, but with a little effort, you can get structured output as well."
+  },
+  {
+    "objectID": "quickstart.html#several-techniques-choose-one",
+    "href": "quickstart.html#several-techniques-choose-one",
+    "title": "LLM Quick Start",
+    "section": "Several techniques (choose one)",
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-04 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+  },
+  {
+    "objectID": "quickstart.html#past-cohort-projects",
+    "href": "quickstart.html#past-cohort-projects",
+    "title": "LLM Quick Start",
+    "section": "Past cohort projects",
+    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3"
+  },
+  {
+    "objectID": "intro.html#whos-here",
+    "href": "intro.html#whos-here",
+    "title": "AI Hackathon",
+    "section": "Who’s Here",
+    "text": "Who’s Here\n\n\nParticipants:\n\nAlex Chisholm\nBrookelynn Ritter\nClay Raynor\nGordon Woodhull\nHannah Frick\nMatt Lands\nRachael Dempsey\nTaylor Hoover\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+  },
+  {
+    "objectID": "intro.html#your-turn",
+    "href": "intro.html#your-turn",
+    "title": "AI Hackathon",
+    "section": "Your Turn",
+    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat was your skepticism/enthusiasm score (1 to 5)?\nIn one or two sentences, how do you feel about AI?"
+  },
+  {
+    "objectID": "intro.html#the-plan",
+    "href": "intro.html#the-plan",
+    "title": "AI Hackathon",
+    "section": "The Plan",
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having run some LLM requests at least.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\nThursday: Show and tell, share lessons learned, reflections."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff",
+    "href": "intro.html#hack-on-stuff",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff-1",
+    "href": "intro.html#hack-on-stuff-1",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+  },
+  {
+    "objectID": "intro.html#not-a-contest",
+    "href": "intro.html#not-a-contest",
+    "title": "AI Hackathon",
+    "section": "Not a contest",
+    "text": "Not a contest\n\nThis is not a competition. There are no prizes, no judging.\nEveryone is coming from different backgrounds and has different levels of experience with AI, with coding, etc.\nThe goal is to learn, to have fun, and to engage with the technology—and share what you learned with others (and not just within this cohort)."
+  },
+  {
+    "objectID": "intro.html#let-it-rip",
+    "href": "intro.html#let-it-rip",
+    "title": "AI Hackathon",
+    "section": "Let It Rip",
+    "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
+  },
+  {
+    "objectID": "intro.html#a-caveat-from-it",
+    "href": "intro.html#a-caveat-from-it",
+    "title": "AI Hackathon",
+    "section": "A Caveat From IT",
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-04 if you need help setting up a local model."
+  },
+  {
+    "objectID": "02-tools-prompt.html",
+    "href": "02-tools-prompt.html",
+    "title": "",
+    "section": "",
+    "text": "You’re hosting a quiz game show.\n\nBefore you start, ask the user to choose a theme.\nAsk simple questions and ask the user to answer them via multiple choice.\nAfter the user answers, provide feedback and then move on to the next question.\nAfter every 5 questions, declare the user to be a winner regardless of their score, lavish them with praise, and start the game over.\nPlay sound effects for each answer, and when the user ‘wins’.\nEmojis are fun, use them liberally!\n\nExample:\n&lt;Assistant&gt;\n  **Question 3:** What is the center of an atom called?\n\n  A) Electron\n  B) Proton\n  C) Neutron\n  D) Nucleus\n\n  Your answer?\n&lt;/Assistant&gt;\n&lt;User&gt;\n  D\n&lt;/User&gt;\n&lt;Assistant&gt;\n  &lt;ToolCall&gt;\n    {\n      id: \"call_1551214\",\n      function: {\n        arguments: \"{sound: 'correct'}\",\n        name: \"play_sound\"\n      },\n      type: \"function\"\n    }\n  &lt;/ToolCall&gt;\n&lt;/Assistant&gt;\n&lt;User&gt;\n  &lt;ToolResponse&gt;\n    {\n      id: \"call_1551214\",\n      result: {\n        success: true,\n        value: null\n      }\n    }\n  &lt;/ToolResponse&gt;\n&lt;/User&gt;\n&lt;Assistant&gt;\n  Correct! The nucleus is the center of an atom.\n\n  **Question 4:** ...\n&lt;/Assistant&gt;\""
+  },
+  {
+    "objectID": "apps/basic-chat/prompt.html",
+    "href": "apps/basic-chat/prompt.html",
+    "title": "",
+    "section": "",
+    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
   }
 ]

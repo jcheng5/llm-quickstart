@@ -6,7 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-99.9.9">
 
   <title>LLM Quick Start</title>
@@ -40,7 +41,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -68,7 +69,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.cf { color: #003b4f; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -82,7 +83,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.kw { color: #003b4f; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -93,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-614b5beebb58f47b92bc1ac53271adaa.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -401,7 +402,7 @@
 <h1>Setup</h1>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-03</code></p></li>
+<li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-04</code></p></li>
 <li><p>For R</p>
 <ul>
 <li><code>pak::pak(c("hadley/elmer", "jcheng5/shinychat", "dotenv"))</code></li>
@@ -422,7 +423,10 @@
 <h2>Framing LLMs</h2>
 <div>
 <ul>
-<li class="fragment">Our focus: Practical, actionable information</li>
+<li class="fragment">Our focus: Practical, actionable information
+<ul>
+<li class="fragment">Often, <em>just</em> enough knowledge so you know what to search for (or better yet, what to ask an LLM)</li>
+</ul></li>
 <li class="fragment">We will treat LLMs as black boxes</li>
 <li class="fragment">Don’t focus on how they work (yet)
 <ul>
@@ -551,6 +555,13 @@
 <section id="choose-a-package" class="title-slide slide level1 smaller center">
 <h1>Choose a Package</h1>
 <ul>
+<li>R:
+<ul>
+<li><code>hadley/elmer</code> high-level, easy, much less ambitious than langchain
+<ul>
+<li>OpenAI only for now, but Anthropic and Google coming soon</li>
+</ul></li>
+</ul></li>
 <li>Python:
 <ul>
 <li><code>openai</code> - low-level, but solid</li>
@@ -559,13 +570,6 @@
 <li>Evolved from v0.1, v0.2, and now <code>langgraph</code></li>
 </ul></li>
 <li>Many, many other options are available</li>
-</ul></li>
-<li>R:
-<ul>
-<li><code>hadley/elmer</code> high-level, easy, much less ambitious than langchain
-<ul>
-<li>OpenAI only for now, but Anthropic and Google coming soon</li>
-</ul></li>
 </ul></li>
 </ul>
 </section>
@@ -592,6 +596,35 @@
 <li>A message is an object with a <code>role</code> (“system”, “user”, “assistant”) and a <code>content</code> string</li>
 <li>A chat conversation is a growing list of messages</li>
 <li>The OpenAI chat API is a stateless HTTP endpoint: takes a list of messages as input, returns a new message as output</li>
+</ul>
+</section></section>
+<section>
+<section id="creating-chatbot-uis" class="title-slide slide level1 center">
+<h1>Creating chatbot UIs</h1>
+
+</section>
+<section id="shiny-for-r" class="slide level2">
+<h2>Shiny for R</h2>
+<p>{<code>shinychat</code>} package<br>
+<a href="https://github.com/jcheng5/shinychat">https://github.com/jcheng5/shinychat</a></p>
+<ul>
+<li>Designed to be used with elmer</li>
+<li>The <a href="https://jcheng.shinyapps.io/elmer-assistant">elmer assistant</a> is quite good for getting started</li>
+</ul>
+</section>
+<section id="shiny-for-python" class="slide level2">
+<h2>Shiny for Python</h2>
+<p>Use the <a href="https://shiny.posit.co/py/components/display-messages/chat/">official <code>ui.Chat</code> component</a> for Shiny for Python</p>
+<ul>
+<li>Ask <a href="https://gallery.shinyapps.io/shiny-assistant/">Shiny asssistant</a> for help (ping me or Winston if you need us to approve your invite)</li>
+<li>Do NOT use the older ChatStream component</li>
+</ul>
+</section>
+<section id="other-python-frameworks" class="slide level2">
+<h2>Other Python frameworks</h2>
+<ul>
+<li>Streamlit has an excellent <a href="https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps">chat component</a> with a <a href="https://docs.streamlit.io/develop/tutorials/llms/llm-quickstart">nice LangChain integration</a></li>
+<li>Gradio has a <a href="https://www.gradio.app/guides/creating-a-chatbot-fast">chat component</a> that is extremely easy to use</li>
 </ul>
 </section></section>
 <section>
@@ -644,24 +677,8 @@
 </section>
 
 <section>
-<section id="setting-up-your-model" class="title-slide slide level1 center">
-<h1>Setting up your model</h1>
-<ul>
-<li><strong>The problem</strong>
-<ul>
-<li>LLMs don’t know your specific information</li>
-<li>You want to customize how the LLM responds</li>
-</ul></li>
-<li><strong>Some solutions</strong>
-<ul>
-<li>Prompt engineering</li>
-<li>Retrieval-Augmented Generation</li>
-<li>Fine tuning</li>
-</ul></li>
-</ul>
-</section>
-<section id="choosing-a-model" class="slide level2">
-<h2>Choosing a model</h2>
+<section id="choosing-a-model" class="title-slide slide level1 center">
+<h1>Choosing a model</h1>
 <ul>
 <li>OpenAI ChatGPT</li>
 <li>Anthropic Claude</li>
@@ -695,7 +712,24 @@
 <li><strong>Llama 3.2 11b</strong>: vision + text, 6GB (can run comfortably on Macbook Pro)</li>
 <li><strong>Llama 3.2 3b</strong>: text, 2GB</li>
 <li><strong>Llama 3.2 1b</strong>: text, 0.8GB</li>
-<li>Can access these models via API with Groq, Openrouter, Hugging Face</li>
+<li>Can also access these models via API with Groq, Openrouter, Hugging Face</li>
+</ul>
+</section></section>
+<section>
+<section id="customizing-behavior-and-adding-knowledge" class="title-slide slide level1 center">
+<h1>Customizing behavior and adding knowledge</h1>
+<ul>
+<li><strong>The problem</strong>
+<ul>
+<li>You want to customize how the LLM responds</li>
+<li>LLM doesn’t know your specific information</li>
+</ul></li>
+<li><strong>Some solutions</strong>
+<ul>
+<li>Prompt engineering</li>
+<li>Retrieval-Augmented Generation</li>
+<li>Fine tuning</li>
+</ul></li>
 </ul>
 </section>
 <section id="prompt-engineering" class="slide level2">
@@ -716,6 +750,65 @@
 <li>“Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so.”</li>
 </ul>
 </section>
+<section id="using-examples-to-guide-behavior" class="slide level2">
+<h2>Using examples to guide behavior</h2>
+<ul>
+<li><p><strong>Goal:</strong> Extract ingredient list from recipe and return in a structured format.</p></li>
+<li><p>Example user input:</p>
+<pre><code>In a large bowl, cream together 1 cup of softened unsalted butter and ½ cup of white sugar until smooth. Beat in 1 egg and 1 teaspoon of vanilla extract. Gradually stir in 2 cups of all-purpose flour until the dough forms. Finally, fold in 1 cup of semisweet chocolate chips. Drop spoonfuls of dough onto an ungreased baking sheet and bake at 350°F (175°C) for 10-12 minutes, or until the edges are lightly browned. Let the cookies cool on the baking sheet for a few minutes before transferring to a wire rack to cool completely. Enjoy!</code></pre></li>
+</ul>
+</section>
+<section id="system-prompt-1-just-instructions" class="slide level2">
+<h2>System prompt 1: just instructions</h2>
+<pre><code>The user input contains a recipe. Extract a list of ingredients and return it in JSON format.</code></pre>
+<p>Assistant response:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a></a><span class="fu">{</span></span>
+<span id="cb7-2"><a></a>  <span class="dt">"ingredients"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-3"><a></a>    <span class="st">"1 cup of softened unsalted butter"</span><span class="ot">,</span></span>
+<span id="cb7-4"><a></a>    <span class="st">"½ cup of white sugar"</span><span class="ot">,</span></span>
+<span id="cb7-5"><a></a>    <span class="st">"1 egg"</span><span class="ot">,</span></span>
+<span id="cb7-6"><a></a>    <span class="st">"1 teaspoon of vanilla extract"</span><span class="ot">,</span></span>
+<span id="cb7-7"><a></a>    <span class="st">"2 cups of all-purpose flour"</span><span class="ot">,</span></span>
+<span id="cb7-8"><a></a>    <span class="st">"1 cup of semisweet chocolate chips"</span></span>
+<span id="cb7-9"><a></a>  <span class="ot">]</span></span>
+<span id="cb7-10"><a></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="system-prompt-2-detailed-description-of-output" class="slide level2">
+<h2>System prompt 2: detailed description of output</h2>
+<pre><code>The user input contains a recipe. Extract a list of ingredients and return it in JSON format. It should be an array of objects, where each object has keys `ingredient`, `quantity`, and `unit`. Put each object on one line of output.</code></pre>
+<p>Assistant response:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a></a><span class="ot">[</span></span>
+<span id="cb9-2"><a></a>    <span class="fu">{</span><span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"unsalted butter"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cup"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb9-3"><a></a>    <span class="fu">{</span><span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"white sugar"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="er">/</span><span class="dv">2</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cup"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb9-4"><a></a>    <span class="fu">{</span><span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"egg"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"large"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb9-5"><a></a>    <span class="fu">{</span><span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"vanilla extract"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"teaspoon"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb9-6"><a></a>    <span class="fu">{</span><span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"all-purpose flour"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cups"</span><span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb9-7"><a></a>    <span class="fu">{</span><span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"semisweet chocolate chips"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cup"</span><span class="fu">}</span></span>
+<span id="cb9-8"><a></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="system-prompt-3-one-shot-example" class="slide level2">
+<h2>System prompt 3: one-shot example</h2>
+<pre><code>The user input contains a recipe. Extract a list of ingredients and return it in JSON format.
+
+Example Output:
+
+```json
+[
+    { "ingredient": "Flour", "quantity": 1, "unit": "cup" },
+    { "ingredient": "Vegetable oil", "quantity": 0.5, "unit": "tsp" },
+    { "ingredient": "Onion", "quantity": 1, "unit": null },
+]
+```</code></pre>
+<p>Assistant response:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb11-1"><a></a><span class="ot">[</span></span>
+<span id="cb11-2"><a></a>    <span class="fu">{</span> <span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"Unsalted butter"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cup"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb11-3"><a></a>    <span class="fu">{</span> <span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"White sugar"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">5</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cup"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb11-4"><a></a>    <span class="fu">{</span> <span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"Egg"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="kw">null</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb11-5"><a></a>    <span class="fu">{</span> <span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"Vanilla extract"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"teaspoon"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb11-6"><a></a>    <span class="fu">{</span> <span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"All-purpose flour"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cups"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb11-7"><a></a>    <span class="fu">{</span> <span class="dt">"ingredient"</span><span class="fu">:</span> <span class="st">"Semisweet chocolate chips"</span><span class="fu">,</span> <span class="dt">"quantity"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span> <span class="dt">"unit"</span><span class="fu">:</span> <span class="st">"cup"</span> <span class="fu">}</span></span>
+<span id="cb11-8"><a></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="adding-contextknowledge-to-prompt" class="slide level2">
 <h2>Adding context/knowledge to prompt</h2>
 <ul>
@@ -733,30 +826,40 @@
 <section id="rag-retrieval-augmented-generation" class="slide level2">
 <h2>RAG: Retrieval Augmented Generation</h2>
 <ul>
-<li>In general, prompt engineering works better than RAG if docs fit in context window.</li>
+<li>Useful when documents don’t fit into context window</li>
 <li>Steps:
 <ul>
-<li>User sends query to system: <em>“How do I …?”</em></li>
-<li>System <strong>retrieves</strong> relevant chunks of text via search</li>
-<li>System sends text and query to LLM
+<li>User sends query to app: <em>“How do I …?”</em></li>
+<li>App <strong>retrieves</strong> relevant chunks of text via search</li>
+<li>App sends text and query to LLM
 <ul>
 <li><em>&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?</em></li>
 </ul></li>
 <li>LLM responds with answer</li>
 </ul></li>
-<li>Search method usually involves a vector DB</li>
+<li>Search method typically a semantic instead of keyword search, using vector DB</li>
+<li>LLM will only know about chunks that were retrieved; does not “know” entire corpus</li>
+<li>In general, prompt engineering works better, if docs fit in context window</li>
 </ul>
 </section>
 <section id="fine-tuning" class="slide level2">
 <h2>Fine tuning</h2>
 <ul>
-<li>Train an existing model with new information</li>
+<li>Update weights for an existing model with new information</li>
 <li>Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)</li>
 <li>Data must be provided in chat conversation format, with query and response
 <ul>
 <li>Can’t just feed it documents – this makes fine-tuning more difficult in practice</li>
 </ul></li>
 <li>Supposedly not very effective unless you have a lot of training data</li>
+</ul>
+</section>
+<section id="more-on-prompting-rag-fine-tuning" class="slide level2">
+<h2>More on prompting, RAG, fine tuning</h2>
+<ul>
+<li>Try prompting first, before RAG and fine tuning.</li>
+<li>OpenAI’s <a href="https://platform.openai.com/docs/guides/prompt-engineering">prompt engineering guide</a></li>
+<li><a href="https://finetunedb.com/blog/fine-tuning-vs-rag/">Fine-tuning vs.&nbsp;RAG article</a></li>
 </ul>
 </section>
 <section id="using-posit.cloud" class="slide level2">
@@ -766,6 +869,43 @@
 <ul>
 <li>Contains <a href="https://github.com/wch/llm-chat">LLM chat examples</a> in R</li>
 </ul></li>
+</ul>
+</section></section>
+<section>
+<section id="getting-structured-output" class="title-slide slide level1 center">
+<h1>Getting structured output</h1>
+
+</section>
+<section id="going-beyond-chat" class="slide level2">
+<h2>Going beyond chat</h2>
+<ul>
+<li><strong>Structured output</strong> can be easily consumed by code: JSON, YAML, CSV, etc.</li>
+<li><strong>Unstructured output</strong> cannot: text, images, etc.</li>
+</ul>
+<p>LLMs are good at generating unstructured output, but with a little effort, you can get structured output as well.</p>
+</section>
+<section id="several-techniques-choose-one" class="slide level2 smaller">
+<h2>Several techniques (choose one)</h2>
+<ul>
+<li><strong>Post-processing:</strong> Use a regular expression to extract structured data from the unstructured output (e.g.&nbsp;<code>/```json\n(.*?)\n```/</code>)</li>
+<li><strong>System prompt:</strong> Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it <em>really</em> helps!</li>
+<li><strong>Structured Output:</strong> GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: <a href="https://platform.openai.com/docs/guides/structured-outputs">openai</a>, <a href="https://python.langchain.com/docs/how_to/structured_output/">LangChain</a>)</li>
+<li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for elmer.)</li>
+<li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
+</ul>
+<p>Ask <code>#hackathon-04</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+</section></section>
+<section>
+<section id="brainstorming" class="title-slide slide level1 center">
+<h1>Brainstorming</h1>
+
+</section>
+<section id="past-cohort-projects" class="slide level2">
+<h2>Past cohort projects</h2>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing">Cohort 1</a></li>
+<li><a href="https://docs.google.com/presentation/d/1j15NfbrRDfHIbnO7Jt3gS63CafArboe70AUJw4hFn8E/edit?usp=sharing">Cohort 2</a></li>
+<li><a href="https://docs.google.com/presentation/d/1NmgeTgzs31r8g8-b2liOzKXDmYU_iXSIA8Ih8Z4ZzMM/edit?usp=sharing">Cohort 3</a></li>
 </ul>
 
 <div class="quarto-auto-generated-content">
@@ -986,6 +1126,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1018,7 +1196,18 @@
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1050,47 +1239,7 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/jcheng5\.github\.io\/llm-quickstart\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1127,11 +1276,7 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
