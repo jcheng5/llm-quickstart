@@ -6,6 +6,8 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.tools import tool
 from langchain_openai import ChatOpenAI
 
+load_dotenv()
+
 
 @tool
 def get_weather(latitude, longitude) -> str:
