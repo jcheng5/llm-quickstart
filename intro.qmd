@@ -54,13 +54,18 @@ slack_channel <- "#hackathon-04"
 
 ## The Plan
 
+```{css}
+section#the-plan li[data-fragment-index="3"] {
+  border-top: 1px solid #ccc;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+```
+
 ::: {.incremental}
 - **Now:** Quick Start course on LLMs. You will leave having used a Chat API.
 - **Next 48 hours:** Hack on stuff! Minimum four hours of effort. "Rules" on the next slide.
 - **Thursday:** Show & tell, share lessons learned, reflections.
-
----
-
 - **Post-hackathon:**
   - Keep hacking! (optional)
   - Think about how AI might apply to your team
