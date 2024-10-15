@@ -442,3 +442,11 @@ LLMs are good at generating unstructured output, but with a little effort, you c
 - **LangChain:** Has its own [abstractions](https://python.langchain.com/docs/how_to/#output-parsers) for parsing unstructured output
 
 Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Claude to make an example.)
+
+# Brainstorming
+
+## Past cohort projects
+
+- [Cohort 1](https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing)
+- [Cohort 2](https://docs.google.com/presentation/d/1j15NfbrRDfHIbnO7Jt3gS63CafArboe70AUJw4hFn8E/edit?usp=sharing)
+- [Cohort 3](https://docs.google.com/presentation/d/1NmgeTgzs31r8g8-b2liOzKXDmYU_iXSIA8Ih8Z4ZzMM/edit?usp=sharing)
