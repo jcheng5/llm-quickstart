@@ -450,3 +450,8 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 - [Cohort 1](https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing)
 - [Cohort 2](https://docs.google.com/presentation/d/1j15NfbrRDfHIbnO7Jt3gS63CafArboe70AUJw4hFn8E/edit?usp=sharing)
 - [Cohort 3](https://docs.google.com/presentation/d/1NmgeTgzs31r8g8-b2liOzKXDmYU_iXSIA8Ih8Z4ZzMM/edit?usp=sharing)
+
+## Interesting tools that don't require coding
+
+- [Google NotebookLM](https://notebooklm.google/)
+- [Claude Projects](https://claude.ai/projects) (requires Claude subscription)
