@@ -33,7 +33,7 @@ slack_channel <- "#hackathon-04"
 - Hannah Frick
 - Matt Lands
 - Rachael Dempsey
-- Taylor Steinberg
+- Taylor Hoover
 :::
 ::: {.column width="50%"}
 **Organizers:**
