@@ -10,10 +10,14 @@ editor:
   render-on-save: true
 ---
 
+```{r include=FALSE}
+slack_channel <- "#hackathon-04"
+```
+
 # Setup {.smaller}
 
 - Clone https://github.com/jcheng5/llm-quickstart
-- Grab your OpenAI API key; see the thread in `#hackathon-03`
+- Grab your OpenAI API key; see the thread in <code>`r slack_channel`</code>
 
 - For R
   - `pak::pak(c("hadley/elmer", "jcheng5/shinychat", "dotenv"))`
@@ -346,4 +350,4 @@ LLMs are good at generating unstructured output, but with a little effort, you c
 - **Tool calling:** Create a tool to receive your output, e.g., `set_result(object)`, where its implementation sets some variable. (Works great for elmer.)
 - **LangChain:** Has its own [abstractions](https://python.langchain.com/docs/how_to/#output-parsers) for parsing unstructured output
 
-Ask `#hackathon-03` for help if you're stuck! (Or ask ChatGPT/Claude to make an example.)
+Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Claude to make an example.)
