@@ -30,7 +30,6 @@ slack_channel <- "#hackathon-04"
 - Alex Chisholm
 - Brookelynn Ritter
 - Clay Raynor
-- Gordon Woodhull
 - Hannah Frick
 - Matt Lands
 - Rachael Dempsey
