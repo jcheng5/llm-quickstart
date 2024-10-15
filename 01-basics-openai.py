@@ -43,5 +43,5 @@ response2 = client.chat.completions.create(
 )
 
 for chunk in response2:
-    print(chunk.choices[0].delta.content, end="", flush=True)
+    print(chunk.choices[0].delta.content or "", end="", flush=True)
 print()
