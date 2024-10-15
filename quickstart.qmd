@@ -406,11 +406,18 @@ Assistant response:
 
 ## Fine tuning
 
-- Train an existing model with new information
+- Update weights for an existing model with new information
 - Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)
 - Data must be provided in chat conversation format, with query and response
   - Can't just feed it documents -- this makes fine-tuning more difficult in practice
 - Supposedly not very effective unless you have a lot of training data
+
+
+## More on prompting, RAG, fine tuning
+
+- Try prompting first, before RAG and fine tuning.
+- OpenAI's [prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [Fine-tuning vs. RAG article](https://finetunedb.com/blog/fine-tuning-vs-rag/)
 
 ## Using posit.cloud
 
