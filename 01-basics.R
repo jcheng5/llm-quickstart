@@ -2,9 +2,9 @@ library(dotenv) # Will read OPENAI_API_KEY from .env file
 library(elmer)
 
 chat <- chat_openai(
-    model = "gpt-4o-mini",
-    system_prompt = "You are a terse assistant.",
-    echo = TRUE # Should chat responses be logged to stdout?
+  model = "gpt-4o-mini",
+  system_prompt = "You are a terse assistant.",
+  echo = TRUE # Should chat responses be logged to stdout?
 )
 chat$chat("What is the capital of the moon?")
 

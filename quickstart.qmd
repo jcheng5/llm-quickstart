@@ -156,7 +156,8 @@ curl https://api.openai.com/v1/chat/completions \
 
 - R:
   - `hadley/elmer` high-level, easy, much less ambitious than langchain
-    - OpenAI only for now, but Anthropic and Google coming soon
+    - OpenAI, Anthropic, Google are well supported
+    - Several other providers are supported but may not be as well tested
 - Python:
   - `openai` - low-level, but solid
   - `langchain` - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
