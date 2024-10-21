@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-10-15 – Cohort 4"
+subtitle: "2024-10-22 – Cohort 5"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-04"
+slack_channel <- "#hackathon-05"
 ```
 
 # Welcome
@@ -27,13 +27,13 @@ slack_channel <- "#hackathon-04"
 ::: {.column width="50%"}
 **Participants:**
 
-- Alex Chisholm
-- Brookelynn Ritter
-- Clay Raynor
-- Hannah Frick
-- Matt Lands
-- Rachael Dempsey
-- Taylor Hoover
+- Gordon Woodhull
+- Jeremy Allen
+- Karan Gathani
+- Kyle Hekhuis
+- Neal Richardson
+- Randy Zwitch
+- Sam Edwardes
 :::
 ::: {.column width="50%"}
 **Organizers:**
@@ -48,8 +48,7 @@ slack_channel <- "#hackathon-04"
 
 - What do you do at Posit?
 - How have you used LLMs/AI tools up until now?
-- What was your skepticism/enthusiasm score (1 to 5)?
-- In one or two sentences, how do you feel about AI?
+- What is your skepticism/enthusiasm score (1 to 5)?
 
 ## The Plan
 

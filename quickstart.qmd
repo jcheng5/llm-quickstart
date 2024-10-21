@@ -11,7 +11,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-04"
+slack_channel <- "#hackathon-05"
 ```
 
 # Setup {.smaller}
@@ -149,7 +149,7 @@ curl https://api.openai.com/v1/chat/completions \
   - 4K video frame at full res → 6885 tokens
 - Important for:
   - Model input/output limits
-  - API pricing is usually by token (e.g. [OpenAI pricing](https://openai.com/api/pricing/))
+  - API pricing is usually by token (see [calculator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator))
 :::
 
 # Choose a Package {.smaller}
