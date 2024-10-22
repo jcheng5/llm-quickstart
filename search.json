@@ -60,7 +60,7 @@
     "href": "quickstart.html#tokens",
     "title": "LLM Quick Start",
     "section": "Tokens",
-    "text": "Tokens\n\n\nFundamental units of text for LLMs\nWords, parts of words, or individual characters\n\n“hello” → 1 token\n“unconventional” → 3 tokens: un|con|ventional\n4K video frame at full res → 6885 tokens\n\nImportant for:\n\nModel input/output limits\nAPI pricing is usually by token (see calculator)"
+    "text": "Tokens\n\n\nFundamental units of information for LLMs\nWords, parts of words, or individual characters\n\n“hello” → 1 token\n“unconventional” → 3 tokens: un|con|ventional\n4K video frame at full res → 6885 tokens\n\nImportant for:\n\nModel input/output limits\nAPI pricing is usually by token (see calculator)"
   },
   {
     "objectID": "quickstart.html#instructions",
@@ -235,7 +235,7 @@
     "href": "quickstart.html#past-cohort-projects",
     "title": "LLM Quick Start",
     "section": "Past cohort projects",
-    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3"
+    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4"
   },
   {
     "objectID": "quickstart.html#interesting-tools-that-dont-require-coding",
