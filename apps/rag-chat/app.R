@@ -31,7 +31,7 @@ retrieve_docs <- function(query) {
   content <- resp_body_json(response)
 
   # The `content` object will contain a list of lists. Each of the inner lists
-  # has a strructure like this:
+  # has a structure like this:
   #  $ :List of 5
   #   ..$ page    :List of 10
   #   .. ..$ id         : chr "pag_jWwa7m9AKE7mYP"
