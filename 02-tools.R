@@ -20,8 +20,7 @@ play_sound <- function(sound = c("correct", "incorrect", "you-win")) {
 
 chat <- chat_openai(
   model = "gpt-4o",
-  system_prompt = paste(collapse = "\n", readLines("02-tools-prompt.md")),
-  echo = TRUE # Should chat responses be logged to stdout?
+  system_prompt = paste(collapse = "\n", readLines("02-tools-prompt.md", warn = FALSE))
 )
 
 # Give the chatbot the ability to play a sound.
