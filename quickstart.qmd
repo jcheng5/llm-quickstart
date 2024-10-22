@@ -142,7 +142,7 @@ curl https://api.openai.com/v1/chat/completions \
 ## Tokens
 
 ::: {.incremental}
-- Fundamental units of text for LLMs
+- Fundamental units of information for LLMs
 - Words, parts of words, or individual characters
   - "hello" → 1 token
   - "unconventional" → 3 tokens: `un|con|ventional`
