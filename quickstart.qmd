@@ -242,8 +242,8 @@ Another way to think of it:
 Take a minute to look at _one of_ the following docs. See if you can get them to run, and try to understand the code.
 
 - R: [`elmer` docs](https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
-- Python: [`openai` docs](https://platform.openai.com/docs/guides/function-calling) (tedious, low-level, but understandable)
-- Python: [`langchain` docs](https://python.langchain.com/docs/how_to/tool_results_pass_to_model/) (not bad)
+- Python: [`openai` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-openai.py) (tedious, low-level, but understandable)
+- Python: [`langchain` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-langchain.py/) (not bad)
 
 
 # Choosing a model
