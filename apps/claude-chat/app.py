@@ -25,7 +25,7 @@ async def _():
         token_limits=(200000, 8192),
     )
     response = await llm.messages.create(
-        model="claude-3-5-sonnet-20240620",
+        model="claude-3-5-sonnet-20241022",
         system=system_prompt,
         messages=messages,
         stream=True,
