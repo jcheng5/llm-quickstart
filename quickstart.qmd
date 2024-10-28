@@ -162,6 +162,7 @@ curl https://api.openai.com/v1/chat/completions \
   - `openai` - low-level, but solid
   - `langchain` - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
     - Evolved from v0.1, v0.2, and now `langgraph`
+  - `chatlas` - high-level, basically a port of R's `elmer`
   - Many, many other options are available
 
 # Your Turn
@@ -173,6 +174,7 @@ Open and run one of these options:
 - `01-basics.R`
 - `01-basics-openai.py` (low level library)
 - `01-basics-langchain.py` (high level framework)
+- `01-basics-chatlas.py` (high level framework, similar to R)
 
 If it errors, now is the time to debug.
 
@@ -243,7 +245,8 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 - R: [`elmer` docs](https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
 - Python: [`openai` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-openai.py) (tedious, low-level, but understandable)
-- Python: [`langchain` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-langchain.py/) (not bad)
+- Python: [`langchain` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-langchain.py) (not bad)
+- Python: [`chatlas` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-chatlas.py) (easy, like `elmer`)
 
 
 # Choosing a model
