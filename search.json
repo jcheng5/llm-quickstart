@@ -67,7 +67,7 @@
     "href": "quickstart.html#instructions",
     "title": "LLM Quick Start",
     "section": "Instructions",
-    "text": "Instructions\nOpen and run one of these options:\n\n01-basics.R\n01-basics-openai.py (low level library)\n01-basics-langchain.py (high level framework)\n\nIf it errors, now is the time to debug.\nIf it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through."
+    "text": "Instructions\nOpen and run one of these options:\n\n01-basics.R\n01-basics-openai.py (low level library)\n01-basics-langchain.py (high level framework)\n01-basics-chatlas.py (high level framework, similar to R)\n\nIf it errors, now is the time to debug.\nIf it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through."
   },
   {
     "objectID": "quickstart.html#summary",
@@ -228,14 +228,14 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-05 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-06 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#past-cohort-projects",
     "href": "quickstart.html#past-cohort-projects",
     "title": "LLM Quick Start",
     "section": "Past cohort projects",
-    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4"
+    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4\nCohort 5"
   },
   {
     "objectID": "quickstart.html#interesting-tools-that-dont-require-coding",
@@ -249,7 +249,7 @@
     "href": "intro.html#whos-here",
     "title": "AI Hackathon",
     "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nGordon Woodhull\nJeremy Allen\nKaran Gathani\nKyle Hekhuis\nNeal Richardson\nRandy Zwitch\nSam Edwardes\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+    "text": "Who’s Here\n\n\nParticipants:\n\nAsh Allen\nEmily Nimsakont\nGraham Held\nTim Margheim\nJordan Jensen\nMichael Beigelmacher\nPatrick Alston\nJames Blair\nKatie Masiello\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
   },
   {
     "objectID": "intro.html#your-turn",
@@ -298,7 +298,7 @@
     "href": "intro.html#a-caveat-from-it",
     "title": "AI Hackathon",
     "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-05 if you need help setting up a local model."
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-06 if you need help setting up a local model."
   },
   {
     "objectID": "02-tools-prompt.html",
