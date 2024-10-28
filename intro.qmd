@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-10-22 – Cohort 5"
+subtitle: "2024-10-29 – Cohort 6"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-05"
+slack_channel <- "#hackathon-06"
 ```
 
 # Welcome
@@ -27,13 +27,15 @@ slack_channel <- "#hackathon-05"
 ::: {.column width="50%"}
 **Participants:**
 
-- Gordon Woodhull
-- Jeremy Allen
-- Karan Gathani
-- Kyle Hekhuis
-- Neal Richardson
-- Randy Zwitch
-- Sam Edwardes
+- Ash Allen
+- Emily Nimsakont
+- Graham Held
+- Tim Margheim
+- Jordan Jensen
+- Michael Beigelmacher
+- Patrick Alston
+- James Blair
+- Katie Masiello
 :::
 ::: {.column width="50%"}
 **Organizers:**
