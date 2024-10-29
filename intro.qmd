@@ -33,7 +33,7 @@ slack_channel <- "#hackathon-06"
 - Tim Margheim
 - Jordan Jensen
 - Michael Beigelmacher
-- Patrick Alston
+- Nick Strayer
 - James Blair
 - Katie Masiello
 :::
