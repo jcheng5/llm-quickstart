@@ -416,6 +416,10 @@ Assistant response:
   - Can't just feed it documents -- this makes fine-tuning more difficult in practice
 - Supposedly not very effective unless you have a lot of training data
 
+##
+
+![](prompt-rag-finetune.png)
+
 
 ## More on prompting, RAG, fine tuning
 
