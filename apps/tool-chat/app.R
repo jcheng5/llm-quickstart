@@ -17,75 +17,53 @@ server <- function(input, output, session) {
     system_prompt = system_prompt
   )
 
-  chat$register_tool(ToolDef(
-    fun = convert_length,
-    name = "convert_length",
-    description = "Converts a length from one unit to another.",
-    arguments = list(
-      value = ToolArg(
-        type = "number",
-        description = "The numerical value of the length to be converted."
-      ),
-      from_unit = ToolArg(
-        type = "string",
-        description = "input unit (meters, kilometers, miles, feet, inches, centimeters)."
-      ),
-      to_unit = ToolArg(
-        type = "string",
-        description = "output unit (meters, kilometers, miles, feet, inches, centimeters)."
-      )
+  chat$register_tool(tool(
+    convert_length,
+    "Converts a length from one unit to another.",
+    value = type_number(
+      "The numerical value of the length to be converted."
+    ),
+    from_unit = type_string(
+      "input unit (meters, kilometers, miles, feet, inches, centimeters)."
+    ),
+    to_unit = type_string(
+      "output unit (meters, kilometers, miles, feet, inches, centimeters)."
     )
   ))
 
-  chat$register_tool(ToolDef(
-    fun = convert_mass,
-    name = "convert_mass",
-    description = "Converts a mass from one unit to another.",
-    arguments = list(
-      value = ToolArg(
-        type = "number",
-        description = "The numerical value of the mass to be converted."
-      ),
-      from_unit = ToolArg(
-        type = "string",
-        description = "input unit (grams, kilograms, pounds, ounces)."
-      ),
-      to_unit = ToolArg(
-        type = "string",
-        description = "output unit (grams, kilograms, pounds, ounces)."
-      )
+  chat$register_tool(tool(
+    convert_mass,
+    "Converts a mass from one unit to another.",
+    value = type_number(
+      "The numerical value of the mass to be converted."
+    ),
+    from_unit = type_string(
+      "input unit (grams, kilograms, pounds, ounces)."
+    ),
+    to_unit = type_string(
+      "output unit (grams, kilograms, pounds, ounces)."
     )
   ))
 
-  chat$register_tool(ToolDef(
-    fun = add,
-    name = "add",
-    description = "Calculates the sum of two numbers.",
-    arguments = list(
-      x = ToolArg(
-        type = "number",
-        description = "The first number to be added."
-      ),
-      y = ToolArg(
-        type = "number",
-        description = "The second number to be added."
-      )
+  chat$register_tool(tool(
+    add,
+    "Calculates the sum of two numbers.",
+    x = type_number(
+      "The first number to be added."
+    ),
+    y = type_number(
+      "The second number to be added."
     )
   ))
 
-  chat$register_tool(ToolDef(
-    fun = multiply,
-    name = "multiply",
-    description = "Calculates the product of two numbers.",
-    arguments = list(
-      x = ToolArg(
-        type = "number",
-        description = "The first number to be multiplied."
-      ),
-      y = ToolArg(
-        type = "number",
-        description = "The second number to be multiplied."
-      )
+  chat$register_tool(tool(
+    multiply,
+    "Calculates the product of two numbers.",
+    x = type_number(
+      "The first number to be multiplied."
+    ),
+    y = type_number(
+      "The second number to be multiplied."
     )
   ))
 

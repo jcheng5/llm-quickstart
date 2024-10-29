@@ -30,12 +30,11 @@ slack_channel <- "#hackathon-06"
 - Ash Allen
 - Emily Nimsakont
 - Graham Held
-- Tim Margheim
+- James Blair
 - Jordan Jensen
 - Michael Beigelmacher
 - Nick Strayer
-- James Blair
-- Katie Masiello
+- Tim Margheim
 :::
 ::: {.column width="50%"}
 **Organizers:**
