@@ -1,6 +1,6 @@
 import requests
-from dotenv import load_dotenv
 from chatlas import ChatOpenAI
+from dotenv import load_dotenv
 
 load_dotenv()  # Loads OPENAI_API_KEY from the .env file
 

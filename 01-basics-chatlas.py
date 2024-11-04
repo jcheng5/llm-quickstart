@@ -11,12 +11,13 @@
 # https://github.com/hadley/elmer/
 # -----------------------------------------------------------
 
-from dotenv import load_dotenv
 from chatlas import ChatOpenAI
+from dotenv import load_dotenv
 
 load_dotenv()  # Loads OPENAI_API_KEY from the .env file
 
 chat = ChatOpenAI(
+  model="gpt-4o-mini",
   system_prompt="You are a terse assistant."
 )
 
