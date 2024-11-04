@@ -272,10 +272,10 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 ## Llama models
 
 - Open weights: you can download the model
-- Can run locally, for example with ollama
+- Can run locally, for example with [Ollama](https://ollama.com/)
 - **Llama 3.1 405b**: text, 229GB
-- **Llama 3.2 90b**: vision + text, 50GB
-- **Llama 3.2 11b**: vision + text, 6GB (can run comfortably on Macbook Pro)
+- **Llama 3.1 80b**: text, 40GB
+- **Llama 3.1 8b**: text, 4.7GB (can run comfortably on Macbook Pro)
 - **Llama 3.2 3b**: text, 2GB
 - **Llama 3.2 1b**: text, 0.8GB
 - Can also access these models via API with Groq, Openrouter, Hugging Face
@@ -291,22 +291,17 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
   - Retrieval-Augmented Generation
   - Fine tuning
 
-## Prompt Engineering
-
-- Directing behavior/output
-- Adding context/knowledge
-
-## Directing behavior/output
+## Prompt engineering: Directing behavior/output
 
 - "Respond with just the minimal information necessary."
-- "Explain your responses in detail."
+- "Explain your response in detail."
 - "Think through this step-by-step."
 - "Carefully read and follow these instructions..."
 - "If the user asks a question related to data processing, produce R code to accomplish that task."
 - "Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so."
 
 
-## Using examples to guide behavior
+## Prompt engineering: Using examples to guide behavior
 
 - **Goal:** Extract ingredient list from recipe and return in a structured format.
 
