@@ -158,6 +158,7 @@ curl https://api.openai.com/v1/chat/completions \
   - `hadley/elmer` high-level, easy, much less ambitious than langchain
     - OpenAI, Anthropic, Google are well supported
     - Several other providers are supported but may not be as well tested
+    - Get help from [Elmer Assistant](https://jcheng.shinyapps.io/elmer-assistant/)
 - Python:
   - `openai` - low-level, but solid
   - `langchain` - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
@@ -194,7 +195,7 @@ If it works, study the code and try to understand how it maps to the low-level H
   [https://github.com/jcheng5/shinychat](https://github.com/jcheng5/shinychat)
 
 - Designed to be used with elmer
-- The [elmer assistant](https://jcheng.shinyapps.io/elmer-assistant) is quite good for getting started
+- [Elmer Assistant](https://jcheng.shinyapps.io/elmer-assistant) is quite good for getting started
 
 ## Shiny for Python
 
