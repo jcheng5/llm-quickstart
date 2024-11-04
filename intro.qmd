@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-10-29 – Cohort 6"
+subtitle: "2024-11-04 – Cohort 7"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-06"
+slack_channel <- "#hackathon-07"
 ```
 
 # Welcome
@@ -27,14 +27,12 @@ slack_channel <- "#hackathon-06"
 ::: {.column width="50%"}
 **Participants:**
 
-- Ash Allen
-- Emily Nimsakont
-- Graham Held
-- James Blair
-- Jordan Jensen
-- Michael Beigelmacher
-- Nick Strayer
-- Tim Margheim
+- Aron Atkins
+- Daniel Chen
+- Ferit Albukrek
+- Jimmy Lubega
+- Patrick Alston
+- Veronica Clarke
 :::
 ::: {.column width="50%"}
 **Organizers:**
