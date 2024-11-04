@@ -278,7 +278,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Llama 3.1 8b**: text, 4.7GB (can run comfortably on Macbook Pro)
 - **Llama 3.2 3b**: text, 2GB
 - **Llama 3.2 1b**: text, 0.8GB
-- Can also access these models via API with Groq, Openrouter, Hugging Face
+- Can also access these models via API with [Openrouter](https://openrouter.ai/), [Groq](https://groq.com/), [Hugging Face](https://huggingface.co/docs/api-inference/en/index)
 
 
 # Customizing behavior and adding knowledge
@@ -407,7 +407,7 @@ Assistant response:
 ## Fine tuning
 
 - Update weights for an existing model with new information
-- Not all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)
+- Not all models can be fine-tuned
 - Data must be provided in chat conversation format, with query and response
   - Can't just feed it documents -- this makes fine-tuning more difficult in practice
 - Supposedly not very effective unless you have a lot of training data
