@@ -267,7 +267,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 ## Anthropic models
 
 - **Claude 3.5 Sonnet**: best model for code generation
-- Comparison: <https://context.ai/compare/gpt-4o/claude-3-5-sonnet>
+- **Claude 3.5 Haiku**: faster, cheaper (and dumber) than Sonnet
 
 ## Llama models
 
