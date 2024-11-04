@@ -3,3 +3,4 @@ python-dotenv
 langchain
 langchain-openai
 requests
+chatlas @ git+https://github.com/posit-dev/chatlas
