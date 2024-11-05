@@ -28,4 +28,4 @@ get_structured_response <- function(prompt) {
 
 # Example usage
 result <- get_structured_response("Give me a list of 3 fruits with their colors")
-jsonlite::toJSON(result, auto_unbox = TRUE, pretty = TRUE)
+print(jsonlite::toJSON(result, auto_unbox = TRUE, pretty = TRUE))
