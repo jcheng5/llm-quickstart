@@ -1,3 +1,4 @@
+library(dotenv) # Will read OPENAI_API_KEY from .env file
 library(elmer)
 library(shiny)
 library(shinychat)
