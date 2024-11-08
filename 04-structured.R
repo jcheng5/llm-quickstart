@@ -14,7 +14,7 @@ fruit_schema <- type_object(
 
 # Create a chat object with a specific system prompt
 chat <- chat_openai(
-  model = "gpt-4o-mini",
+  model = "gpt-4o",
   system_prompt = "You are a helpful assistant. Always respond in valid JSON format."
 )
 

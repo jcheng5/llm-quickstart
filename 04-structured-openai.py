@@ -32,7 +32,7 @@ schema = {
 
 def get_structured_response(prompt):
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[
             {
                 "role": "system",
