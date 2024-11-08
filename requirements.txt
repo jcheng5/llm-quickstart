@@ -2,5 +2,7 @@ openai
 python-dotenv
 langchain
 langchain-openai
+langchain-anthropic
+langgraph
 requests
 chatlas @ git+https://github.com/cpsievert/chatlas
