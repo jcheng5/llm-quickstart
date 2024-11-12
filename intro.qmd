@@ -108,10 +108,11 @@ section#the-plan li[data-fragment-index="3"] {
 
 ## A Caveat From IT
 
-No _proprietary_ code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)
+No _proprietary_ code or data is allowed to be sent to any LLM service, with the below exceptions.
 
-- Sending open source code to these services is fine though.
-
-- Sending proprietary code/data to _local_ models is also fine. Ask in <code>`r slack_channel`</code> if you need help setting up a local model.
+- Google NotebookLM is allowed.
+- AWS Bedrock is allowed, and it has Anthropic models. We can help you set this up.
+- Running any local model is allowed, we can help you with this as well.
+- Sending open source code to any service is allowed.
 
 # Next: [Quick Start](quickstart.qmd)

@@ -244,10 +244,11 @@ Another way to think of it:
 
 Take a minute to look at _one of_ the following docs. See if you can get them to run, and try to understand the code.
 
-- R: [`elmer` docs](https://github.com/hadley/elmer?tab=readme-ov-file#tool-calling-aka-function-calling) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
-- Python: [`openai` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-openai.py) (tedious, low-level, but understandable)
-- Python: [`langchain` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-langchain.py) (not bad)
-- Python: [`chatlas` example](https://github.com/jcheng5/llm-quickstart/blob/main/02-tools-chatlas.py) (easy, like `elmer`)
+- R: [`elmer` docs](https://elmer.tidyverse.org/articles/tool-calling.html) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
+- Python
+  - `openai` example: `02-tools-openai.py` (tedious, low-level, but understandable)
+  - `langchain` example: `02-tools-langchain.py` (not bad)
+  - `chatlas` example: `02-tools-chatlas.py` (easy, like `elmer`)
 
 
 # Choosing a model
@@ -446,6 +447,15 @@ LLMs are good at generating unstructured output, but with a little effort, you c
 - **LangChain:** Has its own [abstractions](https://python.langchain.com/docs/how_to/#output-parsers) for parsing unstructured output
 
 Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Claude to make an example.)
+
+# Vision
+
+## Using images as input
+
+- Modern models are pretty good at this
+- Can understand both photographs and plots
+- Examples for R and Chatlas are in your repo as `05-vision*`
+- See docs for [LangChain multimodal](https://python.langchain.com/docs/how_to/multimodal_inputs/), [OpenAI vision](https://platform.openai.com/docs/guides/vision)
 
 # Brainstorming
 
