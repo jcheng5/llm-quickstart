@@ -224,6 +224,13 @@
     "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-08 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
+    "objectID": "quickstart.html#using-images-as-input",
+    "href": "quickstart.html#using-images-as-input",
+    "title": "LLM Quick Start",
+    "section": "Using images as input",
+    "text": "Using images as input\n\nModern models are pretty good at this\nCan understand both photographs and plots\nExamples for R and Chatlas are in your repo as 05-vision*\nSee docs for LangChain multimodal, OpenAI vision"
+  },
+  {
     "objectID": "quickstart.html#past-cohort-projects",
     "href": "quickstart.html#past-cohort-projects",
     "title": "LLM Quick Start",
@@ -291,7 +298,7 @@
     "href": "intro.html#a-caveat-from-it",
     "title": "AI Hackathon",
     "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-08 if you need help setting up a local model."
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. We can help you set this up.\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
   },
   {
     "objectID": "02-tools-prompt.html",
