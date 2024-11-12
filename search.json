@@ -1,80 +1,10 @@
 [
   {
-    "objectID": "llm-chat/basic-chat/prompt.html",
-    "href": "llm-chat/basic-chat/prompt.html",
+    "objectID": "apps/tool-chat/prompt.html",
+    "href": "apps/tool-chat/prompt.html",
     "title": "",
     "section": "",
-    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
-  },
-  {
-    "objectID": "apps/basic-chat/prompt.html",
-    "href": "apps/basic-chat/prompt.html",
-    "title": "",
-    "section": "",
-    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
-  },
-  {
-    "objectID": "02-tools-prompt.html",
-    "href": "02-tools-prompt.html",
-    "title": "",
-    "section": "",
-    "text": "You’re hosting a quiz game show.\n\nBefore you start, ask the user to choose a theme.\nAsk simple questions and ask the user to answer them via multiple choice.\nAfter the user answers, provide feedback and then move on to the next question.\nAfter every 5 questions, declare the user to be a winner regardless of their score, lavish them with praise, and start the game over.\nPlay sound effects for each answer, and when the user ‘wins’.\nEmojis are fun, use them liberally!\n\nExample:\n&lt;Assistant&gt;\n  **Question 3:** What is the center of an atom called?\n\n  A) Electron\n  B) Proton\n  C) Neutron\n  D) Nucleus\n\n  Your answer?\n&lt;/Assistant&gt;\n&lt;User&gt;\n  D\n&lt;/User&gt;\n&lt;Assistant&gt;\n  &lt;ToolCall&gt;\n    {\n      id: \"call_1551214\",\n      function: {\n        arguments: \"{sound: 'correct'}\",\n        name: \"play_sound\"\n      },\n      type: \"function\"\n    }\n  &lt;/ToolCall&gt;\n&lt;/Assistant&gt;\n&lt;User&gt;\n  &lt;ToolResponse&gt;\n    {\n      id: \"call_1551214\",\n      result: {\n        success: true,\n        value: null\n      }\n    }\n  &lt;/ToolResponse&gt;\n&lt;/User&gt;\n&lt;Assistant&gt;\n  Correct! The nucleus is the center of an atom.\n\n  **Question 4:** ...\n&lt;/Assistant&gt;\""
-  },
-  {
-    "objectID": "intro.html#whos-here",
-    "href": "intro.html#whos-here",
-    "title": "AI Hackathon",
-    "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nAron Atkins\nDaniel Chen\nFerit Albukrek\nJimmy Lubega\nPatrick Alston\nVeronica Clarke\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
-  },
-  {
-    "objectID": "intro.html#your-turn",
-    "href": "intro.html#your-turn",
-    "title": "AI Hackathon",
-    "section": "Your Turn",
-    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat is your skepticism/enthusiasm score (1 to 5)?"
-  },
-  {
-    "objectID": "intro.html#the-plan",
-    "href": "intro.html#the-plan",
-    "title": "AI Hackathon",
-    "section": "The Plan",
-    "text": "The Plan\n\n\n\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\nThursday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff",
-    "href": "intro.html#hack-on-stuff",
-    "title": "AI Hackathon",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff-1",
-    "href": "intro.html#hack-on-stuff-1",
-    "title": "AI Hackathon",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
-  },
-  {
-    "objectID": "intro.html#not-a-contest",
-    "href": "intro.html#not-a-contest",
-    "title": "AI Hackathon",
-    "section": "Not a contest",
-    "text": "Not a contest\n\nThis is not a competition. There are no prizes, no judging.\nEveryone is coming from different backgrounds and has different levels of experience with AI, with coding, etc.\nThe goal is to learn, to have fun, and to engage with the technology—and share what you learned with others (and not just within this cohort)."
-  },
-  {
-    "objectID": "intro.html#let-it-rip",
-    "href": "intro.html#let-it-rip",
-    "title": "AI Hackathon",
-    "section": "Let It Rip",
-    "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
-  },
-  {
-    "objectID": "intro.html#a-caveat-from-it",
-    "href": "intro.html#a-caveat-from-it",
-    "title": "AI Hackathon",
-    "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-07 if you need help setting up a local model."
+    "text": "You are an assistant which can convert units and perform basic arithmetic with units."
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -200,14 +130,14 @@
     "href": "quickstart.html#anthropic-models",
     "title": "LLM Quick Start",
     "section": "Anthropic models",
-    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nComparison: https://context.ai/compare/gpt-4o/claude-3-5-sonnet"
+    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nClaude 3.5 Haiku: faster, cheaper (and dumber) than Sonnet"
   },
   {
     "objectID": "quickstart.html#llama-models",
     "href": "quickstart.html#llama-models",
     "title": "LLM Quick Start",
     "section": "Llama models",
-    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with Ollama\nLlama 3.1 405b: text, 229GB\nLlama 3.1 80b: text, 40GB\nLlama 3.1 8b: text, 4.7GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.2 1b: text, 0.8GB\nCan also access these models via API with Groq, Openrouter, Hugging Face"
+    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with Ollama\nLlama 3.1 405b: text, 229GB\nLlama 3.1 80b: text, 40GB\nLlama 3.1 8b: text, 4.7GB (can run comfortably on Macbook Pro)\nLlama 3.2 3b: text, 2GB\nLlama 3.2 1b: text, 0.8GB\nCan also access these models via API with Openrouter, Groq, Hugging Face"
   },
   {
     "objectID": "quickstart.html#prompt-engineering-directing-behavioroutput",
@@ -263,7 +193,7 @@
     "href": "quickstart.html#fine-tuning",
     "title": "LLM Quick Start",
     "section": "Fine tuning",
-    "text": "Fine tuning\n\nUpdate weights for an existing model with new information\nNot all models can be fine-tuned via API (Claude 3.5 Sonnet cannot)\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
+    "text": "Fine tuning\n\nUpdate weights for an existing model with new information\nNot all models can be fine-tuned\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
   },
   {
     "objectID": "quickstart.html#more-on-prompting-rag-fine-tuning",
@@ -291,7 +221,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-07 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-08 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#past-cohort-projects",
@@ -308,10 +238,73 @@
     "text": "Interesting tools that don’t require coding\n\nGoogle NotebookLM\nClaude Projects (requires Claude subscription)"
   },
   {
-    "objectID": "apps/tool-chat/prompt.html",
-    "href": "apps/tool-chat/prompt.html",
+    "objectID": "intro.html#whos-here",
+    "href": "intro.html#whos-here",
+    "title": "AI Hackathon",
+    "section": "Who’s Here",
+    "text": "Who’s Here\n\n\nParticipants:\n\nBrian Deitte\nCraig Manning\nGreg Swinehart\nHeath Young\nKevin Gartland\nMichael Chow\nSam Perman\nShannon Hagerty\nToph Allen\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+  },
+  {
+    "objectID": "intro.html#your-turn",
+    "href": "intro.html#your-turn",
+    "title": "AI Hackathon",
+    "section": "Your Turn",
+    "text": "Your Turn\n\nWhat do you do at Posit?\nHow have you used LLMs/AI tools up until now?\nWhat is your skepticism/enthusiasm score (1 to 5)?"
+  },
+  {
+    "objectID": "intro.html#the-plan",
+    "href": "intro.html#the-plan",
+    "title": "AI Hackathon",
+    "section": "The Plan",
+    "text": "The Plan\n\n\n\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\nThursday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff",
+    "href": "intro.html#hack-on-stuff",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff-1",
+    "href": "intro.html#hack-on-stuff-1",
+    "title": "AI Hackathon",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+  },
+  {
+    "objectID": "intro.html#not-a-contest",
+    "href": "intro.html#not-a-contest",
+    "title": "AI Hackathon",
+    "section": "Not a contest",
+    "text": "Not a contest\n\nThis is not a competition. There are no prizes, no judging.\nEveryone is coming from different backgrounds and has different levels of experience with AI, with coding, etc.\nThe goal is to learn, to have fun, and to engage with the technology—and share what you learned with others (and not just within this cohort)."
+  },
+  {
+    "objectID": "intro.html#let-it-rip",
+    "href": "intro.html#let-it-rip",
+    "title": "AI Hackathon",
+    "section": "Let It Rip",
+    "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
+  },
+  {
+    "objectID": "intro.html#a-caveat-from-it",
+    "href": "intro.html#a-caveat-from-it",
+    "title": "AI Hackathon",
+    "section": "A Caveat From IT",
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service (except Copilot), for now. (Pending IT/legal review.)\n\nSending open source code to these services is fine though.\nSending proprietary code/data to local models is also fine. Ask in #hackathon-08 if you need help setting up a local model."
+  },
+  {
+    "objectID": "02-tools-prompt.html",
+    "href": "02-tools-prompt.html",
     "title": "",
     "section": "",
-    "text": "You are an assistant which can convert units and perform basic arithmetic with units."
+    "text": "You’re hosting a quiz game show.\n\nBefore you start, ask the user to choose a theme.\nAsk simple questions and ask the user to answer them via multiple choice.\nAfter the user answers, provide feedback and then move on to the next question.\nAfter every 5 questions, declare the user to be a winner regardless of their score, lavish them with praise, and start the game over.\nPlay sound effects for each answer, and when the user ‘wins’.\nEmojis are fun, use them liberally!\n\nExample:\n&lt;Assistant&gt;\n  **Question 3:** What is the center of an atom called?\n\n  A) Electron\n  B) Proton\n  C) Neutron\n  D) Nucleus\n\n  Your answer?\n&lt;/Assistant&gt;\n&lt;User&gt;\n  D\n&lt;/User&gt;\n&lt;Assistant&gt;\n  &lt;ToolCall&gt;\n    {\n      id: \"call_1551214\",\n      function: {\n        arguments: \"{sound: 'correct'}\",\n        name: \"play_sound\"\n      },\n      type: \"function\"\n    }\n  &lt;/ToolCall&gt;\n&lt;/Assistant&gt;\n&lt;User&gt;\n  &lt;ToolResponse&gt;\n    {\n      id: \"call_1551214\",\n      result: {\n        success: true,\n        value: null\n      }\n    }\n  &lt;/ToolResponse&gt;\n&lt;/User&gt;\n&lt;Assistant&gt;\n  Correct! The nucleus is the center of an atom.\n\n  **Question 4:** ...\n&lt;/Assistant&gt;\""
+  },
+  {
+    "objectID": "apps/basic-chat/prompt.html",
+    "href": "apps/basic-chat/prompt.html",
+    "title": "",
+    "section": "",
+    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
   }
 ]
