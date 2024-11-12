@@ -8,7 +8,10 @@ ui <- bslib::page_fluid(
 )
 
 server <- function(input, output, session) {
-  chat <- chat_openai(system_prompt = "You're a trickster who answers in riddles")
+  chat <- chat_openai(
+    model = "gpt-4o",
+    system_prompt = "You're a trickster who answers in riddles"
+  )
 
   observeEvent(input$chat_user_input, {
     stream <- chat$stream_async(input$chat_user_input)

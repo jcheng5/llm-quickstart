@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-11-04 – Cohort 7"
+subtitle: "2024-11-12 – Cohort 8"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-07"
+slack_channel <- "#hackathon-08"
 ```
 
 # Welcome
@@ -27,12 +27,15 @@ slack_channel <- "#hackathon-07"
 ::: {.column width="50%"}
 **Participants:**
 
-- Aron Atkins
-- Daniel Chen
-- Ferit Albukrek
-- Jimmy Lubega
-- Patrick Alston
-- Veronica Clarke
+- Brian Deitte
+- Craig Manning
+- Greg Swinehart
+- Heath Young
+- Kevin Gartland
+- Michael Chow
+- Sam Perman
+- Shannon Hagerty
+- Toph Allen
 :::
 ::: {.column width="50%"}
 **Organizers:**
