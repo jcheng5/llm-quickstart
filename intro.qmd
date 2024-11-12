@@ -33,6 +33,7 @@ slack_channel <- "#hackathon-08"
 - Heath Young
 - Kevin Gartland
 - Michael Chow
+- Ryan Johnson
 - Sam Perman
 - Shannon Hagerty
 - Toph Allen
