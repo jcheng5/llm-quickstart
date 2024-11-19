@@ -221,7 +221,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-08 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for elmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-09 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",
@@ -249,7 +249,7 @@
     "href": "intro.html#whos-here",
     "title": "AI Hackathon",
     "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nBrian Deitte\nCraig Manning\nGreg Swinehart\nHeath Young\nKevin Gartland\nMichael Chow\nRyan Johnson\nSam Perman\nShannon Hagerty\nToph Allen\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+    "text": "Who’s Here\n\n\nParticipants:\n\nBarret Schloerke\nBrian Tackett\nBruno Trimouille\nDavid Aja\nGarrick Aden-Buie\nIbi Togun\nIngrid Rodriguez\nJason Milnes\nMel Gregory\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
   },
   {
     "objectID": "intro.html#your-turn",
