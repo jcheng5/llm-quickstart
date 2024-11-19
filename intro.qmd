@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-11-12 – Cohort 8"
+subtitle: "2024-11-19 – Cohort 9"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-08"
+slack_channel <- "#hackathon-09"
 ```
 
 # Welcome
@@ -27,16 +27,15 @@ slack_channel <- "#hackathon-08"
 ::: {.column width="50%"}
 **Participants:**
 
-- Brian Deitte
-- Craig Manning
-- Greg Swinehart
-- Heath Young
-- Kevin Gartland
-- Michael Chow
-- Ryan Johnson
-- Sam Perman
-- Shannon Hagerty
-- Toph Allen
+- Barret Schloerke
+- Brian Tackett
+- Bruno Trimouille
+- David Aja
+- Garrick Aden-Buie
+- Ibi Togun
+- Ingrid Rodriguez
+- Jason Milnes
+- Mel Gregory
 :::
 ::: {.column width="50%"}
 **Organizers:**
