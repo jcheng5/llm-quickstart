@@ -201,7 +201,7 @@ If it works, study the code and try to understand how it maps to the low-level H
 
 Use the [official `ui.Chat` component](https://shiny.posit.co/py/components/display-messages/chat/) for Shiny for Python
 
-- Ask [Shiny assistant](https://gallery.shinyapps.io/assistant/) for help (ping me or Winston if you need us to approve your invite)
+- Ask [Shiny assistant](https://gallery.shinyapps.io/assistant/) for help
 - Do NOT use the older ChatStream component
 
 ## Other Python frameworks
