@@ -20,7 +20,7 @@ slack_channel <- "#hackathon-09"
 - Grab your OpenAI API key; see the thread in <code>`r slack_channel`</code>
 
 - For R
-  - `pak::pak(c("hadley/elmer", "jcheng5/shinychat", "dotenv"))`
+  - `pak::pak(c("tidyverse/elmer", "jcheng5/shinychat", "dotenv"))`
 - For Python
   - `pip install -r requirements.txt`
 
@@ -155,7 +155,7 @@ curl https://api.openai.com/v1/chat/completions \
 # Choose a Package {.smaller}
 
 - R:
-  - `hadley/elmer` high-level, easy, much less ambitious than langchain
+  - `elmer` high-level, easy, much less ambitious than langchain
     - OpenAI, Anthropic, Google are well supported
     - Several other providers are supported but may not be as well tested
     - Get help from [Elmer Assistant](https://jcheng.shinyapps.io/elmer-assistant/)

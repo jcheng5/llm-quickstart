@@ -11,7 +11,7 @@ To run the R version, first install some packages, then run the app:
 
 ```R
 # install.packages("pak")
-pak::pak(c("shiny", "hadley/elmer"))
+pak::pak(c("shiny", "tidyverse/elmer"))
 ```
 
 

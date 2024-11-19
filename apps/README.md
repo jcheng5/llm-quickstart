@@ -10,7 +10,7 @@ To run these apps, first install some packages from R:
 
 ```R
 if (!require("pak")) install.packages("pak")  # Instal pak if not already installed
-pak::pak(c("dotenv", "shiny", "hadley/elmer", "jcheng5/shinychat"))
+pak::pak(c("dotenv", "shiny", "tidyverse/elmer", "jcheng5/shinychat"))
 ```
 
 Then create a file named `.env` in the project directory with API keys that you have been provided. (Replace the `XXXXXXXX` below with the actual API keys.)

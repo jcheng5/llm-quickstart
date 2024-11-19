@@ -5,9 +5,9 @@ load_dotenv()  # Loads OPENAI_API_KEY from the .env file
 
 chat = ChatOpenAI(model="gpt-4o")
 
-chat.chat(
+print(chat.chat(
     content_image_file("photo.jpg"),
     "What photographic choices were made here, and why do you think the photographer chose them?"
-)
+))
 
-chat.chat("Come up with an artsy, pretentious, minimalistic, abstract title for this photo.")
+print(chat.chat("Come up with an artsy, pretentious, minimalistic, abstract title for this photo."))
