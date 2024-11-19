@@ -88,7 +88,7 @@
     "href": "quickstart.html#shiny-for-python",
     "title": "LLM Quick Start",
     "section": "Shiny for Python",
-    "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nAsk Shiny assistant for help (ping me or Winston if you need us to approve your invite)\nDo NOT use the older ChatStream component"
+    "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nAsk Shiny assistant for help\nDo NOT use the older ChatStream component"
   },
   {
     "objectID": "quickstart.html#other-python-frameworks",
@@ -235,7 +235,7 @@
     "href": "quickstart.html#past-cohort-projects",
     "title": "LLM Quick Start",
     "section": "Past cohort projects",
-    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4\nCohort 5\nCohort 6\nCohort 7"
+    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4\nCohort 5\nCohort 6\nCohort 7\nCohort 8"
   },
   {
     "objectID": "quickstart.html#interesting-tools-that-dont-require-coding",
