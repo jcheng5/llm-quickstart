@@ -20,7 +20,7 @@ slack_channel <- "#hackathon-10"
 - Grab your OpenAI API key; see the thread in <code>`r slack_channel`</code>
 
 - For R
-  - `pak::pak(c("tidyverse/elmer", "jcheng5/shinychat", "dotenv"))`
+  - `pak::pak(c("tidyverse/elmer", "jcheng5/shinychat", "dotenv", "rstudio/shiny"))`
 - For Python
   - `pip install -r requirements.txt`
 

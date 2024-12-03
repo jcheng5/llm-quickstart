@@ -18,6 +18,6 @@ load_dotenv()  # Loads OPENAI_API_KEY from the .env file
 
 chat = ChatOpenAI(model="gpt-4o", system_prompt="You are a terse assistant.")
 
-print(chat.chat("What is the capital of the moon?"))
+chat.chat("What is the capital of the moon?")
 
-print(chat.chat("Are you sure?"))
+chat.chat("Are you sure?")

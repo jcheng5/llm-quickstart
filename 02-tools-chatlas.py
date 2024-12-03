@@ -34,4 +34,4 @@ def get_weather(latitude: float, longitude: float):
 
 
 chat.register_tool(get_weather)
-print(chat.chat("What is the weather in Seattle?"))
+chat.chat("What is the weather in Seattle?")

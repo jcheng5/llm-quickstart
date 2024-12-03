@@ -22,7 +22,7 @@ chat <- chat_openai(
 get_structured_response <- function(prompt) {
   chat$extract_data(
     prompt,
-    spec = fruit_schema
+    type = fruit_schema
   )
 }
 
