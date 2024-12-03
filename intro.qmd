@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-11-19 – Cohort 9"
+subtitle: "2024-12-03 – Cohort 10"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-09"
+slack_channel <- "#hackathon-10"
 ```
 
 # Welcome
@@ -27,15 +27,13 @@ slack_channel <- "#hackathon-09"
 ::: {.column width="50%"}
 **Participants:**
 
-- Barret Schloerke
-- Brian Tackett
-- Bruno Trimouille
-- David Aja
-- Garrick Aden-Buie
-- Ibi Togun
-- Ingrid Rodriguez
-- Jason Milnes
-- Mel Gregory
+- Carlos Scheidegger
+- Cecil Singh
+- Katie Masiello
+- Lachlan Simpson
+- Lisa Anders
+- Sara Altman
+- Tyler Minear
 :::
 ::: {.column width="50%"}
 **Organizers:**
