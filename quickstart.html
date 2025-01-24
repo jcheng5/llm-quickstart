@@ -203,10 +203,10 @@
 <h1>Setup</h1>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-10</code></p></li>
+<li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-11</code></p></li>
 <li><p>For R</p>
 <ul>
-<li><code>pak::pak(c("tidyverse/elmer", "jcheng5/shinychat", "dotenv", "rstudio/shiny"))</code></li>
+<li><code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))</code></li>
 </ul></li>
 <li><p>For Python</p>
 <ul>
@@ -358,11 +358,11 @@
 <ul>
 <li>R:
 <ul>
-<li><code>elmer</code> high-level, easy, much less ambitious than langchain
+<li><code>ellmer</code> high-level, easy, much less ambitious than langchain
 <ul>
 <li>OpenAI, Anthropic, Google are well supported</li>
 <li>Several other providers are supported but may not be as well tested</li>
-<li>Get help from <a href="https://jcheng.shinyapps.io/elmer-assistant/">Elmer Assistant</a></li>
+<li>Get help from <a href="https://jcheng.shinyapps.io/ellmer-assistant/">Ellmer Assistant</a></li>
 </ul></li>
 </ul></li>
 <li>Python:
@@ -372,7 +372,7 @@
 <ul>
 <li>Evolved from v0.1, v0.2, and now <code>langgraph</code></li>
 </ul></li>
-<li><code>chatlas</code> - high-level, basically a port of R’s <code>elmer</code></li>
+<li><code>chatlas</code> - high-level, basically a port of R’s <code>ellmer</code></li>
 <li>Many, many other options are available</li>
 </ul></li>
 </ul>
@@ -413,8 +413,8 @@
 <p>{<code>shinychat</code>} package<br>
 <a href="https://github.com/jcheng5/shinychat">https://github.com/jcheng5/shinychat</a></p>
 <ul>
-<li>Designed to be used with elmer</li>
-<li><a href="https://jcheng.shinyapps.io/elmer-assistant">Elmer Assistant</a> is quite good for getting started</li>
+<li>Designed to be used with ellmer</li>
+<li><a href="https://jcheng.shinyapps.io/ellmer-assistant">Ellmer Assistant</a> is quite good for getting started</li>
 </ul>
 </section>
 <section id="shiny-for-python" class="slide level2">
@@ -475,12 +475,12 @@
 <h1>Your Turn</h1>
 <p>Take a minute to look at <em>one of</em> the following docs. See if you can get them to run, and try to understand the code.</p>
 <ul>
-<li>R: <a href="https://elmer.tidyverse.org/articles/tool-calling.html"><code>elmer</code> docs</a> (anticlimactically easy), or example <code>02-tools.R</code> in <code>llm-quickstart</code> repo</li>
+<li>R: <a href="https://ellmer.tidyverse.org/articles/tool-calling.html"><code>ellmer</code> docs</a> (anticlimactically easy), or example <code>02-tools.R</code> in <code>llm-quickstart</code> repo</li>
 <li>Python
 <ul>
 <li><code>openai</code> example: <code>02-tools-openai.py</code> (tedious, low-level, but understandable)</li>
 <li><code>langchain</code> example: <code>02-tools-langchain.py</code> (not bad)</li>
-<li><code>chatlas</code> example: <code>02-tools-chatlas.py</code> (easy, like <code>elmer</code>)</li>
+<li><code>chatlas</code> example: <code>02-tools-chatlas.py</code> (easy, like <code>ellmer</code>)</li>
 </ul></li>
 </ul>
 </section>
@@ -619,7 +619,7 @@ Example Output:
 <li>Docs must fit in context window</li>
 <li>Examples
 <ul>
-<li><a href="https://github.com/jcheng5/elmer-assistant/blob/main/prompt.generated.md">Elmer assistant</a> uses README files in prompt</li>
+<li><a href="https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md">Ellmer assistant</a> uses README files in prompt</li>
 <li><a href="https://github.com/jcheng5/py-sidebot/blob/main/prompt.md">Sidebot</a></li>
 <li><a href="https://docs.fastht.ml/llms-ctx.txt">FastHTML LLM prompt</a></li>
 </ul></li>
@@ -696,10 +696,10 @@ Example Output:
 <li><strong>Post-processing:</strong> Use a regular expression to extract structured data from the unstructured output (e.g.&nbsp;<code>/```json\n(.*?)\n```/</code>)</li>
 <li><strong>System prompt:</strong> Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it <em>really</em> helps!</li>
 <li><strong>Structured Output:</strong> GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: <a href="https://platform.openai.com/docs/guides/structured-outputs">openai</a>, <a href="https://python.langchain.com/docs/how_to/structured_output/">LangChain</a>)</li>
-<li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for elmer.)</li>
+<li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
-<p>Ask <code>#hackathon-10</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+<p>Ask <code>#hackathon-11</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
 </section></section>
 <section>
 <section id="vision" class="title-slide slide level1 center">
