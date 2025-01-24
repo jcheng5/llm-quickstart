@@ -1,5 +1,5 @@
 library(dotenv) # Will read OPENAI_API_KEY from .env file
-library(elmer)
+library(ellmer)
 
 chat <- chat_openai(
   model = "gpt-4o",

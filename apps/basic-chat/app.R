@@ -12,7 +12,7 @@ ui <- bslib::page_fluid(
 )
 
 server <- function(input, output, session) {
-  chat <- elmer::chat_openai(
+  chat <- ellmer::chat_openai(
     model = "gpt-4o",
     system_prompt = system_prompt
   )

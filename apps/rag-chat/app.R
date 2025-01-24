@@ -18,10 +18,12 @@ retrieve_docs <- function(query) {
     req_headers(
       "Authorization" = paste0("Bearer ", EMBEDDING_IO_API_KEY)
     ) |>
-    req_body_json(list(
-      "collection" = COLLECTION_ID,
-      "query" = query
-    ))
+    req_body_json(
+      list(
+        "collection" = COLLECTION_ID,
+        "query" = query
+      )
+    )
 
   req |> req_dry_run()
 
@@ -65,7 +67,7 @@ ui <- bslib::page_fluid(
 )
 
 server <- function(input, output, session) {
-  chat <- elmer::chat_openai(
+  chat <- ellmer::chat_openai(
     model = "gpt-4o",
   )
 

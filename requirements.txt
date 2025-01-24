@@ -6,5 +6,6 @@ langchain-openai
 langchain-anthropic
 langgraph
 requests
-chatlas @ git+https://github.com/cpsievert/chatlas
+chatlas
 pillow
+shiny

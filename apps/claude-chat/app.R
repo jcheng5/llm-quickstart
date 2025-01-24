@@ -12,7 +12,7 @@ ui <- page_fluid(
 )
 
 server <- function(input, output, session) {
-  chat <- elmer::chat_claude(
+  chat <- ellmer::chat_claude(
     model = "claude-3-5-sonnet-20241022",
     system_prompt = prompt
   )

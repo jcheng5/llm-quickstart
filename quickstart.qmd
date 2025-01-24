@@ -20,7 +20,7 @@ slack_channel <- "#hackathon-10"
 - Grab your OpenAI API key; see the thread in <code>`r slack_channel`</code>
 
 - For R
-  - `pak::pak(c("tidyverse/elmer", "jcheng5/shinychat", "dotenv", "rstudio/shiny"))`
+  - `install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))`
 - For Python
   - `pip install -r requirements.txt`
 
@@ -155,15 +155,15 @@ curl https://api.openai.com/v1/chat/completions \
 # Choose a Package {.smaller}
 
 - R:
-  - `elmer` high-level, easy, much less ambitious than langchain
+  - `ellmer` high-level, easy, much less ambitious than langchain
     - OpenAI, Anthropic, Google are well supported
     - Several other providers are supported but may not be as well tested
-    - Get help from [Elmer Assistant](https://jcheng.shinyapps.io/elmer-assistant/)
+    - Get help from [Ellmer Assistant](https://jcheng.shinyapps.io/ellmer-assistant/)
 - Python:
   - `openai` - low-level, but solid
   - `langchain` - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
     - Evolved from v0.1, v0.2, and now `langgraph`
-  - `chatlas` - high-level, basically a port of R's `elmer`
+  - `chatlas` - high-level, basically a port of R's `ellmer`
   - Many, many other options are available
 
 # Your Turn
@@ -194,8 +194,8 @@ If it works, study the code and try to understand how it maps to the low-level H
 {`shinychat`} package\
   [https://github.com/jcheng5/shinychat](https://github.com/jcheng5/shinychat)
 
-- Designed to be used with elmer
-- [Elmer Assistant](https://jcheng.shinyapps.io/elmer-assistant) is quite good for getting started
+- Designed to be used with ellmer
+- [Ellmer Assistant](https://jcheng.shinyapps.io/ellmer-assistant) is quite good for getting started
 
 ## Shiny for Python
 
@@ -244,11 +244,11 @@ Another way to think of it:
 
 Take a minute to look at _one of_ the following docs. See if you can get them to run, and try to understand the code.
 
-- R: [`elmer` docs](https://elmer.tidyverse.org/articles/tool-calling.html) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
+- R: [`ellmer` docs](https://ellmer.tidyverse.org/articles/tool-calling.html) (anticlimactically easy), or example `02-tools.R` in `llm-quickstart` repo
 - Python
   - `openai` example: `02-tools-openai.py` (tedious, low-level, but understandable)
   - `langchain` example: `02-tools-langchain.py` (not bad)
-  - `chatlas` example: `02-tools-chatlas.py` (easy, like `elmer`)
+  - `chatlas` example: `02-tools-chatlas.py` (easy, like `ellmer`)
 
 
 # Choosing a model
@@ -388,7 +388,7 @@ Assistant response:
 - Add positive examples (negative examples don't work well)
 - Docs must fit in context window
 - Examples
-  - [Elmer assistant](https://github.com/jcheng5/elmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
+  - [Ellmer assistant](https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
@@ -443,7 +443,7 @@ LLMs are good at generating unstructured output, but with a little effort, you c
 - **Post-processing:** Use a regular expression to extract structured data from the unstructured output (e.g. <code>/&grave;&grave;&grave;json\\n(.*?)\\n&grave;&grave;&grave;/</code>)
 - **System prompt:** Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples---it _really_ helps!
 - **Structured Output:** GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: [openai](https://platform.openai.com/docs/guides/structured-outputs), [LangChain](https://python.langchain.com/docs/how_to/structured_output/))
-- **Tool calling:** Create a tool to receive your output, e.g., `set_result(object)`, where its implementation sets some variable. (Works great for elmer.)
+- **Tool calling:** Create a tool to receive your output, e.g., `set_result(object)`, where its implementation sets some variable. (Works great for ellmer.)
 - **LangChain:** Has its own [abstractions](https://python.langchain.com/docs/how_to/#output-parsers) for parsing unstructured output
 
 Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Claude to make an example.)

@@ -1,7 +1,7 @@
 library(dotenv) # Will read OPENAI_API_KEY from .env file
-library(elmer)
+library(ellmer)
 
-# Define the structured data specification using elmer's `type_` functions
+# Define the structured data specification using ellmer's `type_` functions
 fruit_schema <- type_object(
   "A list of fruits and their colors.",
   fruit = type_array(

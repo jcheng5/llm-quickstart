@@ -5,7 +5,7 @@ Please be sure to create an `.env` file in your repo root, with just the lines `
 ## If you plan to use R
 
 ```r
-pak::pak(c("tidyverse/elmer", "jcheng5/shinychat", "dotenv"))
+pak::pak(c("tidyverse/ellmer", "jcheng5/shinychat", "dotenv"))
 ```
 
 ## If you plan to use Python

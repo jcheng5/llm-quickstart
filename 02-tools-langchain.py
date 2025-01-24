@@ -39,7 +39,7 @@ model = ChatAnthropic(model="claude-3-5-sonnet-latest")
 app = create_react_agent(
     model,
     tools=[get_weather],
-    messages_modifier=(
+    state_modifier=(
         "You are a helpful assistant that can check the weather. "
         "Report results in imperial units."
     ),

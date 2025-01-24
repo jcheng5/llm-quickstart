@@ -1,5 +1,5 @@
 library(dotenv) # Will read OPENAI_API_KEY from .env file
-library(elmer)
+library(ellmer)
 library(beepr)
 
 #' Plays a sound effect.
@@ -25,7 +25,7 @@ chat <- chat_openai(
 
 # Give the chatbot the ability to play a sound.
 #
-# Created using `elmer::create_tool_metadata(play_sound)`
+# Created using `ellmer::create_tool_metadata(play_sound)`
 chat$register_tool(tool(
   play_sound,
   "Plays a sound effect.",

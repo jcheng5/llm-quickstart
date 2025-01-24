@@ -8,7 +8,7 @@
 # https://github.com/cpsievert/chatlas#readme
 #
 # Also, note that chatlas is essentially the Python equivalent of
-# https://github.com/tidyverse/elmer/
+# https://github.com/tidyverse/ellmer/
 # -----------------------------------------------------------
 
 from chatlas import ChatOpenAI

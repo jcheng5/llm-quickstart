@@ -1,6 +1,6 @@
-library(elmer)
+library(ellmer)
 
-chat <- elmer::chat_openai(model = "gpt-4o")
+chat <- ellmer::chat_openai(model = "gpt-4o")
 
 chat$chat(
   "What photographic choices were made here, and why do you think the photographer chose them?",
