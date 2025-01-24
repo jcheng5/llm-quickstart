@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2024-12-03 – Cohort 10"
+subtitle: "2025-01-27 – Cohort 11"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-10"
+slack_channel <- "#hackathon-11"
 ```
 
 # Welcome
@@ -27,13 +27,16 @@ slack_channel <- "#hackathon-10"
 ::: {.column width="50%"}
 **Participants:**
 
-- Carlos Scheidegger
-- Cecil Singh
+- Alex Gold
+- David Kegley
+- Eric Pite
+- Ian Flores
+- Isabel Zimmerman
 - Katie Masiello
-- Lachlan Simpson
-- Lisa Anders
-- Sara Altman
-- Tyler Minear
+- Matt Conflitti
+- Pablo Bianco Lascaray
+- Shalu Tiwari
+- Tareef Kawaf
 :::
 ::: {.column width="50%"}
 **Organizers:**
