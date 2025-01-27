@@ -217,7 +217,7 @@ Use the [official `ui.Chat` component](https://shiny.posit.co/py/components/disp
 
 - Allows LLMs to interact with other systems
 - Sounds complicated? It isn't!
-- Supported by most of the newest LLMs, but not all (notably, not the new OpenAI `o1` models, yet)
+- Supported by most of the newest LLMs, but not all
 
 :::
 
