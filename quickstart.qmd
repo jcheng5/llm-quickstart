@@ -263,8 +263,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 - **GPT-4o**: best general purpose model
 - **GPT-4o-mini**: similar to 4o, but faster and cheaper (and dumber)
-- **o1-preview**: uses chain of thought (available via API only for high usage tiers)
-- **o1-mini**
+- **o1**: uses chain of thought; can't set system prompt, but can set "developer" prompt
 
 ## Anthropic models
 
@@ -280,16 +279,17 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Llama 3.2 90b**: text+vision, 55GB
 - **Llama 3.2 11b**: text+vision, 7.9GB (can run comfortably on Macbook)
 - **Llama 3.2 3b, 1b**: text, 2GB, 0.8GB
-- Can also access these models via API with [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [Hugging Face](https://huggingface.co/docs/api-inference/en/index)
+- Can also access these models via API with [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [AWS Bedrock](https://aws.amazon.com/bedrock/llama/)
 
 ## DeepSeek models
 
 - Open weights
+- Can access via API from [DeepSeek](https://platform.deepseek.com/), [OpenRouter](https://openrouter.ai/deepseek/deepseek-r1)
 - Can run locally, for example with [Ollama](https://ollama.com/)
-- **DeepSeek R1 671b** 404GB (claimed similar perf to OpenAI o1)
-- **DeepSeek R1 32b, 70b** 20GB, 43GB (claimed similar perf to OpenAI o1-mini)
-- Smaller sizes also available
-- Can also access via API from [DeepSeek](https://platform.deepseek.com/), [OpenRouter](https://openrouter.ai/deepseek/deepseek-r1), [Hugging Face](https://huggingface.co/docs/api-inference/en/index)
+- **DeepSeek R1 671b**: 404GB, uses chain of thought (claimed similar perf to OpenAI o1)
+- **DeepSeek R1 32b, 70b**: 20GB, 43GB (claimed similar perf to OpenAI o1-mini)
+- Smaller sizes of R1 also available
+- **DeepSeek V3 671b**: 404GB (claimed similar perf to OpenAI 4o, Claude 3.5 Sonnet)
 
 # Customizing behavior and adding knowledge
 
