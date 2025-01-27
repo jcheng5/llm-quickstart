@@ -193,14 +193,14 @@
     "href": "quickstart.html#openai-models",
     "title": "LLM Quick Start",
     "section": "OpenAI models",
-    "text": "OpenAI models\n\nGPT-4o: best general purpose model\nGPT-4o-mini: similar to 4o, but faster and cheaper (and dumber)\no1: uses chain of thought; can’t set system prompt, but can set “developer” prompt"
+    "text": "OpenAI models\n\nGPT-4o: best general purpose model\nGPT-4o-mini: similar to 4o, but faster and cheaper (and dumber)\no1: uses chain of thought; can’t set system prompt, but can set “developer” prompt\nCan access API via OpenAI or Azure"
   },
   {
     "objectID": "quickstart.html#anthropic-models",
     "href": "quickstart.html#anthropic-models",
     "title": "LLM Quick Start",
     "section": "Anthropic models",
-    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nClaude 3.5 Haiku: faster, cheaper (and dumber) than Sonnet"
+    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nClaude 3.5 Haiku: faster, cheaper (and dumber) than Sonnet\nCan access API via Anthropic or AWS Bedrock"
   },
   {
     "objectID": "quickstart.html#llama-models",
