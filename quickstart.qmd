@@ -264,11 +264,13 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **GPT-4o**: best general purpose model
 - **GPT-4o-mini**: similar to 4o, but faster and cheaper (and dumber)
 - **o1**: uses chain of thought; can't set system prompt, but can set "developer" prompt
+- Can access API via [OpenAI](https://platform.openai.com/docs/overview/) or [Azure](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 
 ## Anthropic models
 
 - **Claude 3.5 Sonnet**: best model for code generation
 - **Claude 3.5 Haiku**: faster, cheaper (and dumber) than Sonnet
+- Can access API via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/)
 
 ## Llama models
 
