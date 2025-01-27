@@ -4,5 +4,7 @@
 /.quarto/
 /_site/
 
+.venv
+venv
 __pycache__
 rsconnect-python
