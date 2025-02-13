@@ -1,10 +1,10 @@
 .DS_Store
 .env
-
 /.quarto/
 /_site/
-
 .venv
 venv
 __pycache__
 rsconnect-python
+logs/
+__pycache__/
