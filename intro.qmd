@@ -110,7 +110,7 @@ section#the-plan li[data-fragment-index="3"] {
 No _proprietary_ code or data is allowed to be sent to any LLM service, with the below exceptions.
 
 - Google NotebookLM is allowed.
-- AWS Bedrock is allowed, and it has Anthropic models. We can help you set this up.
+- AWS Bedrock is allowed, and it has Anthropic models. ([Instructions](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
 - Running any local model is allowed, we can help you with this as well.
 - Sending open source code to any service is allowed.
 
