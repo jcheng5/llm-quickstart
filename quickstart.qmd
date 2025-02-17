@@ -11,7 +11,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-11"
+slack_channel <- "#hackathon-12"
 ```
 
 # Setup {.smaller}

@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2025-01-27 – Cohort 11"
+subtitle: "2025-02-18 – Cohort 12"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-11"
+slack_channel <- "#hackathon-12"
 ```
 
 # Welcome
@@ -27,16 +27,14 @@ slack_channel <- "#hackathon-11"
 ::: {.column width="50%"}
 **Participants:**
 
-- Alex Gold
-- David Kegley
-- Eric Pite
-- Ian Flores
-- Isabel Zimmerman
-- Katie Masiello
-- Matt Conflitti
-- Pablo Bianco Lascaray
-- Shalu Tiwari
-- Tareef Kawaf
+- Andrie de Vries
+- David McGaffin
+- Kristin Bott
+- Mariano Caputto
+- Rika Gorn
+- Sarah Choi
+- Tom Mock
+- Zack Verham
 :::
 ::: {.column width="50%"}
 **Organizers:**
