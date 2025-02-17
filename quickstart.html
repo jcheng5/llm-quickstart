@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +203,7 @@
 <h1>Setup</h1>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-11</code></p></li>
+<li><p>Grab your OpenAI API key; see the thread in <code>#hackathon-12</code></p></li>
 <li><p>For R</p>
 <ul>
 <li><code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))</code></li>
@@ -443,7 +443,7 @@
 <ul>
 <li class="fragment">Allows LLMs to interact with other systems</li>
 <li class="fragment">Sounds complicated? It isn’t!</li>
-<li class="fragment">Supported by most of the newest LLMs, but not all (notably, not the new OpenAI <code>o1</code> models, yet)</li>
+<li class="fragment">Supported by most of the newest LLMs, but not all</li>
 </ul>
 </div>
 </section>
@@ -713,7 +713,7 @@ Example Output:
 <li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
-<p>Ask <code>#hackathon-11</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+<p>Ask <code>#hackathon-12</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
 </section></section>
 <section>
 <section id="vision" class="title-slide slide level1 center">
@@ -746,6 +746,7 @@ Example Output:
 <li><a href="https://docs.google.com/presentation/d/1DZVC7d-ycbnwh6nbDyNZEGwdtPMD3FB4NoIf0dd915o/edit?usp=sharing">Cohort 7</a></li>
 <li><a href="https://docs.google.com/presentation/d/1OMj8S4-nH-bM_1QZ-1aztZw0hc5gMuxO4vDKngrUYxQ/edit?usp=sharing">Cohort 8</a></li>
 <li><a href="https://docs.google.com/presentation/d/1MUiSctRtiMF9N8tGLRvtbWrNl49Ur0ty8soX0NO1v_Y/edit?usp=sharing">Cohort 9</a></li>
+<li><a href="https://docs.google.com/presentation/d/1ArrYMvHCIDrgfj4xFsUkBNE1T0kt2mCPUtLJ4kiPYIY/edit?usp=sharing">Cohort 10</a></li>
 </ul>
 </section>
 <section id="interesting-tools-that-dont-require-coding" class="slide level2">
@@ -1091,6 +1092,8 @@ Example Output:
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')

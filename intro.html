@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -129,7 +129,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">AI Hackathon</h1>
-  <p class="subtitle">2025-01-27 – Cohort 11</p>
+  <p class="subtitle">2025-02-18 – Cohort 12</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -139,7 +139,7 @@
 <section id="welcome" class="title-slide slide level1 center">
 <h1>Welcome</h1>
 <ul>
-<li>Before we begin, please join <code>#hackathon-11</code> in Slack!</li>
+<li>Before we begin, please join <code>#hackathon-12</code> in Slack!</li>
 <li>Also, please clone this repo:<br>
 <a href="https://github.com/jcheng5/llm-quickstart">https://github.com/jcheng5/llm-quickstart</a></li>
 </ul>
@@ -150,16 +150,14 @@
 <div class="column" style="width:50%;">
 <p><strong>Participants:</strong></p>
 <ul>
-<li>Alex Gold</li>
-<li>David Kegley</li>
-<li>Eric Pite</li>
-<li>Ian Flores</li>
-<li>Isabel Zimmerman</li>
-<li>Katie Masiello</li>
-<li>Matt Conflitti</li>
-<li>Pablo Bianco Lascaray</li>
-<li>Shalu Tiwari</li>
-<li>Tareef Kawaf</li>
+<li>Andrie de Vries</li>
+<li>David McGaffin</li>
+<li>Kristin Bott</li>
+<li>Mariano Caputto</li>
+<li>Rika Gorn</li>
+<li>Sarah Choi</li>
+<li>Tom Mock</li>
+<li>Zack Verham</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong>Organizers:</strong></p>
@@ -593,6 +591,8 @@ Negative results (“I thought LLMs could do this but turns out they can’t”)
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
