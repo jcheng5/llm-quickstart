@@ -130,7 +130,7 @@
     "href": "quickstart.html#anthropic-models",
     "title": "LLM Quick Start",
     "section": "Anthropic models",
-    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nClaude 3.5 Haiku: faster, cheaper (and dumber) than Sonnet\nCan access API via Anthropic or AWS Bedrock"
+    "text": "Anthropic models\n\nClaude 3.5 Sonnet: best model for code generation\nClaude 3.5 Haiku: faster, cheaper (and dumber) than Sonnet\nCan access API via Anthropic or AWS Bedrock (instructions for using Bedrock at Posit)"
   },
   {
     "objectID": "quickstart.html#llama-models",
@@ -305,7 +305,7 @@
     "href": "intro.html#a-caveat-from-it",
     "title": "AI Hackathon",
     "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. We can help you set this up.\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. (Instructions)\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
   },
   {
     "objectID": "all-projects.html",
