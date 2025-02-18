@@ -263,7 +263,8 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 - **GPT-4o**: best general purpose model
 - **GPT-4o-mini**: similar to 4o, but faster and cheaper (and dumber)
-- **o1**: uses chain of thought; can't set system prompt, but can set "developer" prompt
+- **o1**: reasoning model; better for complex math and coding, but much slower and more expensive
+- **o3-mini**: reasoning model; faster and cheaper than o1, doesn't support vision
 - Can access API via [OpenAI](https://platform.openai.com/docs/overview/) or [Azure](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 
 ## Anthropic models
