@@ -123,7 +123,7 @@
     "href": "quickstart.html#openai-models",
     "title": "LLM Quick Start",
     "section": "OpenAI models",
-    "text": "OpenAI models\n\nGPT-4o: best general purpose model\nGPT-4o-mini: similar to 4o, but faster and cheaper (and dumber)\no1: uses chain of thought; can’t set system prompt, but can set “developer” prompt\nCan access API via OpenAI or Azure"
+    "text": "OpenAI models\n\nGPT-4o: best general purpose model\nGPT-4o-mini: similar to 4o, but faster and cheaper (and dumber)\no1: reasoning model; better for complex math and coding, but much slower and more expensive\no3-mini: reasoning model; faster and cheaper than o1, doesn’t support vision\nCan access API via OpenAI or Azure"
   },
   {
     "objectID": "quickstart.html#anthropic-models",
