@@ -404,6 +404,11 @@ Assistant response:
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
+## Prompt engineering guides
+
+- OpenAI's [prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- Anthropic's [prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+
 ## RAG: Retrieval Augmented Generation
 
 - Useful when documents don't fit into context window
@@ -425,15 +430,9 @@ Assistant response:
   - Can't just feed it documents -- this makes fine-tuning more difficult in practice
 - Supposedly not very effective unless you have a lot of training data
 
-##
-
-![](prompt-rag-finetune.png)
-
-
 ## More on prompting, RAG, fine tuning
 
 - Try prompting first, before RAG and fine tuning.
-- OpenAI's [prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Fine-tuning vs. RAG article](https://finetunedb.com/blog/fine-tuning-vs-rag/)
 
 ## Using posit.cloud
