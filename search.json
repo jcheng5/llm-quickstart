@@ -228,7 +228,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-12 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-13 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",
@@ -242,7 +242,7 @@
     "href": "quickstart.html#past-cohort-projects",
     "title": "LLM Quick Start",
     "section": "Past cohort projects",
-    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4\nCohort 5\nCohort 6\nCohort 7\nCohort 8\nCohort 9\nCohort 10"
+    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4\nCohort 5\nCohort 6\nCohort 7\nCohort 8\nCohort 9\nCohort 10\nCohort 11\nCohort 12"
   },
   {
     "objectID": "quickstart.html#interesting-tools-that-dont-require-coding",
@@ -256,7 +256,7 @@
     "href": "intro.html#whos-here",
     "title": "AI Hackathon",
     "section": "Who’s Here",
-    "text": "Who’s Here\n\n\nParticipants:\n\nAndrie de Vries\nDavid McGaffin\nKristin Bott\nMariano Caputto\nRika Gorn\nSarah Choi\nTom Mock\nZack Verham\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
+    "text": "Who’s Here\n\n\nParticipants:\n\nBill Sager\nChristophe Dervieux\nGrace Lawley\nJacob Peterson\nJames Clawson\nOmar Baba\nSean Sinnot\nSharon Wang\nZak Kubicek\n\n\nOrganizers:\n\nAndrew Holz\nJoe Cheng\nWinston Chang"
   },
   {
     "objectID": "intro.html#your-turn",
