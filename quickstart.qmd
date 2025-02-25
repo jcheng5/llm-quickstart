@@ -11,7 +11,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-12"
+slack_channel <- "#hackathon-13"
 ```
 
 # Setup {.smaller}
@@ -483,6 +483,8 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 - [Cohort 8](https://docs.google.com/presentation/d/1OMj8S4-nH-bM_1QZ-1aztZw0hc5gMuxO4vDKngrUYxQ/edit?usp=sharing)
 - [Cohort 9](https://docs.google.com/presentation/d/1MUiSctRtiMF9N8tGLRvtbWrNl49Ur0ty8soX0NO1v_Y/edit?usp=sharing)
 - [Cohort 10](https://docs.google.com/presentation/d/1ArrYMvHCIDrgfj4xFsUkBNE1T0kt2mCPUtLJ4kiPYIY/edit?usp=sharing)
+- [Cohort 11](https://docs.google.com/presentation/d/1nPCWVG1jKgmxvXQsvWgkOlZsgWrHawD5Dp3qF2j0Rpg/edit?usp=sharing)
+- [Cohort 12](https://docs.google.com/presentation/d/17RRsGauC7TfiRLCJh40VnEsawwv727eK5np9F0SzmN8/edit?usp=sharing)
 
 ## Interesting tools that don't require coding
 

@@ -1,6 +1,6 @@
 ---
 title: "AI Hackathon"
-subtitle: "2025-02-18 – Cohort 12"
+subtitle: "2025-02-25 – Cohort 13"
 format:
   revealjs:
     theme: simple
@@ -12,7 +12,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-12"
+slack_channel <- "#hackathon-13"
 ```
 
 # Welcome
@@ -27,14 +27,15 @@ slack_channel <- "#hackathon-12"
 ::: {.column width="50%"}
 **Participants:**
 
-- Andrie de Vries
-- David McGaffin
-- Kristin Bott
-- Mariano Caputto
-- Rika Gorn
-- Sarah Choi
-- Tom Mock
-- Zack Verham
+- Bill Sager
+- Christophe Dervieux
+- Grace Lawley
+- Jacob Peterson
+- James Clawson
+- Omar Baba
+- Sean Sinnot
+- Sharon Wang
+- Zak Kubicek
 :::
 ::: {.column width="50%"}
 **Organizers:**
