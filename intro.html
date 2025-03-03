@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-494121dfa8658343c03537e94414993d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-99.9.9">
 
-  <title>AI Hackathon</title>
+  <title>intro</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,52 +127,36 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">AI Hackathon</h1>
-  <p class="subtitle">2025-02-25 – Cohort 13</p>
 
-<div class="quarto-title-authors">
+<section class="slide level2">
+
+
+<img data-src="logo-academy.png" class="r-stretch"><h3 style="text-align: center; font-size: 72pt; color: #414142;" id="ai-hackathon">AI Hackathon</h3>
+<div style="text-align: center; color: #414142;">
+<p>March 4, 2025</p>
 </div>
-
 </section>
 <section>
 <section id="welcome" class="title-slide slide level1 center">
 <h1>Welcome</h1>
 <ul>
-<li>Before we begin, please join <code>#hackathon-13</code> in Slack!</li>
+<li>Before we begin, please join <code>#academy-ai-1</code> in Slack!</li>
 <li>Also, please clone this repo:<br>
 <a href="https://github.com/jcheng5/llm-quickstart">https://github.com/jcheng5/llm-quickstart</a></li>
 </ul>
 </section>
-<section id="whos-here" class="slide level2 smaller">
-<h2>Who’s Here</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Participants:</strong></p>
+<section id="organizers" class="slide level2">
+<h2>Organizers</h2>
 <ul>
-<li>Bill Sager</li>
-<li>Christophe Dervieux</li>
-<li>Grace Lawley</li>
-<li>Jacob Peterson</li>
-<li>James Clawson</li>
-<li>Omar Baba</li>
-<li>Sean Sinnot</li>
-<li>Sharon Wang</li>
-<li>Zak Kubicek</li>
+<li><strong>Andrew Holz</strong> - Head of Engineering, Open Source</li>
+<li><strong>Joe Cheng</strong> - CTO</li>
+<li><strong>Winston Chang</strong> - Principal Software Engineer</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Organizers:</strong></p>
-<ul>
-<li>Andrew Holz</li>
-<li>Joe Cheng</li>
-<li>Winston Chang</li>
-</ul>
-</div></div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your Turn</h2>
 <ul>
-<li>What do you do at Posit?</li>
+<li>Your name, company, and role</li>
 <li>How have you used LLMs/AI tools up until now?</li>
 <li>What is your skepticism/enthusiasm score (1 to 5)?</li>
 </ul>
@@ -195,9 +179,7 @@ section#the-plan li[data-fragment-index="3"] {
 <li class="fragment"><strong>Thursday:</strong> Show &amp; tell, share lessons learned, reflections.</li>
 <li class="fragment"><strong>Post-hackathon:</strong>
 <ul>
-<li class="fragment">Keep hacking! (optional)</li>
-<li class="fragment">Think about how AI might apply to your team</li>
-<li class="fragment">Be a resource for others around you</li>
+<li class="fragment">Create/deploy an LLM-enabled Shiny app for your company</li>
 </ul></li>
 </ul>
 </div>
@@ -243,14 +225,14 @@ Negative results (“I thought LLMs could do this but turns out they can’t”)
 </ul>
 </div>
 </section>
-<section id="a-caveat-from-it" class="slide level2">
-<h2>A Caveat From IT</h2>
-<p>No <em>proprietary</em> code or data is allowed to be sent to any LLM service, with the below exceptions.</p>
+<section id="a-note-on-data-security" class="slide level2">
+<h2>A Note on Data Security</h2>
 <ul>
-<li>Google NotebookLM is allowed.</li>
-<li>AWS Bedrock is allowed, and it has Anthropic models. (<a href="https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit">Instructions</a>)</li>
-<li>Running any local model is allowed, we can help you with this as well.</li>
-<li>Sending open source code to any service is allowed.</li>
+<li>Please refrain from sending your company’s proprietary code or data to any LLM, unless you are sure your company’s policies allow it.
+<ul>
+<li>AWS, Azure, and Google Cloud all host frontier models—your IT might be OK with these.</li>
+</ul></li>
+<li>If you absolutely must use proprietary info, consider using a local model (but expect considerably worse results).</li>
 </ul>
 </section></section>
 <section id="next-quick-start" class="title-slide slide level1 center">
@@ -592,6 +574,8 @@ Negative results (“I thought LLMs could do this but turns out they can’t”)
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
