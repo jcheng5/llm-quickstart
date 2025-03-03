@@ -1,6 +1,4 @@
 ---
-title: "AI Hackathon"
-subtitle: "2025-02-25 – Cohort 13"
 format:
   revealjs:
     theme: simple
@@ -11,8 +9,16 @@ editor:
   render-on-save: true
 ---
 
+![](logo-academy.png)
+
+### AI Hackathon {style="text-align: center; font-size: 72pt; color: #414142;"}
+
+::: {style="text-align: center; color: #414142;"}
+March 4, 2025
+:::
+
 ```{r include=FALSE}
-slack_channel <- "#hackathon-13"
+slack_channel <- "#academy-ai-1"
 ```
 
 # Welcome
@@ -21,34 +27,15 @@ slack_channel <- "#hackathon-13"
 - Also, please clone this repo:\
   [https://github.com/jcheng5/llm-quickstart](https://github.com/jcheng5/llm-quickstart)
 
-## Who's Here {.smaller}
+## Organizers
 
-::: {.columns}
-::: {.column width="50%"}
-**Participants:**
-
-- Bill Sager
-- Christophe Dervieux
-- Grace Lawley
-- Jacob Peterson
-- James Clawson
-- Omar Baba
-- Sean Sinnot
-- Sharon Wang
-- Zak Kubicek
-:::
-::: {.column width="50%"}
-**Organizers:**
-
-- Andrew Holz
-- Joe Cheng
-- Winston Chang
-:::
-:::
+- **Andrew Holz** - Head of Engineering, Open Source
+- **Joe Cheng** - CTO
+- **Winston Chang** - Principal Software Engineer
 
 ## Your Turn
 
-- What do you do at Posit?
+- Your name, company, and role
 - How have you used LLMs/AI tools up until now?
 - What is your skepticism/enthusiasm score (1 to 5)?
 
@@ -67,9 +54,7 @@ section#the-plan li[data-fragment-index="3"] {
 - **Next 48 hours:** Hack on stuff! Minimum four hours of effort. "Rules" on the next slide.
 - **Thursday:** Show & tell, share lessons learned, reflections.
 - **Post-hackathon:**
-  - Keep hacking! (optional)
-  - Think about how AI might apply to your team
-  - Be a resource for others around you
+  - Create/deploy an LLM-enabled Shiny app for your company
 :::
 
 ## Hack On Stuff
@@ -106,13 +91,10 @@ section#the-plan li[data-fragment-index="3"] {
 
 :::
 
-## A Caveat From IT
+## A Note on Data Security
 
-No _proprietary_ code or data is allowed to be sent to any LLM service, with the below exceptions.
-
-- Google NotebookLM is allowed.
-- AWS Bedrock is allowed, and it has Anthropic models. ([Instructions](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
-- Running any local model is allowed, we can help you with this as well.
-- Sending open source code to any service is allowed.
+- Please refrain from sending your company's proprietary code or data to any LLM, unless you are sure your company's policies allow it.
+  - AWS, Azure, and Google Cloud all host frontier models—your IT might be OK with these.
+- If you absolutely must use proprietary info, consider using a local model (but expect considerably worse results).
 
 # Next: [Quick Start](quickstart.qmd)
