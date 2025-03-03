@@ -25,7 +25,7 @@ chat <- chat_openai(
 
 # Give the chatbot the ability to play a sound.
 #
-# Created using `ellmer::create_tool_metadata(play_sound)`
+# Created using `ellmer::create_tool_def(play_sound)`
 chat$register_tool(tool(
   play_sound,
   "Plays a sound effect.",
