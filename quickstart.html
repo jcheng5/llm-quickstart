@@ -199,26 +199,22 @@
 </div>
 
 </section>
-<section id="setup-cloud" class="slide level2 smaller">
-<h2>Setup (Cloud)</h2>
+<section id="setup" class="slide level2 smaller">
+<h2>Setup</h2>
+<h4 id="option-1-cloud">Option 1: Cloud</h4>
 <ul>
-<li>Log in to https://dev.academy.posit.team/</li>
+<li>Log in to <a href="https://dev.academy.posit.team/">https://dev.academy.posit.team/</a> and start a session in your IDE of choice
+<ul>
+<li>We recommend RStudio for R, and Positron for R or Python</li>
+</ul></li>
 <li>Grab your OpenAI/Anthropic API keys; see the thread in <code>#academy-ai-1</code></li>
 </ul>
-</section>
-<section id="setup-local" class="slide level2 smaller">
-<h2>Setup (Local)</h2>
+<h4 id="option-2-local">Option 2: Local</h4>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
 <li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#academy-ai-1</code></p></li>
-<li><p>For R</p>
-<ul>
-<li><code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))</code></li>
-</ul></li>
-<li><p>For Python</p>
-<ul>
-<li><code>pip install -r requirements.txt</code></li>
-</ul></li>
+<li><p>For R: <code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))</code></p></li>
+<li><p>For Python: <code>pip install -r requirements.txt</code></p></li>
 </ul>
 </section>
 <section>
@@ -389,14 +385,20 @@
 <h1>Your Turn</h1>
 
 </section>
-<section id="instructions" class="slide level2">
+<section id="instructions" class="slide level2 smaller">
 <h2>Instructions</h2>
 <p>Open and run one of these options:</p>
 <ul>
-<li><code>01-basics.R</code></li>
+<li><code>01-basics.R</code>
+<ul>
+<li>or <code>01-basics-bedrock.R</code> for cloud</li>
+</ul></li>
 <li><code>01-basics-openai.py</code> (low level library)</li>
 <li><code>01-basics-langchain.py</code> (high level framework)</li>
-<li><code>01-basics-chatlas.py</code> (high level framework, similar to R)</li>
+<li><code>01-basics-chatlas.py</code> (high level framework, similar to R)
+<ul>
+<li>or <code>01-basics-chatlas-bedrock.py</code> for cloud</li>
+</ul></li>
 </ul>
 <p>If it errors, now is the time to debug.</p>
 <p>If it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through.</p>

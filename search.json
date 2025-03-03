@@ -7,18 +7,11 @@
     "text": "You are an assistant which can convert units and perform basic arithmetic with units."
   },
   {
-    "objectID": "quickstart.html#setup-cloud",
-    "href": "quickstart.html#setup-cloud",
+    "objectID": "quickstart.html#setup",
+    "href": "quickstart.html#setup",
     "title": "LLM Quick Start",
-    "section": "Setup (Cloud)",
-    "text": "Setup (Cloud)\n\nLog in to https://dev.academy.posit.team/\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1"
-  },
-  {
-    "objectID": "quickstart.html#setup-local",
-    "href": "quickstart.html#setup-local",
-    "title": "LLM Quick Start",
-    "section": "Setup (Local)",
-    "text": "Setup (Local)\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\nFor R\n\ninstall.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\"))\n\nFor Python\n\npip install -r requirements.txt"
+    "section": "Setup",
+    "text": "Setup\nOption 1: Cloud\n\nLog in to https://dev.academy.posit.team/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\"))\nFor Python: pip install -r requirements.txt"
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -81,7 +74,7 @@
     "href": "quickstart.html#instructions",
     "title": "LLM Quick Start",
     "section": "Instructions",
-    "text": "Instructions\nOpen and run one of these options:\n\n01-basics.R\n01-basics-openai.py (low level library)\n01-basics-langchain.py (high level framework)\n01-basics-chatlas.py (high level framework, similar to R)\n\nIf it errors, now is the time to debug.\nIf it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through."
+    "text": "Instructions\nOpen and run one of these options:\n\n01-basics.R\n\nor 01-basics-bedrock.R for cloud\n\n01-basics-openai.py (low level library)\n01-basics-langchain.py (high level framework)\n01-basics-chatlas.py (high level framework, similar to R)\n\nor 01-basics-chatlas-bedrock.py for cloud\n\n\nIf it errors, now is the time to debug.\nIf it works, study the code and try to understand how it maps to the low-level HTTP descriptions we just went through."
   },
   {
     "objectID": "quickstart.html#summary",
@@ -264,13 +257,6 @@
     "title": "LLM Quick Start",
     "section": "Interesting tools that don’t require coding",
     "text": "Interesting tools that don’t require coding\n\nGoogle NotebookLM\nClaude Projects (requires Claude subscription)"
-  },
-  {
-    "objectID": "intro.html#organizers",
-    "href": "intro.html#organizers",
-    "title": "",
-    "section": "Organizers",
-    "text": "Organizers\n\nAndrew Holz - Head of Engineering, Open Source\nJoe Cheng - CTO\nWinston Chang - Principal Software Engineer"
   },
   {
     "objectID": "intro.html#your-turn",
