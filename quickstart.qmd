@@ -14,20 +14,21 @@ editor:
 slack_channel <- "#academy-ai-1"
 ```
 
-## Setup (Cloud) {.smaller}
+## Setup {.smaller}
 
-- Log in to https://dev.academy.posit.team/
+#### Option 1: Cloud
+
+- Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
+  - We recommend RStudio for R, and Positron for R or Python
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
 
-## Setup (Local) {.smaller}
+#### Option 2: Local
 
 - Clone https://github.com/jcheng5/llm-quickstart
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
 
-- For R
-  - `install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))`
-- For Python
-  - `pip install -r requirements.txt`
+- For R: `install.packages(c("ellmer", "shinychat", "dotenv", "shiny"))`
+- For Python: `pip install -r requirements.txt`
 
 # Introduction
 
@@ -173,14 +174,16 @@ curl https://api.openai.com/v1/chat/completions \
 
 # Your Turn
 
-## Instructions
+## Instructions {.smaller}
 
 Open and run one of these options:
 
 - `01-basics.R`
+  - or `01-basics-bedrock.R` for cloud
 - `01-basics-openai.py` (low level library)
 - `01-basics-langchain.py` (high level framework)
 - `01-basics-chatlas.py` (high level framework, similar to R)
+  - or `01-basics-chatlas-bedrock.py` for cloud
 
 If it errors, now is the time to debug.
 
