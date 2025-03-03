@@ -39,20 +39,13 @@ And we have lots of other Posit folks who are ready to help!
 
 ## The Plan
 
-```{css}
-section#the-plan li[data-fragment-index="3"] {
-  border-top: 1px solid #ccc;
-  margin-top: 1em;
-  padding-top: 1em;
-}
-```
-
 ::: {.incremental}
 - **Now:** Quick Start course on LLMs. You will leave having used a Chat API.
 - **Next 48 hours:** Hack on stuff! Minimum four hours of effort. "Rules" on the next slide.
+  - Zoom office hours on Wednesday and Thursday
+  - We'll be continuously monitoring `r slack_channel`
 - **Thursday:** Show & tell, share lessons learned, reflections.
-- **Post-hackathon:**
-  - Create/deploy an LLM-enabled Shiny app for your company
+- **Post-hackathon:** Create/deploy an LLM-enabled Shiny app for your company. We can help!
 :::
 
 ## Hack On Stuff
