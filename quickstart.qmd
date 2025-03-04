@@ -416,7 +416,7 @@ Assistant response:
 - Add positive examples (negative examples don't work well)
 - Docs must fit in context window
 - Examples
-  - [Ellmer assistant](https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
+  - [Ellmer assistant](https://github.com/jcheng5/elmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
