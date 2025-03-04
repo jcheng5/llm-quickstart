@@ -11,7 +11,7 @@
     "href": "quickstart.html#setup",
     "title": "LLM Quick Start",
     "section": "Setup",
-    "text": "Setup\nOption 1: Cloud\n\nLog in to https://dev.academy.posit.team/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\"))\nFor Python: pip install -r requirements.txt"
+    "text": "Setup\nOption 1: Cloud\n\nLog in to https://dev.academy.posit.team/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-1\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -245,11 +245,11 @@
     "text": "Using images as input\n\nModern models are pretty good at this\nCan understand both photographs and plots\nExamples for R and Chatlas are in your repo as 05-vision*\nSee docs for LangChain multimodal, OpenAI vision"
   },
   {
-    "objectID": "quickstart.html#past-cohort-projects",
-    "href": "quickstart.html#past-cohort-projects",
+    "objectID": "quickstart.html#sample-of-past-cohort-projects",
+    "href": "quickstart.html#sample-of-past-cohort-projects",
     "title": "LLM Quick Start",
-    "section": "Past cohort projects",
-    "text": "Past cohort projects\n\nPhotography: Evaluate photos for focus issues. Auto-generate photo title, tags, and description. Advanced OCR on specific document types.\nGaming: Dungeon master for D&D campaign. Agent for navigating simple ASCII maze.\nData: Tool for auto-generating ALT tags for plots. Tool for making realistic-looking mock datasets. Code linter for R and PyData code. Dataset exploring assistant.\nAPI integrations: GitHub, Posit Connect, Zendesk, Fusion360, Disney theme park wait times."
+    "section": "Sample of past cohort projects",
+    "text": "Sample of past cohort projects\n\nPhotography:\n\nEvaluate photos for focus issues.\nAuto-generate photo title, tags, and description.\nAdvanced OCR on specific document types.\n\nGaming:\n\nDungeon master for D&D campaign.\nAgent for navigating simple ASCII maze.\n\nData:\n\nTool for auto-generating ALT tags for plots.\nTool for making realistic-looking mock datasets.\nCode linter for R and PyData code.\nDataset exploring assistant.\n\nAPI integrations: GitHub, Posit Connect, Zendesk, Fusion360, Disney theme park wait times."
   },
   {
     "objectID": "quickstart.html#interesting-tools-that-dont-require-coding",
@@ -270,21 +270,14 @@
     "href": "intro.html#the-plan",
     "title": "",
     "section": "The Plan",
-    "text": "The Plan\n\n\n\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\nThursday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nCreate/deploy an LLM-enabled Shiny app for your company"
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 72 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nZoom office hours on Wednesday and Thursday\nWe’ll be continuously monitoring #academy-ai-1\nWe recommend that you not team up; we prefer that you work on individual projects, and ask for help/feedback in the slack channel\n\nFriday: Show & tell, share lessons learned, reflections.\nPost-hackathon: Create/deploy an LLM-enabled Shiny app for your company. We can help!"
   },
   {
     "objectID": "intro.html#hack-on-stuff",
     "href": "intro.html#hack-on-stuff",
     "title": "",
     "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff-1",
-    "href": "intro.html#hack-on-stuff-1",
-    "title": "",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Make an interesting project on ChatGPT Playground &gt; Assistants, or assemble a useful NotebookLM and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+    "text": "Hack On Stuff\n\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language,any service that you have access to.\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Create something in Google AI Studio, or assemble a useful NotebookLM, and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
   },
   {
     "objectID": "intro.html#not-a-contest",
