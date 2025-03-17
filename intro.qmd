@@ -56,7 +56,7 @@ And we have lots of other Posit folks who are ready to help!
 -->
 :::
 
-## Hack On Stuff {.smaller}
+## Hack On Stuff
 
 ::: {.incremental}
 - **Does NOT have to be relevant to your day job, or Posit, or data science.**\
@@ -64,7 +64,12 @@ And we have lots of other Posit folks who are ready to help!
 - **Does NOT have to be a finished product/demo/app/API.**\
   Showing some things you did in a notebook is fine as long as YOU found it interesting.
 - **Does NOT have to use Posit products.**\
-  You may use any framework, any language,any service that you have access to.
+  You may use any framework, any language, any service that you have access to.
+:::
+
+## Hack On Stuff
+
+::: {.incremental}
 - **Does NOT have to be an original idea.**\
   You can build on existing projects, improve on existing demos, etc.
 - **Does NOT even have to be coding.**\
