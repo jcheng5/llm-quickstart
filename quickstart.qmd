@@ -11,11 +11,12 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#academy-ai-1"
+slack_channel <- "#hackathon-14"
 ```
 
 ## Setup {.smaller}
 
+<!--
 #### Option 1: Cloud
 
 - Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
@@ -24,6 +25,7 @@ slack_channel <- "#academy-ai-1"
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
 
 #### Option 2: Local
+-->
 
 - Clone https://github.com/jcheng5/llm-quickstart
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
@@ -281,7 +283,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Claude 3.7 Sonnet**: best model for code generation
 - **Claude 3.5 Sonnet**: previous best model for code generation; some still prefer it over 3.7
 - **Claude 3.5 Haiku**: faster, cheaper (and dumber) than Sonnet
-- Can access API via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) <!--([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))-->
+- Can access API via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) ([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
 
 ## Google models
 
@@ -416,7 +418,7 @@ Assistant response:
 - Add positive examples (negative examples don't work well)
 - Docs must fit in context window
 - Examples
-  - [Ellmer assistant](https://github.com/jcheng5/elmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
+  - [Ellmer assistant](https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
@@ -481,6 +483,7 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 
 # Brainstorming
 
+<!--
 ## Sample of past cohort projects {.smaller}
 
 - **Photography:**
@@ -496,9 +499,10 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
   - Code linter for R and PyData code.
   - Dataset exploring assistant.
 - **API integrations:** GitHub, Posit Connect, Zendesk, Fusion360, Disney theme park wait times.
+-->
 
+## Past cohort projects
 
-<!--
 - [Cohort 1](https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing)
 - [Cohort 2](https://docs.google.com/presentation/d/1j15NfbrRDfHIbnO7Jt3gS63CafArboe70AUJw4hFn8E/edit?usp=sharing)
 - [Cohort 3](https://docs.google.com/presentation/d/1NmgeTgzs31r8g8-b2liOzKXDmYU_iXSIA8Ih8Z4ZzMM/edit?usp=sharing)
@@ -510,7 +514,8 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 - [Cohort 9](https://docs.google.com/presentation/d/1MUiSctRtiMF9N8tGLRvtbWrNl49Ur0ty8soX0NO1v_Y/edit?usp=sharing)
 - [Cohort 10](https://docs.google.com/presentation/d/1ArrYMvHCIDrgfj4xFsUkBNE1T0kt2mCPUtLJ4kiPYIY/edit?usp=sharing)
 - [Cohort 11](https://docs.google.com/presentation/d/1nPCWVG1jKgmxvXQsvWgkOlZsgWrHawD5Dp3qF2j0Rpg/edit?usp=sharing)
-- [Cohort 12](https://docs.google.com/presentation/d/17RRsGauC7TfiRLCJh40VnEsawwv727eK5np9F0SzmN8/edit?usp=sharing) -->
+- [Cohort 12](https://docs.google.com/presentation/d/17RRsGauC7TfiRLCJh40VnEsawwv727eK5np9F0SzmN8/edit?usp=sharing)
+- [Cohort 13](https://docs.google.com/presentation/d/1JnViUBV_AzkSU35vAOklg60OLPsL2BsAk8iy6H_lBbM/edit?usp=sharing)
 
 ## Interesting tools that don't require coding
 
