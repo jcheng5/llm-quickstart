@@ -264,7 +264,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 # Shiny Assistant demo
 
-![](shiny-assistant-extension.png)
+![](shiny-assistant-extension-1.png)
 
 ##
 
