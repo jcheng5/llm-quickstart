@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -494,6 +494,11 @@
 </ul>
 </section>
 
+<section id="shiny-assistant-demo" class="title-slide slide level1 center">
+<h1>Shiny Assistant demo</h1>
+
+</section>
+
 <section>
 <section id="choosing-a-model" class="title-slide slide level1 center">
 <h1>Choosing a model</h1>
@@ -501,34 +506,33 @@
 <li>OpenAI ChatGPT</li>
 <li>Anthropic Claude</li>
 <li>Google Gemini</li>
-<li>Meta Llama (Can run locally, or access via API)</li>
-<li>DeepSeek</li>
+<li>Meta Llama (can run locally)</li>
+<li>DeepSeek (can run locally)</li>
 </ul>
 </section>
 <section id="openai-models" class="slide level2">
 <h2>OpenAI models</h2>
 <ul>
-<li><strong>GPT-4o</strong>: best general purpose model</li>
-<li><strong>GPT-4o-mini</strong>: similar to 4o, but faster and cheaper (and dumber)</li>
+<li><strong>GPT-4o</strong>: good general purpose model</li>
 <li><strong>o1</strong>: reasoning model; better for complex math and coding, but much slower and more expensive</li>
-<li><strong>o3-mini</strong>: reasoning model; faster and cheaper than o1, doesn’t support vision</li>
-<li>Can access API via <a href="https://platform.openai.com/docs/overview/">OpenAI</a> or <a href="https://azure.microsoft.com/en-us/products/ai-services/openai-service">Azure</a></li>
+<li>API access via <a href="https://platform.openai.com/docs/overview/">OpenAI</a> or <a href="https://azure.microsoft.com/en-us/products/ai-services/openai-service">Azure</a></li>
+<li><strong>Takeaway</strong>: Good models for general purpose use</li>
 </ul>
 </section>
 <section id="anthropic-models" class="slide level2">
 <h2>Anthropic models</h2>
 <ul>
-<li><strong>Claude 3.7 Sonnet</strong>: best model for code generation</li>
-<li><strong>Claude 3.5 Sonnet</strong>: previous best model for code generation; some still prefer it over 3.7</li>
-<li><strong>Claude 3.5 Haiku</strong>: faster, cheaper (and dumber) than Sonnet</li>
-<li>Can access API via <a href="https://docs.anthropic.com/">Anthropic</a> or <a href="https://aws.amazon.com/bedrock/claude/">AWS Bedrock</a> (<a href="https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit">instructions for using Bedrock at Posit</a>)</li>
+<li><strong>Claude 3.7 Sonnet</strong>: good general purpose model, best for code generation</li>
+<li>API access via <a href="https://docs.anthropic.com/">Anthropic</a> or <a href="https://aws.amazon.com/bedrock/claude/">AWS Bedrock</a> (<a href="https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit">instructions for using Bedrock at Posit</a>)</li>
+<li><strong>Takeaway</strong>: Best model for code generation</li>
 </ul>
 </section>
 <section id="google-models" class="slide level2">
 <h2>Google models</h2>
 <ul>
 <li><strong>Gemini 2.0 Flash</strong>: 1 million token context length, very fast</li>
-<li><strong>Gemini 2.0 Pro</strong>: 2 million token context length</li>
+<li><strong>Gemini 2.0 Pro</strong>: 2 million token context length, smarter than Flash</li>
+<li><strong>Takeaway</strong>: Largest context length - good if you need to provide lots of information</li>
 </ul>
 </section>
 <section id="llama-models" class="slide level2">
@@ -536,24 +540,21 @@
 <ul>
 <li>Open weights: you can download the model</li>
 <li>Can run locally, for example with <a href="https://ollama.com/">Ollama</a></li>
-<li><strong>Llama 3.1 405b</strong>: text, 229GB</li>
-<li><strong>Llama 3.3 70b</strong>: text, 43GB (perf similar to 3.1 405b)</li>
+<li><strong>Llama 3.1 405b</strong>: text, 229GB. Not quite as smart as best closed models.</li>
 <li><strong>Llama 3.2 90b</strong>: text+vision, 55GB</li>
 <li><strong>Llama 3.2 11b</strong>: text+vision, 7.9GB (can run comfortably on Macbook)</li>
-<li><strong>Llama 3.2 3b, 1b</strong>: text, 2GB, 0.8GB</li>
-<li>Can also access these models via API with <a href="https://openrouter.ai/">OpenRouter</a>, <a href="https://groq.com/">Groq</a>, <a href="https://aws.amazon.com/bedrock/llama/">AWS Bedrock</a></li>
+<li>API access via <a href="https://openrouter.ai/">OpenRouter</a>, <a href="https://groq.com/">Groq</a>, <a href="https://aws.amazon.com/bedrock/llama/">AWS Bedrock</a>, others</li>
+<li><strong>Takeaway</strong>: Good models if you want to keep all information on premises.</li>
 </ul>
 </section>
 <section id="deepseek-models" class="slide level2">
 <h2>DeepSeek models</h2>
 <ul>
 <li>Open weights</li>
-<li>Can access via API from <a href="https://platform.deepseek.com/">DeepSeek</a>, <a href="https://openrouter.ai/deepseek/deepseek-r1">OpenRouter</a></li>
-<li>Can run locally, for example with <a href="https://ollama.com/">Ollama</a></li>
 <li><strong>DeepSeek R1 671b</strong>: 404GB, uses chain of thought (claimed similar perf to OpenAI o1)</li>
-<li><strong>DeepSeek R1 32b, 70b</strong>: 20GB, 43GB (claimed similar perf to OpenAI o1-mini)</li>
-<li>Smaller sizes of R1 also available</li>
-<li><strong>DeepSeek V3 671b</strong>: 404GB (claimed similar perf to OpenAI 4o, Claude 3.5 Sonnet)</li>
+<li><strong>DeepSeek R1 32b, 70b</strong>: 20GB, 43GB. Not actually DeepSeek architecture - said to be significantly worse.</li>
+<li>API access via <a href="https://platform.deepseek.com/">DeepSeek</a>, <a href="https://openrouter.ai/deepseek/deepseek-r1">OpenRouter</a></li>
+<li>Can run locally, but smaller models aren’t really DeepSeek.</li>
 </ul>
 </section></section>
 <section>
@@ -577,7 +578,6 @@
 <h2>Prompt engineering: Directing behavior/output</h2>
 <ul>
 <li>“Respond with just the minimal information necessary.”</li>
-<li>“Explain your response in detail.”</li>
 <li>“Think through this step-by-step.”</li>
 <li>“Carefully read and follow these instructions…”</li>
 <li>“If the user asks a question related to data processing, produce R code to accomplish that task.”</li>
@@ -748,7 +748,7 @@ Example Output:
 
 - **Photography:**
   - Evaluate photos for focus issues.
-  - Auto-generate photo title, tags, and description. 
+  - Auto-generate photo title, tags, and description.
   - Advanced OCR on specific document types.
 - **Gaming:**
   - Dungeon master for D&D campaign.
@@ -1122,8 +1122,6 @@ Example Output:
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
