@@ -215,6 +215,16 @@ Use the [official `ui.Chat` component](https://shiny.posit.co/py/components/disp
 - Ask [Shiny assistant](https://gallery.shinyapps.io/assistant/) for help
 - Do NOT use the older ChatStream component
 
+# Shiny Assistant for VS Code
+
+##
+
+![](shiny-assistant-extension-1.png)
+
+## Installation
+
+![](shiny-assistant-extension-2.png)
+
 ## Other Python frameworks
 
 - Streamlit has an excellent [chat component](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps) with a [nice LangChain integration](https://docs.streamlit.io/develop/tutorials/llms/llm-quickstart)
@@ -260,18 +270,6 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
   - `openai` example: `02-tools-openai.py` (tedious, low-level, but understandable)
   - `langchain` example: `02-tools-langchain.py` (not bad)
   - `chatlas` example: `02-tools-chatlas.py` (easy, like `ellmer`)
-
-
-# Shiny Assistant for VS Code
-
-##
-
-![](shiny-assistant-extension-1.png)
-
-## Installation
-
-![](shiny-assistant-extension-2.png)
-
 
 # Choosing a model
 
