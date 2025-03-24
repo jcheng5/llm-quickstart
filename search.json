@@ -98,6 +98,13 @@
     "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nAsk Shiny assistant for help\nDo NOT use the older ChatStream component"
   },
   {
+    "objectID": "quickstart.html#installation",
+    "href": "quickstart.html#installation",
+    "title": "LLM Quick Start",
+    "section": "Installation",
+    "text": "Installation"
+  },
+  {
     "objectID": "quickstart.html#other-python-frameworks",
     "href": "quickstart.html#other-python-frameworks",
     "title": "LLM Quick Start",
@@ -124,13 +131,6 @@
     "title": "LLM Quick Start",
     "section": "How It Works",
     "text": "How It Works\nAnother way to think of it:\n\nThe client can perform tasks that the assistant can’t do\nTools put control into the hands of the assistant—it decides when to use them, and what arguments to pass in, and what to do with the results\nHaving an “intelligent-ish” coordinator of tools is a surprisingly general, powerful capability!"
-  },
-  {
-    "objectID": "quickstart.html#installation",
-    "href": "quickstart.html#installation",
-    "title": "LLM Quick Start",
-    "section": "Installation",
-    "text": "Installation"
   },
   {
     "objectID": "quickstart.html#openai-models",
