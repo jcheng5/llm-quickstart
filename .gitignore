@@ -8,3 +8,5 @@ __pycache__
 rsconnect-python
 logs/
 __pycache__/
+.Rproj.user
+.Renviron
