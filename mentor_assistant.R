@@ -4,6 +4,10 @@ library(shiny)
 library(shinychat)
 library(bslib)
 
+
+# base app ----------------------------------------------------------------
+
+
 my_theme <- bs_theme(bootswatch = "cerulean")
 
 ui <- bslib::page_fluid(
@@ -36,9 +40,12 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 
 
+# adjusting for learner ---------------------------------------------------
+
+
 # I want this ui but I can't figure out how to get that into the new package for formatting
 ui <- fluidPage(
-   titlePanel("Posit Academy Mentor Response Standardizer"),
+   titlePanel("Posit Academy Mentor Assistant"),
    
    sidebarLayout(
       sidebarPanel(
@@ -95,18 +102,21 @@ generate_mentor_response <- function(code, personality, tone) {
    return(prompt)
 }
 
+# test the prompt
+generate_mentor_response("ggplot(mtcars) |> geom_point()", "Eager", "1")
+
 # Server logic
 server <- function(input, output, session) {
    
    observeEvent(input$generate, {
       req(input$code)  # Ensure code input is provided
       
-      # Generate response using ellmer::chat_openai
+      # Generate the prompt
       response <- generate_mentor_response(input$code, input$personality, input$tone)
       
-      # Display the response in the UI
+      # Display the combined prompt in the UI
       output$response <- renderText({
-         response
+        response
       })
    })
 }
@@ -114,3 +124,27 @@ server <- function(input, output, session) {
 # Run the app
 shinyApp(ui, server)
 
+# text example code: ggplot(mtcars) |> geom_point()
+
+# Add the ai chat component -----------------------------------------------
+
+server <- function(input, output, session) {
+   
+   observeEvent(input$generate, {
+      req(input$code)  # Ensure code input is provided
+      
+      # Generate the prompt
+      response <- generate_mentor_response(input$code, input$personality, input$tone)
+      
+      chat <- ellmer::chat_openai(system_prompt = response)
+      
+      # Display the combined prompt in the UI
+      output$response <- renderText({
+         stream <- chat$stream_async(input$chat_user_input)
+         chat_append("chat", stream)
+      })
+   })
+}
+
+# Run the app
+shinyApp(ui, server)
