@@ -10,7 +10,7 @@ ui <- bslib::page_fluid(
    h1("Posit Academy Mentor Assistant"),
    theme = my_theme,
    layout_sidebar(
-      sidebar = sidebar("Sidebar"),
+      sidebar = sidebar(""),
       chat_ui("chat")
    )
 )
@@ -49,8 +49,8 @@ ui <- fluidPage(
          selectInput("personality", "Select Learner Personality:", 
                      choices = c("Eager", "Resistant", "Perfectionist", "Disengaged")),
          
-         sliderInput("tone", "Select Emotional Tone (learner frustration level):", 
-                     min = 1, max = 10, value = 1, step = 1),
+         sliderInput("tone", "Select Emotional Tone (gentle, neutral, firm):", 
+                     min = 1, max = 3, value = 1, step = 1),
          
          actionButton("generate", "Generate Response")
       ),
@@ -62,4 +62,37 @@ ui <- fluidPage(
    )
 )
 shinyApp(ui, function(...){})
+
+
+# Function to generate mentor responses based on learner personality and emotional tone
+generate_mentor_response <- function(code, personality, tone) {
+   
+   # Define personalized tone instructions based on learner personality
+   personality_prompt <- switch(personality,
+                                "Eager" = "The learner is eager and excited to learn. Provide a friendly, encouraging response with a small hint to keep them motivated.",
+                                "Resistant" = "The learner seems frustrated or resistant. Keep the tone neutral, professional, and firm. Provide a clear hint without pushing too much.",
+                                "Perfectionist" = "The learner has high standards and expects flawless code. Acknowledge their attention to detail, provide a gentle hint, and encourage a balance between perfectionism and moving forward.",
+                                "Disengaged" = "The learner seems disengaged or overwhelmed. Keep the tone light, non-judgmental, and encouraging. Break down the issue into simpler steps.")
+   
+   # Adjust the emotional tone of the response based on the slider
+   tone_prompt <- switch(as.character(tone),
+                         "1" = "Keep the response gentle, empathetic, and supportive.",
+                         "2" = "Keep the response neutral and professional.",
+                         "3" = "Make the response firm and authoritative, but still respectful.")
+   
+   # Combine personality prompt, emotional tone, and debugging request
+   prompt <- paste(
+      "You are a mentor at Posit Academy. Your job is to help learners debug R code while following these principles:\n",
+      "- Acknowledge their effort and issue.\n",
+      "- Guide them with a hint instead of giving the full answer.\n",
+      "- Provide a partial fix, but encourage them to figure out the final step.\n",
+      "- Optionally, explain why the error happened in simple terms.\n\n",
+      personality_prompt, "\n",
+      tone_prompt, "\n",
+      "Here is the learner's code:\n", code, 
+      "\nGenerate a response following these principles."
+   )
+   return(response)
+}
+
 
