@@ -42,7 +42,7 @@ ui <- fluidPage(
    
    sidebarLayout(
       sidebarPanel(
-         textAreaInput("code", "Enter Learner's Code or Question:", 
+         textAreaInput("code", "Enter Learner's Code", 
                        placeholder = "Paste the learner's code here...", 
                        rows = 5),
          
@@ -61,7 +61,7 @@ ui <- fluidPage(
       )
    )
 )
-shinyApp(ui, function(...){})
+# shinyApp(ui, function(...){})
 
 
 # Function to generate mentor responses based on learner personality and emotional tone
@@ -89,10 +89,28 @@ generate_mentor_response <- function(code, personality, tone) {
       "- Optionally, explain why the error happened in simple terms.\n\n",
       personality_prompt, "\n",
       tone_prompt, "\n",
-      "Here is the learner's code:\n", code, 
+      "Here is the learner's code:\n", "`", code, "`", 
       "\nGenerate a response following these principles."
    )
-   return(response)
+   return(prompt)
 }
 
+# Server logic
+server <- function(input, output, session) {
+   
+   observeEvent(input$generate, {
+      req(input$code)  # Ensure code input is provided
+      
+      # Generate response using ellmer::chat_openai
+      response <- generate_mentor_response(input$code, input$personality, input$tone)
+      
+      # Display the response in the UI
+      output$response <- renderText({
+         response
+      })
+   })
+}
+
+# Run the app
+shinyApp(ui, server)
 
