@@ -1,211 +1,8 @@
-library(dotenv) # Will read OPENAI_API_KEY from .env file
-library(ellmer)
-library(shiny)
-library(shinychat)
-library(bslib)
+# Creating an assistant that will help mentors craft messages for learners
+# with some level of customization to match learner engagement
 
-# Exmample provided ------------
-
-ui <- bslib::page_fluid(
-   chat_ui("chat")
-)
-
-server <- function(input, output, session) {
-   chat <- chat_openai(
-      model = "gpt-4o",
-      system_prompt = "You're a trickster who answers in riddles"
-   )
-   
-   observeEvent(input$chat_user_input, {
-      stream <- chat$stream_async(input$chat_user_input)
-      chat_append("chat", stream)
-   })
-}
-
-shinyApp(ui, server)
-
-
-# base app ----------------------------------------------------------------
-
-
-my_theme <- bs_theme(bootswatch = "cerulean")
-
-ui <- bslib::page_fluid(
-   h1("Posit Academy Mentor Assistant"),
-   theme = my_theme,
-   layout_sidebar(
-      sidebar = sidebar(""),
-      chat_ui("chat")
-   )
-)
-# shinyApp(ui, function(...){})
-
-empathetic_learner_promt <- "You are the assistant for a mentor at Posit Academy. 
-    Your job is to help mentors craft empathetic responses for learners to debug R code while following these guidelines:
-        1. Acknowledge the learners effort and the issue they are having.
-        2. Guide them with a hint instead of giving the full answer.
-        3. Provide a partial fix, but encourage them to figure out the final step.
-        4. Optionally, explain why the error happened in simple terms.
-        5. Make it short."
-
-server <- function(input, output, session) {
-   chat <- ellmer::chat_openai(system_prompt = empathetic_learner_promt)
-   
-   observeEvent(input$chat_user_input, {
-      stream <- chat$stream_async(input$chat_user_input)
-      chat_append("chat", stream)
-   })
-}
-
-shinyApp(ui, server)
-
-
-# adjusting for learner ---------------------------------------------------
-
-
-# I want this ui but I can't figure out how to get that into the new package for formatting
-ui <- fluidPage(
-   titlePanel("Posit Academy Mentor Assistant"),
-   
-   sidebarLayout(
-      sidebarPanel(
-         textAreaInput("code", "Enter Learner's Code", 
-                       placeholder = "Paste the learner's code here...", 
-                       rows = 5),
-         
-         selectInput("personality", "Select Learner Personality:", 
-                     choices = c("Eager", "Resistant", "Perfectionist", "Disengaged")),
-         
-         sliderInput("tone", "Select Emotional Tone (gentle, neutral, firm):", 
-                     min = 1, max = 3, value = 1, step = 1),
-         
-         actionButton("generate", "Generate Response")
-      ),
-      
-      mainPanel(
-         h3("Generated Mentor Response:"),
-         verbatimTextOutput("response")
-      )
-   )
-)
-# shinyApp(ui, function(...){})
-
-
-# Function to generate mentor responses based on learner personality and emotional tone
-generate_mentor_response <- function(code, personality, tone) {
-   
-   # Define personalized tone instructions based on learner personality
-   personality_prompt <- switch(personality,
-                                "Eager" = "The learner is eager and excited to learn. Provide a friendly, encouraging response with a small hint to keep them motivated.",
-                                "Resistant" = "The learner seems frustrated or resistant. Keep the tone neutral, professional, and firm. Provide a clear hint without pushing too much.",
-                                "Perfectionist" = "The learner has high standards and expects flawless code. Acknowledge their attention to detail, provide a gentle hint, and encourage a balance between perfectionism and moving forward.",
-                                "Disengaged" = "The learner seems disengaged or overwhelmed. Keep the tone light, non-judgmental, and encouraging. Break down the issue into simpler steps.")
-   
-   # Adjust the emotional tone of the response based on the slider
-   tone_prompt <- switch(as.character(tone),
-                         "1" = "Keep the response gentle, empathetic, and supportive.",
-                         "2" = "Keep the response neutral and professional.",
-                         "3" = "Make the response firm and authoritative, but still respectful.")
-   
-   # Combine personality prompt, emotional tone, and debugging request
-   prompt <- paste(
-      "You are a mentor at Posit Academy. Your job is to help learners debug R code while following these principles:\n",
-      "- Acknowledge their effort and issue.\n",
-      "- Guide them with a hint instead of giving the full answer.\n",
-      "- Provide a partial fix, but encourage them to figure out the final step.\n",
-      "- Optionally, explain why the error happened in simple terms.\n\n",
-      personality_prompt, "\n",
-      tone_prompt, "\n",
-      "Here is the learner's code:\n", "`", code, "`", 
-      "\nGenerate a response following these principles."
-   )
-   return(prompt)
-}
-
-# test the prompt
-generate_mentor_response("ggplot(mtcars) |> geom_point()", "Eager", "1")
-
-# Server logic
-server <- function(input, output, session) {
-   
-   observeEvent(input$generate, {
-      req(input$code)  # Ensure code input is provided
-      
-      # Generate the prompt
-      response <- generate_mentor_response(input$code, input$personality, input$tone)
-      
-      # Display the combined prompt in the UI
-      output$response <- renderText({
-        response
-      })
-   })
-}
-
-# Run the app
-shinyApp(ui, server)
-
-# text example code: ggplot(mtcars) |> geom_point()
-
-# Add the ai chat component -----------------------------------------------
-
-server <- function(input, output, session) {
-   
-   observeEvent(input$generate, {
-      req(input$code)  # Ensure code input is provided
-      
-      # Generate the prompt
-      response <- generate_mentor_response(input$code, input$personality, input$tone)
-      
-      chat <- ellmer::chat_openai(system_prompt = response)
-      
-      # Display the combined prompt in the UI
-      # output$response <- renderText({
-      #    stream <- chat$stream_async(input$chat_user_input)
-      #    chat_append("chat", stream)
-      # })
-   })
-}
-
-# Run the app
-shinyApp(ui, server)
-
-
-
-# UI with bslib ------------------------------------------------------
-
-# testing this bslib package 
-ui <- bslib::page_fluid(
-   h1("Posit Academy Mentor Assistant"),
-   theme = bs_theme(bootswatch = "cerulean"),
-   layout_column_wrap(
-      width = 1,
-      card(
-         card_header("Learner frustration"),
-         sliderInput("frustration", "Frustration Level", min = 0, max = 5, value = 1)
-      ),
-      card(
-         card_header("Mentor Chat"),
-         chat_ui("chat")
-      )
-   )
-)
-
-server <- function(input, output, session) {
-   chat <- ellmer::chat_openai(system_prompt = empathetic_learner_promt)
-   
-   observeEvent(input$chat_user_input, {
-      stream <- chat$stream_async(input$chat_user_input)
-      chat_append("chat", stream)
-   })
-}
-
-
-shinyApp(ui, server)
-
-
-
-# Using ellmer assistant --------------------------------------------------
-
+# created by javirudolph
+# with significant help from ellmer assistant
 
 library(dotenv) # Will read OPENAI_API_KEY from .env file
 
@@ -215,20 +12,10 @@ library(bslib)
 library(ellmer)
 
 ui <- bslib::page_fluid(
-   titlePanel("Mentor Assistant"),
+   titlePanel("Code debug message assistant"),
    
    # Apply custom theme
-   theme = bs_theme(
-      bg = "white", # Pastel pink
-      fg = "#212121", # Dark text
-      primary = "#E1BEE7", # Lavender
-      secondary = "#C5CAE9", # Light blue
-      success = "#C8E6C9", # Mint green
-      info = "#FFCCBC", # Light coral
-      warning = "#FFF9C4", # Light yellow
-      danger = "#FFCDD2", # Pastel red
-      base_font = font_google("Open Sans")
-   ),
+   theme = bs_theme(bootswatch = "quartz"),
    
    sidebarLayout(
       sidebarPanel(
@@ -305,3 +92,6 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
+# To thest in the code box
+# ggplot(mtcars) + geom_point()
