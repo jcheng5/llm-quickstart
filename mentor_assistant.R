@@ -15,7 +15,7 @@ ui <- bslib::page_fluid(
    titlePanel("Code debug message assistant"),
    
    # Apply custom theme
-   theme = bs_theme(bootswatch = "quartz"),
+   theme = bs_theme(bootswatch = "journal"),
    
    sidebarLayout(
       sidebarPanel(
