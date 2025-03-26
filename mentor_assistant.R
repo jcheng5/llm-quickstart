@@ -18,7 +18,7 @@ ui <- bslib::page_fluid(
       chat_ui("chat")
    )
 )
-shinyApp(ui, function(...){})
+# shinyApp(ui, function(...){})
 
 empathetic_learner_promt <- "You are the assistant for a mentor at Posit Academy. 
     Your job is to help mentors craft empathetic responses for learners to debug R code while following these guidelines:
@@ -139,12 +139,45 @@ server <- function(input, output, session) {
       chat <- ellmer::chat_openai(system_prompt = response)
       
       # Display the combined prompt in the UI
-      output$response <- renderText({
-         stream <- chat$stream_async(input$chat_user_input)
-         chat_append("chat", stream)
-      })
+      # output$response <- renderText({
+      #    stream <- chat$stream_async(input$chat_user_input)
+      #    chat_append("chat", stream)
+      # })
    })
 }
 
 # Run the app
+shinyApp(ui, server)
+
+
+
+# UI with bslib ------------------------------------------------------
+
+# testing this bslib package 
+ui <- bslib::page_fluid(
+   h1("Posit Academy Mentor Assistant"),
+   theme = bs_theme(bootswatch = "cerulean"),
+   layout_column_wrap(
+      width = 1,
+      card(
+         card_header("Learner frustration"),
+         sliderInput("frustration", "Frustration Level", min = 0, max = 5, value = 1)
+      ),
+      card(
+         card_header("Mentor Chat"),
+         chat_ui("chat")
+      )
+   )
+)
+
+server <- function(input, output, session) {
+   chat <- ellmer::chat_openai(system_prompt = empathetic_learner_promt)
+   
+   observeEvent(input$chat_user_input, {
+      stream <- chat$stream_async(input$chat_user_input)
+      chat_append("chat", stream)
+   })
+}
+
+
 shinyApp(ui, server)
