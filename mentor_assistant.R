@@ -3,14 +3,30 @@ library(ellmer)
 library(shiny)
 library(shinychat)
 
-ui <- bslib::page_fluid(
-   chat_ui("chat")
+ui <- fluidPage(
+   titlePanel("Posit Academy Mentor Response Standardizer"),
+   
+   sidebarLayout(
+      sidebarPanel(
+         textAreaInput("code", "Enter Learner's Code or Question:", 
+                       placeholder = "Paste the learner's code here...", 
+                       rows = 5),
+         
+         selectInput("personality", "Select Learner Personality:", 
+                     choices = c("Eager", "Resistant", "Perfectionist", "Disengaged")),
+         
+         actionButton("generate", "Generate Response")
+      ),
+      
+      mainPanel(
+         h3("Generated Mentor Response:"),
+         verbatimTextOutput("response")
+      )
+   )
 )
 
-ui <- page_fluid(
-   h2(class = "text-center pt-4", "Shiny + Claude"),
-   chat_ui("chat")
-)
+# Run the app
+shinyApp(ui, function(...) {})
 
 server <- function(input, output, session) {
    chat <- chat_openai(
