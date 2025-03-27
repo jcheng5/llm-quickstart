@@ -10,3 +10,4 @@ logs/
 __pycache__/
 .Rproj.user
 .Renviron
+.Rhistory
