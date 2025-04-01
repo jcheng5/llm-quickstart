@@ -215,15 +215,19 @@ Use the [official `ui.Chat` component](https://shiny.posit.co/py/components/disp
 - Ask [Shiny assistant](https://gallery.shinyapps.io/assistant/) for help
 - Do NOT use the older ChatStream component
 
-# Shiny Assistant for VS Code
-
-##
+## Shiny Assistant for VS Code
 
 ![](shiny-assistant-extension-1.png)
 
 ## Installation
 
 ![](shiny-assistant-extension-2.png)
+
+## {querychat}
+
+![](https://github.com/posit-dev/querychat/raw/main/animation.gif)
+
+[https://github.com/posit-dev/querychat](https://github.com/posit-dev/querychat) (R and Python)
 
 ## Other Python frameworks
 
