@@ -11,7 +11,7 @@
     "href": "quickstart.html#setup",
     "title": "LLM Quick Start",
     "section": "Setup",
-    "text": "Setup\n\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-15\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
+    "text": "Setup\n\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-16\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -210,18 +210,11 @@
     "text": "Adding context/knowledge to prompt\n\nAdd documentation files to prompt\nAdd positive examples (negative examples don’t work well)\nDocs must fit in context window\nExamples\n\nEllmer assistant uses README files in prompt\nSidebot\nFastHTML LLM prompt"
   },
   {
-    "objectID": "quickstart.html#prompt-engineering-guides",
-    "href": "quickstart.html#prompt-engineering-guides",
-    "title": "LLM Quick Start",
-    "section": "Prompt engineering guides",
-    "text": "Prompt engineering guides\n\nOpenAI’s prompt engineering guide\nAnthropic’s prompt engineering guide"
-  },
-  {
     "objectID": "quickstart.html#rag-retrieval-augmented-generation",
     "href": "quickstart.html#rag-retrieval-augmented-generation",
     "title": "LLM Quick Start",
     "section": "RAG: Retrieval Augmented Generation",
-    "text": "RAG: Retrieval Augmented Generation\n\nUseful when documents don’t fit into context window\nSteps:\n\nUser sends query to app: “How do I …?”\nApp retrieves relevant chunks of text via search\nApp sends text and query to LLM\n\n&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?\n\nLLM responds with answer\n\nSearch method typically a semantic instead of keyword search, using vector DB\nLLM will only know about chunks that were retrieved; does not “know” entire corpus\nIn general, prompt engineering works better, if docs fit in context window"
+    "text": "RAG: Retrieval Augmented Generation\n\nUseful when documents don’t fit into context window\nSteps:\n\nUser sends query to app: “How do I …?”\nApp retrieves relevant chunks of text via search\nApp sends text and query to LLM\n\n&lt;chunk 1&gt;, &lt;chunk 2&gt;, &lt;chunk 3&gt;. How do I …?\n\nLLM responds with answer\n\nSearch method typically a semantic instead of keyword search, using vector DB\nLLM will only know about chunks that were retrieved; does not “know” entire corpus\nIn general, prompt stuffing works better, if docs fit in context window"
   },
   {
     "objectID": "quickstart.html#fine-tuning",
@@ -231,11 +224,11 @@
     "text": "Fine tuning\n\nUpdate weights for an existing model with new information\nNot all models can be fine-tuned\nData must be provided in chat conversation format, with query and response\n\nCan’t just feed it documents – this makes fine-tuning more difficult in practice\n\nSupposedly not very effective unless you have a lot of training data"
   },
   {
-    "objectID": "quickstart.html#more-on-prompting-rag-fine-tuning",
-    "href": "quickstart.html#more-on-prompting-rag-fine-tuning",
+    "objectID": "quickstart.html#takeaways",
+    "href": "quickstart.html#takeaways",
     "title": "LLM Quick Start",
-    "section": "More on prompting, RAG, fine tuning",
-    "text": "More on prompting, RAG, fine tuning\n\nTry prompting first, before RAG and fine tuning.\nFine-tuning vs. RAG article"
+    "section": "Takeaways",
+    "text": "Takeaways\n\nFirst try pompting, then RAG, and then fine tuning.\nOther resources\n\nOpenAI’s prompt engineering guide\nAnthropic’s prompt engineering guide\nFine-tuning vs. RAG article"
   },
   {
     "objectID": "quickstart.html#going-beyond-chat",
@@ -249,7 +242,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-15 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-16 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",
@@ -284,7 +277,7 @@
     "href": "intro.html#the-plan",
     "title": "",
     "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #hackathon-15\n\nWednesday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #hackathon-16\n\nWednesday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
   },
   {
     "objectID": "intro.html#hack-on-stuff",

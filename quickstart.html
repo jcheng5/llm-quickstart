@@ -207,13 +207,13 @@
 - Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
   - We recommend RStudio for R, and Positron for R or Python
 - Clone https://github.com/jcheng5/llm-quickstart
-- Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-15</code>
+- Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-16</code>
 
 #### Option 2: Local
 -->
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-15</code></p></li>
+<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-16</code></p></li>
 <li><p>For R: <code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny", "paws.common", "magick", "beepr"))</code></p></li>
 <li><p>For Python: <code>pip install -r requirements.txt</code></p></li>
 </ul>
@@ -665,13 +665,6 @@ Example Output:
 </ul></li>
 </ul>
 </section>
-<section id="prompt-engineering-guides" class="slide level2">
-<h2>Prompt engineering guides</h2>
-<ul>
-<li>OpenAI’s <a href="https://platform.openai.com/docs/guides/prompt-engineering">prompt engineering guide</a></li>
-<li>Anthropic’s <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">prompt engineering guide</a></li>
-</ul>
-</section>
 <section id="rag-retrieval-augmented-generation" class="slide level2">
 <h2>RAG: Retrieval Augmented Generation</h2>
 <ul>
@@ -688,7 +681,7 @@ Example Output:
 </ul></li>
 <li>Search method typically a semantic instead of keyword search, using vector DB</li>
 <li>LLM will only know about chunks that were retrieved; does not “know” entire corpus</li>
-<li>In general, prompt engineering works better, if docs fit in context window</li>
+<li>In general, prompt stuffing works better, if docs fit in context window</li>
 </ul>
 </section>
 <section id="fine-tuning" class="slide level2">
@@ -703,11 +696,16 @@ Example Output:
 <li>Supposedly not very effective unless you have a lot of training data</li>
 </ul>
 </section>
-<section id="more-on-prompting-rag-fine-tuning" class="slide level2">
-<h2>More on prompting, RAG, fine tuning</h2>
+<section id="takeaways" class="slide level2">
+<h2>Takeaways</h2>
 <ul>
-<li>Try prompting first, before RAG and fine tuning.</li>
+<li><strong>First try pompting, then RAG, and then fine tuning.</strong></li>
+<li>Other resources
+<ul>
+<li>OpenAI’s <a href="https://platform.openai.com/docs/guides/prompt-engineering">prompt engineering guide</a></li>
+<li>Anthropic’s <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">prompt engineering guide</a></li>
 <li><a href="https://finetunedb.com/blog/fine-tuning-vs-rag/">Fine-tuning vs.&nbsp;RAG article</a></li>
+</ul></li>
 </ul>
 </section></section>
 <section>
@@ -732,7 +730,7 @@ Example Output:
 <li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
-<p>Ask <code>#hackathon-15</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+<p>Ask <code>#hackathon-16</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
 </section></section>
 <section>
 <section id="vision" class="title-slide slide level1 center">
