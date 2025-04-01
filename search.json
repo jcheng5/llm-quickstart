@@ -98,11 +98,25 @@
     "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nAsk Shiny assistant for help\nDo NOT use the older ChatStream component"
   },
   {
+    "objectID": "quickstart.html#shiny-assistant-for-vs-code",
+    "href": "quickstart.html#shiny-assistant-for-vs-code",
+    "title": "LLM Quick Start",
+    "section": "Shiny Assistant for VS Code",
+    "text": "Shiny Assistant for VS Code"
+  },
+  {
     "objectID": "quickstart.html#installation",
     "href": "quickstart.html#installation",
     "title": "LLM Quick Start",
     "section": "Installation",
     "text": "Installation"
+  },
+  {
+    "objectID": "quickstart.html#querychat",
+    "href": "quickstart.html#querychat",
+    "title": "LLM Quick Start",
+    "section": "{querychat}",
+    "text": "{querychat}\n\nhttps://github.com/posit-dev/querychat (R and Python)"
   },
   {
     "objectID": "quickstart.html#other-python-frameworks",
