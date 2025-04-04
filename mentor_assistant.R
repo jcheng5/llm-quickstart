@@ -87,15 +87,13 @@ server <- function(input, output, session) {
                                          input$frustration)
       # Use chat to process the prompt
       stream <- chat$stream_async(prompt)
-      chat_append("chat", stream)
-      
-      observeEvent(input$chat_user_input, {
-         stream <- chat$stream_async(input$chat_user_input)
-         chat_append("chat", stream)
-      })
-      
+      chat_append("chat", stream)      
    })
-   
+
+   observeEvent(input$chat_user_input, {
+      stream <- chat$stream_async(input$chat_user_input)
+      chat_append("chat", stream)
+   })   
 }
 
 shinyApp(ui, server)
