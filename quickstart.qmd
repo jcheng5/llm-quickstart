@@ -442,6 +442,14 @@ Assistant response:
 - LLM will only know about chunks that were retrieved; does not "know" entire corpus
 - In general, prompt stuffing works better, if docs fit in context window
 
+## Agentic search
+
+- Similar to RAG:
+  - Extra information is provided to LLM
+- Different from RAG:
+  - Application does *not* search documents and send to LLM along with user prompt
+  - User prompt is sent to LLM, then LLM uses a _tool_ to search for relevant documents
+
 ## Fine tuning
 
 - Update weights for an existing model with new information
