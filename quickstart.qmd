@@ -523,6 +523,8 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 - [Cohort 12](https://docs.google.com/presentation/d/17RRsGauC7TfiRLCJh40VnEsawwv727eK5np9F0SzmN8/edit?usp=sharing)
 - [Cohort 13](https://docs.google.com/presentation/d/1JnViUBV_AzkSU35vAOklg60OLPsL2BsAk8iy6H_lBbM/edit?usp=sharing)
 - [Cohort 14](https://docs.google.com/presentation/d/1Svl7XZOHD_g21NZ0jX8hICmIKUHRyoCEirzDMDeh3UM/edit?usp=sharing)
+- [Cohort 15](https://docs.google.com/presentation/d/1TfGWfH2ck9s5Y71XrLc-7hIn7m9evFTEtkVg-GEs6G8/edit?usp=sharing)
+- [Cohort 16](https://docs.google.com/presentation/d/1ZR5klcr20WSuJEI2EmYIQan9DffUNMBMp_L6Ik0sBl0/edit?usp=sharing)
 
 ## Interesting tools that don't require coding
 
