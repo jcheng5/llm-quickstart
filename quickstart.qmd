@@ -275,6 +275,19 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
   - `langchain` example: `02-tools-langchain.py` (not bad)
   - `chatlas` example: `02-tools-chatlas.py` (easy, like `ellmer`)
 
+# MCP (Model Context Protocol)
+
+- Standard protocol to give LLMs access to tools
+- Tool can be implemented by third party as MCP server
+- The application that talks to LLM is an MCP client
+- [Clients](https://modelcontextprotocol.io/clients): Claude Desktop app, Claude Code, Continue, Cursor
+- Example [Servers](https://github.com/modelcontextprotocol/servers)
+  - [Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) - Give LLM access to files on disk
+  - [Github](https://github.com/modelcontextprotocol/servers/blob/main/src/github)
+  - [Google Maps](https://github.com/modelcontextprotocol/servers/blob/main/src/google-maps)
+  - [Sqlite](https://github.com/modelcontextprotocol/servers/blob/main/src/sqlite)
+  - [Browser MCP](https://browsermcp.io/) - Control web browser
+
 # Choosing a model
 
 - OpenAI ChatGPT
