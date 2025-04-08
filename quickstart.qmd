@@ -165,15 +165,16 @@ curl https://api.openai.com/v1/chat/completions \
 # Choose a Package {.smaller}
 
 - R:
-  - `ellmer` high-level, easy, much less ambitious than langchain
+  - [`ellmer`](https://ellmer.tidyverse.org/) high-level, easy, much less ambitious than langchain
     - OpenAI, Anthropic, Google are well supported
     - Several other providers are supported but may not be as well tested
     - Get help from [Ellmer Assistant](https://jcheng.shinyapps.io/ellmer-assistant/)
 - Python:
-  - `openai` - low-level, but solid
-  - `langchain` - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
-    - Evolved from v0.1, v0.2, and now `langgraph`
-  - `chatlas` - high-level, basically a port of R's `ellmer`
+  - [`openai`](https://platform.openai.com/docs/overview?lang=python), [`anthropic`](https://docs.anthropic.com/en/home) - from LLM providers, low-level but solid 
+  - [`PydanticAI`](https://ai.pydantic.dev/) - relatively new (announced 2024-12), abstracts over providers, relatively low level. (Does not support streaming for Anthropic!)
+  - [`langchain`](https://python.langchain.com/docs/introduction/) - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
+    - Evolved from v0.1, v0.2, and now [`langgraph`](https://langchain-ai.github.io/langgraphjs/)
+  - [`chatlas`](https://posit-dev.github.io/chatlas/) - high-level, basically a port of R's `ellmer`
   - Many, many other options are available
 
 # Your Turn
