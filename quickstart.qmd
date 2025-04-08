@@ -205,7 +205,7 @@ If it works, study the code and try to understand how it maps to the low-level H
 ## Shiny for R
 
 {`shinychat`} package\
-  [https://github.com/jcheng5/shinychat](https://github.com/jcheng5/shinychat)
+  [https://github.com/posit-dev/shinychat](https://github.com/posit-dev/shinychat)
 
 - Designed to be used with ellmer
 - [Ellmer Assistant](https://jcheng.shinyapps.io/ellmer-assistant) is quite good for getting started
@@ -214,8 +214,8 @@ If it works, study the code and try to understand how it maps to the low-level H
 
 Use the [official `ui.Chat` component](https://shiny.posit.co/py/components/display-messages/chat/) for Shiny for Python
 
-- Ask [Shiny assistant](https://gallery.shinyapps.io/assistant/) for help
 - Do NOT use the older ChatStream component
+- [Shiny Assistant](https://gallery.shinyapps.io/assistant/) on the web can't help you with `ui.Chat` for data privacy reasons
 
 ## Shiny Assistant for VS Code
 
