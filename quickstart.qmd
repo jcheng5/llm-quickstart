@@ -156,6 +156,7 @@ curl https://api.openai.com/v1/chat/completions \
   - "hello" → 1 token
   - "unconventional" → 3 tokens: `un|con|ventional`
   - 4K video frame at full res → 6885 tokens
+- Example with [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
 - Important for:
   - Model input/output limits
   - API pricing is usually by token (see [calculator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator))
