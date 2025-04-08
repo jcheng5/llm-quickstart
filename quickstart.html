@@ -422,7 +422,7 @@
 <section id="shiny-for-r" class="slide level2">
 <h2>Shiny for R</h2>
 <p>{<code>shinychat</code>} package<br>
-<a href="https://github.com/jcheng5/shinychat">https://github.com/jcheng5/shinychat</a></p>
+<a href="https://github.com/posit-dev/shinychat">https://github.com/posit-dev/shinychat</a></p>
 <ul>
 <li>Designed to be used with ellmer</li>
 <li><a href="https://jcheng.shinyapps.io/ellmer-assistant">Ellmer Assistant</a> is quite good for getting started</li>
@@ -432,8 +432,8 @@
 <h2>Shiny for Python</h2>
 <p>Use the <a href="https://shiny.posit.co/py/components/display-messages/chat/">official <code>ui.Chat</code> component</a> for Shiny for Python</p>
 <ul>
-<li>Ask <a href="https://gallery.shinyapps.io/assistant/">Shiny assistant</a> for help</li>
 <li>Do NOT use the older ChatStream component</li>
+<li><a href="https://gallery.shinyapps.io/assistant/">Shiny Assistant</a> on the web can’t help you with <code>ui.Chat</code> for data privacy reasons</li>
 </ul>
 </section>
 <section id="shiny-assistant-for-vs-code" class="slide level2">
@@ -509,21 +509,19 @@
 </ul>
 </section>
 
-<section id="mcp-model-context-protocol" class="title-slide slide level1 center">
-<h1>MCP (Model Context Protocol)</h1>
+<section id="model-context-protocol" class="title-slide slide level1 center">
+<h1>Model Context Protocol</h1>
 <ul>
-<li>Standard protocol to give LLMs access to tools</li>
-<li>Tool can be implemented by third party as MCP server</li>
-<li>The application that talks to LLM is an MCP client</li>
-<li><a href="https://modelcontextprotocol.io/clients">Clients</a>: Claude Desktop app, Claude Code, Continue, Cursor</li>
-<li>Example <a href="https://github.com/modelcontextprotocol/servers">Servers</a>
+<li>tl;dr: give the LLM tools that you didn’t write</li>
+<li>Protocol to give LLMs access to tools that can be written in any language</li>
+<li>The application that uses the tool is an MCP client</li>
+<li>MCP Servers provide the tools. <a href="https://github.com/modelcontextprotocol/servers">Examples</a>:
 <ul>
-<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem">Filesystem</a> - Give LLM access to files on disk</li>
-<li><a href="https://github.com/modelcontextprotocol/servers/blob/main/src/github">Github</a></li>
 <li><a href="https://github.com/modelcontextprotocol/servers/blob/main/src/google-maps">Google Maps</a></li>
-<li><a href="https://github.com/modelcontextprotocol/servers/blob/main/src/sqlite">Sqlite</a></li>
-<li><a href="https://browsermcp.io/">Browser MCP</a> - Control web browser</li>
+<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem">Filesystem</a> - access to files on disk</li>
+<li><a href="https://browsermcp.io/">Browser MCP</a> - control web browser</li>
 </ul></li>
+<li>Clients use the tools. <a href="https://modelcontextprotocol.io/clients">Examples</a>: Claude Desktop app, Claude Code, Continue, Cursor, many others</li>
 </ul>
 </section>
 

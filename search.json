@@ -151,14 +151,14 @@
     "href": "quickstart.html#shiny-for-r",
     "title": "LLM Quick Start",
     "section": "Shiny for R",
-    "text": "Shiny for R\n{shinychat} package\nhttps://github.com/jcheng5/shinychat\n\nDesigned to be used with ellmer\nEllmer Assistant is quite good for getting started"
+    "text": "Shiny for R\n{shinychat} package\nhttps://github.com/posit-dev/shinychat\n\nDesigned to be used with ellmer\nEllmer Assistant is quite good for getting started"
   },
   {
     "objectID": "quickstart.html#shiny-for-python",
     "href": "quickstart.html#shiny-for-python",
     "title": "LLM Quick Start",
     "section": "Shiny for Python",
-    "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nAsk Shiny assistant for help\nDo NOT use the older ChatStream component"
+    "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nDo NOT use the older ChatStream component\nShiny Assistant on the web can’t help you with ui.Chat for data privacy reasons"
   },
   {
     "objectID": "quickstart.html#shiny-assistant-for-vs-code",
