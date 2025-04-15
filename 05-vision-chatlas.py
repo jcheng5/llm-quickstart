@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # Loads OPENAI_API_KEY from the .env file
 
-chat = ChatOpenAI(model="gpt-4o")
+chat = ChatOpenAI(model="gpt-4.1")
 
 chat.chat(
     content_image_file("photo.jpg"),

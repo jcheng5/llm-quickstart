@@ -19,7 +19,7 @@ messages = [
 # Call out to the OpenAI API to generate a response. (This is a blocking call,
 # but there are ways to do async, streaming, and async streaming as well.)
 response = client.chat.completions.create(
-    model="gpt-4o",
+    model="gpt-4.1",
     messages=messages,
 )
 
@@ -37,7 +37,7 @@ messages.append(response.choices[0].message)
 # Ask a followup question.
 messages.append({"role": "user", "content": "Are you sure?"})
 response2 = client.chat.completions.create(
-    model="gpt-4o",
+    model="gpt-4.1",
     messages=messages,
     stream=True,
 )

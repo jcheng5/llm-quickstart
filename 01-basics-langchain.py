@@ -11,7 +11,7 @@ load_dotenv()  # Loads OPENAI_API_KEY from the .env file
 # See https://python.langchain.com/docs/tutorials/chatbot/ for more information.
 
 # The underlying chat model. It doesn't manage any state, so we need to wrap it.
-model = ChatOpenAI(model="gpt-4o")
+model = ChatOpenAI(model="gpt-4.1")
 
 # This is how you provide a system message in Langchain. Surprisingly
 # complicated, isn't it?

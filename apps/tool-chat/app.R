@@ -13,7 +13,7 @@ ui <- bslib::page_fluid(
 
 server <- function(input, output, session) {
   chat <- ellmer::chat_openai(
-    model = "gpt-4o",
+    model = "gpt-4.1",
     system_prompt = system_prompt
   )
 

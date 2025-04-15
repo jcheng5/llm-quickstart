@@ -19,7 +19,7 @@ play_sound <- function(sound = c("correct", "incorrect", "you-win")) {
 }
 
 chat <- chat_openai(
-  model = "gpt-4o",
+  model = "gpt-4.1",
   system_prompt = paste(collapse = "\n", readLines("02-tools-prompt.md", warn = FALSE))
 )
 

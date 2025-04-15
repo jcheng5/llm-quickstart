@@ -9,7 +9,7 @@ from shiny.express import input, ui
 _ = load_dotenv()
 
 chat_session = ChatOpenAI(
-    model="gpt-4o",
+    model="gpt-4.1",
     system_prompt="You're a trickster who answers in riddles",
 )
 

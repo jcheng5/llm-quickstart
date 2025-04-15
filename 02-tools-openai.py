@@ -57,7 +57,7 @@ tools = [
 def process_conversation(messages):
     while True:
         response = client.chat.completions.create(
-            model="gpt-4o",  # Make sure to use a model that supports function calling
+            model="gpt-4.1",  # Make sure to use a model that supports function calling
             messages=messages,
             tools=tools,
             tool_choice="auto",

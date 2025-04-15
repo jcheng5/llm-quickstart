@@ -29,7 +29,7 @@ get_weather <- function(latitude, longitude) {
 
 # Create chat instance
 chat <- chat_openai(
-  model = "gpt-4o",
+  model = "gpt-4.1",
   system_prompt = "You are a helpful assistant that can check the weather. Report results in imperial units."
 )
 
