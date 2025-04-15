@@ -1,3 +1,7 @@
+# To run this app, execute `shiny run 03-shiny-chat-app.py` at the terminal,
+# or in Positron/VS Code with the Shiny extension, use the Run button-menu's
+# "Run Shiny App" option.
+
 from chatlas import ChatOpenAI
 from dotenv import load_dotenv
 from shiny.express import input, ui
