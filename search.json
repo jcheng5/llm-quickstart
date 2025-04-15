@@ -39,7 +39,7 @@
     "href": "quickstart.html#example-request",
     "title": "LLM Quick Start",
     "section": "Example Request",
-    "text": "Example Request\ncurl https://api.openai.com/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -d '{\n    \"model\": \"gpt-4o\",\n    \"messages\": [\n        {\"role\": \"system\", \"content\": \"You are a terse assistant.\"},\n        {\"role\": \"user\", \"content\": \"What is the capital of the moon?\"}\n    ]\n}'\n\nSystem prompt: behind-the-scenes instructions and information for the model\nUser prompt: a question or statement for the model to respond to"
+    "text": "Example Request\ncurl https://api.openai.com/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -d '{\n    \"model\": \"gpt-4.1\",\n    \"messages\": [\n        {\"role\": \"system\", \"content\": \"You are a terse assistant.\"},\n        {\"role\": \"user\", \"content\": \"What is the capital of the moon?\"}\n    ]\n}'\n\nSystem prompt: behind-the-scenes instructions and information for the model\nUser prompt: a question or statement for the model to respond to"
   },
   {
     "objectID": "quickstart.html#example-response-abridged",
@@ -53,7 +53,7 @@
     "href": "quickstart.html#example-request-1",
     "title": "LLM Quick Start",
     "section": "Example Request",
-    "text": "Example Request\ncurl https://api.openai.com/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -d '{\n    \"model\": \"gpt-4o\",\n    \"messages\": [\n      {\"role\": \"system\", \"content\": \"You are a terse assistant.\"},\n      {\"role\": \"user\", \"content\": \"What is the capital of the moon?\"},\n      {\"role\": \"assistant\", \"content\": \"The moon does not have a capital. It is not inhabited or governed.\"},\n      {\"role\": \"user\", \"content\": \"Are you sure?\"}\n    ]\n}'"
+    "text": "Example Request\ncurl https://api.openai.com/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -d '{\n    \"model\": \"gpt-4.1\",\n    \"messages\": [\n      {\"role\": \"system\", \"content\": \"You are a terse assistant.\"},\n      {\"role\": \"user\", \"content\": \"What is the capital of the moon?\"},\n      {\"role\": \"assistant\", \"content\": \"The moon does not have a capital. It is not inhabited or governed.\"},\n      {\"role\": \"user\", \"content\": \"Are you sure?\"}\n    ]\n}'"
   },
   {
     "objectID": "quickstart.html#example-response-abridged-1",
@@ -151,7 +151,7 @@
     "href": "quickstart.html#openai-models",
     "title": "LLM Quick Start",
     "section": "OpenAI models",
-    "text": "OpenAI models\n\nGPT-4o: good general purpose model\no1: reasoning model; better for complex math and coding, but much slower and more expensive\nAPI access via OpenAI or Azure\nTakeaway: Good models for general purpose use"
+    "text": "OpenAI models\n\nGPT-4o GPT-4.1: good general purpose model\no1: reasoning model; better for complex math and coding, but much slower and more expensive\nAPI access via OpenAI or Azure\nTakeaway: Good models for general purpose use"
   },
   {
     "objectID": "quickstart.html#anthropic-models",
@@ -263,7 +263,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-18 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-18 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",

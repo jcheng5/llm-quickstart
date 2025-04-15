@@ -271,7 +271,7 @@
 <span id="cb1-2"><a></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
 <span id="cb1-3"><a></a>  <span class="at">-H</span> <span class="st">"Authorization: Bearer </span><span class="va">$OPENAI_API_KEY</span><span class="st">"</span> <span class="dt">\</span></span>
 <span id="cb1-4"><a></a>  <span class="at">-d</span> <span class="st">'{</span></span>
-<span id="cb1-5"><a></a><span class="st">    "model": "gpt-4o",</span></span>
+<span id="cb1-5"><a></a><span class="st">    "model": "gpt-4.1",</span></span>
 <span id="cb1-6"><a></a><span class="st">    "messages": [</span></span>
 <span id="cb1-7"><a></a><span class="st">        {"role": "system", "content": "You are a terse assistant."},</span></span>
 <span id="cb1-8"><a></a><span class="st">        {"role": "user", "content": "What is the capital of the moon?"}</span></span>
@@ -308,7 +308,7 @@
 <span id="cb3-2"><a></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
 <span id="cb3-3"><a></a>  <span class="at">-H</span> <span class="st">"Authorization: Bearer </span><span class="va">$OPENAI_API_KEY</span><span class="st">"</span> <span class="dt">\</span></span>
 <span id="cb3-4"><a></a>  <span class="at">-d</span> <span class="st">'{</span></span>
-<span id="cb3-5"><a></a><span class="st">    "model": "gpt-4o",</span></span>
+<span id="cb3-5"><a></a><span class="st">    "model": "gpt-4.1",</span></span>
 <span id="cb3-6"><a></a><span class="st">    "messages": [</span></span>
 <span id="cb3-7"><a></a><span class="st">      {"role": "system", "content": "You are a terse assistant."},</span></span>
 <span id="cb3-8"><a></a><span class="st">      {"role": "user", "content": "What is the capital of the moon?"},</span></span>
@@ -539,7 +539,7 @@
 <section id="openai-models" class="slide level2">
 <h2>OpenAI models</h2>
 <ul>
-<li><strong>GPT-4o</strong>: good general purpose model</li>
+<li><s><strong>GPT-4o</strong></s> <strong>GPT-4.1</strong>: good general purpose model</li>
 <li><strong>o1</strong>: reasoning model; better for complex math and coding, but much slower and more expensive</li>
 <li>API access via <a href="https://platform.openai.com/docs/overview/">OpenAI</a> or <a href="https://azure.microsoft.com/en-us/products/ai-services/openai-service">Azure</a></li>
 <li><strong>Takeaway</strong>: Good models for general purpose use</li>
@@ -758,7 +758,7 @@ Example Output:
 <ul>
 <li><strong>Post-processing:</strong> Use a regular expression to extract structured data from the unstructured output (e.g.&nbsp;<code>/```json\n(.*?)\n```/</code>)</li>
 <li><strong>System prompt:</strong> Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it <em>really</em> helps!</li>
-<li><strong>Structured Output:</strong> GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: <a href="https://platform.openai.com/docs/guides/structured-outputs">openai</a>, <a href="https://python.langchain.com/docs/how_to/structured_output/">LangChain</a>)</li>
+<li><strong>Structured Output:</strong> GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: <a href="https://platform.openai.com/docs/guides/structured-outputs">openai</a>, <a href="https://python.langchain.com/docs/how_to/structured_output/">LangChain</a>)</li>
 <li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
