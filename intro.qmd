@@ -14,11 +14,11 @@ editor:
 ### AI Hackathon {style="text-align: center; font-size: 72pt; color: #414142;"}
 
 ::: {style="text-align: center; color: #414142;"}
-Cohort 17 -- April 7, 2025
+Cohort 18 -- April 15, 2025
 :::
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-17"
+slack_channel <- "#hackathon-18"
 ```
 
 # Welcome!
