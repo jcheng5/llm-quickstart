@@ -217,13 +217,20 @@ If it works, study the code and try to understand how it maps to the low-level H
 - Do NOT use the older ChatStream component
 - [Shiny Assistant](https://gallery.shinyapps.io/assistant/) on the web can't help you with `ui.Chat` for data privacy reasons
 
-## Shiny Assistant for VS Code
+## Shiny Assistant for VS Code and Positron
 
 ![](shiny-assistant-extension-1.png)
 
 ## Installation
 
 ![](shiny-assistant-extension-2.png)
+
+## Shiny Assistant requirements
+
+- In **VS Code**, requires Copilot subscription
+- In **Positron**, requires:
+  - Anthropic or OpenAI API key
+  - Enabling not-yet-documented feature in User Settings
 
 ## {querychat}
 
