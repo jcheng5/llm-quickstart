@@ -76,7 +76,7 @@ curl https://api.openai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -d '{
-    "model": "gpt-4o",
+    "model": "gpt-4.1",
     "messages": [
         {"role": "system", "content": "You are a terse assistant."},
         {"role": "user", "content": "What is the capital of the moon?"}
@@ -116,7 +116,7 @@ curl https://api.openai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -d '{
-    "model": "gpt-4o",
+    "model": "gpt-4.1",
     "messages": [
       {"role": "system", "content": "You are a terse assistant."},
       {"role": "user", "content": "What is the capital of the moon?"},
@@ -298,7 +298,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 ## OpenAI models
 
-- **GPT-4o**: good general purpose model
+- <s>**GPT-4o**</s> **GPT-4.1**: good general purpose model
 - **o1**: reasoning model; better for complex math and coding, but much slower and more expensive
 - API access via [OpenAI](https://platform.openai.com/docs/overview/) or [Azure](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 - **Takeaway**: Good models for general purpose use
@@ -493,7 +493,7 @@ LLMs are good at generating unstructured output, but with a little effort, you c
 
 - **Post-processing:** Use a regular expression to extract structured data from the unstructured output (e.g. <code>/&grave;&grave;&grave;json\\n(.*?)\\n&grave;&grave;&grave;/</code>)
 - **System prompt:** Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples---it _really_ helps!
-- **Structured Output:** GPT-4o and GPT-4o-mini now have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: [openai](https://platform.openai.com/docs/guides/structured-outputs), [LangChain](https://python.langchain.com/docs/how_to/structured_output/))
+- **Structured Output:** GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: [openai](https://platform.openai.com/docs/guides/structured-outputs), [LangChain](https://python.langchain.com/docs/how_to/structured_output/))
 - **Tool calling:** Create a tool to receive your output, e.g., `set_result(object)`, where its implementation sets some variable. (Works great for ellmer.)
 - **LangChain:** Has its own [abstractions](https://python.langchain.com/docs/how_to/#output-parsers) for parsing unstructured output
 
