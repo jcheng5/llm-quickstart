@@ -11,7 +11,7 @@
     "href": "quickstart.html#setup",
     "title": "LLM Quick Start",
     "section": "Setup",
-    "text": "Setup\n\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-18\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
+    "text": "Setup\nOption 1: Cloud\n\nLog in to https://dev.academy.posit.team/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-2\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-2\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -95,14 +95,14 @@
     "href": "quickstart.html#shiny-for-python",
     "title": "LLM Quick Start",
     "section": "Shiny for Python",
-    "text": "Shiny for Python\nUse the official ui.Chat component for Shiny for Python\n\nDo NOT use the older ChatStream component\nShiny Assistant on the web can’t help you with ui.Chat for data privacy reasons"
+    "text": "Shiny for Python\nCreating chatbots in Shiny for Python\n\nShiny Assistant on the web can’t help you with ui.Chat for data privacy reasons, so instead…"
   },
   {
-    "objectID": "quickstart.html#shiny-assistant-for-vs-code",
-    "href": "quickstart.html#shiny-assistant-for-vs-code",
+    "objectID": "quickstart.html#shiny-assistant-for-vs-code-and-positron",
+    "href": "quickstart.html#shiny-assistant-for-vs-code-and-positron",
     "title": "LLM Quick Start",
-    "section": "Shiny Assistant for VS Code",
-    "text": "Shiny Assistant for VS Code"
+    "section": "Shiny Assistant for VS Code and Positron",
+    "text": "Shiny Assistant for VS Code and Positron"
   },
   {
     "objectID": "quickstart.html#installation",
@@ -110,6 +110,13 @@
     "title": "LLM Quick Start",
     "section": "Installation",
     "text": "Installation"
+  },
+  {
+    "objectID": "quickstart.html#shiny-assistant-requirements",
+    "href": "quickstart.html#shiny-assistant-requirements",
+    "title": "LLM Quick Start",
+    "section": "Shiny Assistant requirements",
+    "text": "Shiny Assistant requirements\n\nIn VS Code, requires Copilot subscription\nIn Positron, requires:\n\nAnthropic or OpenAI API key\nEnabling not-yet-documented feature in User Settings"
   },
   {
     "objectID": "quickstart.html#querychat",
@@ -158,7 +165,7 @@
     "href": "quickstart.html#anthropic-models",
     "title": "LLM Quick Start",
     "section": "Anthropic models",
-    "text": "Anthropic models\n\nClaude 3.7 Sonnet: good general purpose model, best for code generation\nAPI access via Anthropic or AWS Bedrock (instructions for using Bedrock at Posit)\nTakeaway: Best model for code generation"
+    "text": "Anthropic models\n\nClaude 3.7 Sonnet: good general purpose model, best for code generation\nAPI access via Anthropic or AWS Bedrock \nTakeaway: Best model for code generation"
   },
   {
     "objectID": "quickstart.html#google-models",
@@ -263,7 +270,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-18 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #academy-ai-2 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",
@@ -271,20 +278,6 @@
     "title": "LLM Quick Start",
     "section": "Using images as input",
     "text": "Using images as input\n\nModern models are pretty good at this\nCan understand both photographs and plots\nExamples for R and Chatlas are in your repo as 05-vision*\nSee docs for LangChain multimodal, OpenAI vision"
-  },
-  {
-    "objectID": "quickstart.html#past-cohort-projects",
-    "href": "quickstart.html#past-cohort-projects",
-    "title": "LLM Quick Start",
-    "section": "Past cohort projects",
-    "text": "Past cohort projects\n\nCohort 1\nCohort 2\nCohort 3\nCohort 4\nCohort 5\nCohort 6\nCohort 7\nCohort 8\nCohort 9\nCohort 10\nCohort 11\nCohort 12\nCohort 13\nCohort 14\nCohort 15\nCohort 16"
-  },
-  {
-    "objectID": "quickstart.html#interesting-tools-that-dont-require-coding",
-    "href": "quickstart.html#interesting-tools-that-dont-require-coding",
-    "title": "LLM Quick Start",
-    "section": "Interesting tools that don’t require coding",
-    "text": "Interesting tools that don’t require coding\n\nGoogle NotebookLM\nClaude Projects (requires Claude subscription)"
   },
   {
     "objectID": "intro.html#your-turn",
@@ -298,7 +291,7 @@
     "href": "intro.html#the-plan",
     "title": "",
     "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #hackathon-18\n\nThursday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 72 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #academy-ai-2\n\nFriday: Show & tell, share lessons learned, reflections. \nPost-hackathon: Create/deploy an LLM-enabled Shiny app for your company. We can help!"
   },
   {
     "objectID": "intro.html#hack-on-stuff",
@@ -329,11 +322,11 @@
     "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
   },
   {
-    "objectID": "intro.html#a-caveat-from-it",
-    "href": "intro.html#a-caveat-from-it",
+    "objectID": "intro.html#a-note-on-data-security",
+    "href": "intro.html#a-note-on-data-security",
     "title": "",
-    "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. (Instructions)\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
+    "section": "A Note on Data Security",
+    "text": "A Note on Data Security\n\nPlease refrain from sending your proprietary code or data to any LLM, unless you are sure your company’s policies allow it.\n\nAWS, Azure, and Google Cloud all host frontier models—your IT might be OK with these.\n\nIf you absolutely must use proprietary info, consider using a local model (but expect considerably worse results)."
   },
   {
     "objectID": "all-projects.html",

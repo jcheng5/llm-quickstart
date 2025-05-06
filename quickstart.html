@@ -201,19 +201,19 @@
 </section>
 <section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
-<!--
-#### Option 1: Cloud
-
-- Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
-  - We recommend RStudio for R, and Positron for R or Python
-- Clone https://github.com/jcheng5/llm-quickstart
-- Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-18</code>
-
-#### Option 2: Local
--->
+<h4 id="option-1-cloud">Option 1: Cloud</h4>
+<ul>
+<li>Log in to <a href="https://dev.academy.posit.team/">https://dev.academy.posit.team/</a> and start a session in your IDE of choice
+<ul>
+<li>We recommend RStudio for R, and Positron for R or Python</li>
+</ul></li>
+<li>Clone https://github.com/jcheng5/llm-quickstart</li>
+<li>Grab your OpenAI/Anthropic API keys; see the thread in <code>#academy-ai-2</code></li>
+</ul>
+<h4 id="option-2-local">Option 2: Local</h4>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-18</code></p></li>
+<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#academy-ai-2</code></p></li>
 <li><p>For R: <code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny", "paws.common", "magick", "beepr"))</code></p></li>
 <li><p>For Python: <code>pip install -r requirements.txt</code></p></li>
 </ul>
@@ -372,11 +372,7 @@
 <li>Python:
 <ul>
 <li><a href="https://platform.openai.com/docs/overview?lang=python"><code>openai</code></a>, <a href="https://docs.anthropic.com/en/home"><code>anthropic</code></a> - from LLM providers, low-level but solid</li>
-<li><a href="https://ai.pydantic.dev/"><code>PydanticAI</code></a> - relatively new (announced 2024-12), abstracts over providers, relatively low level. (Does not support streaming for Anthropic!)</li>
-<li><a href="https://python.langchain.com/docs/introduction/"><code>langchain</code></a> - high-level, all models, sprawling scope… but polarizing architecture, steep learning curve, and supposedly questionable code quality
-<ul>
-<li>Evolved from v0.1, v0.2, and now <a href="https://langchain-ai.github.io/langgraphjs/"><code>langgraph</code></a></li>
-</ul></li>
+<li><a href="https://python.langchain.com/docs/introduction/"><code>langchain</code></a> - high-level, all models, sprawling scope… but polarizing architecture, steep learning curve, and supposedly questionable code quality</li>
 <li><a href="https://posit-dev.github.io/chatlas/"><code>chatlas</code></a> - high-level, basically a port of R’s <code>ellmer</code></li>
 <li>Many, many other options are available</li>
 </ul></li>
@@ -430,20 +426,30 @@
 </section>
 <section id="shiny-for-python" class="slide level2">
 <h2>Shiny for Python</h2>
-<p>Use the <a href="https://shiny.posit.co/py/components/display-messages/chat/">official <code>ui.Chat</code> component</a> for Shiny for Python</p>
+<p><a href="https://shiny.posit.co/py/docs/genai-chatbots.html">Creating chatbots</a> in Shiny for Python</p>
 <ul>
-<li>Do NOT use the older ChatStream component</li>
-<li><a href="https://gallery.shinyapps.io/assistant/">Shiny Assistant</a> on the web can’t help you with <code>ui.Chat</code> for data privacy reasons</li>
+<li><a href="https://gallery.shinyapps.io/assistant/">Shiny Assistant</a> on the web can’t help you with <code>ui.Chat</code> for data privacy reasons, so instead…</li>
 </ul>
 </section>
-<section id="shiny-assistant-for-vs-code" class="slide level2">
-<h2>Shiny Assistant for VS Code</h2>
+<section id="shiny-assistant-for-vs-code-and-positron" class="slide level2">
+<h2>Shiny Assistant for VS Code and Positron</h2>
 
 <img data-src="shiny-assistant-extension-1.png" class="r-stretch"></section>
 <section id="installation" class="slide level2">
 <h2>Installation</h2>
 
 <img data-src="shiny-assistant-extension-2.png" class="r-stretch"></section>
+<section id="shiny-assistant-requirements" class="slide level2">
+<h2>Shiny Assistant requirements</h2>
+<ul>
+<li>In <strong>VS Code</strong>, requires Copilot subscription</li>
+<li>In <strong>Positron</strong>, requires:
+<ul>
+<li>Anthropic or OpenAI API key</li>
+<li>Enabling not-yet-documented feature in User Settings</li>
+</ul></li>
+</ul>
+</section>
 <section id="querychat" class="slide level2">
 <h2>{querychat}</h2>
 
@@ -549,7 +555,7 @@
 <h2>Anthropic models</h2>
 <ul>
 <li><strong>Claude 3.7 Sonnet</strong>: good general purpose model, best for code generation</li>
-<li>API access via <a href="https://docs.anthropic.com/">Anthropic</a> or <a href="https://aws.amazon.com/bedrock/claude/">AWS Bedrock</a> (<a href="https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit">instructions for using Bedrock at Posit</a>)</li>
+<li>API access via <a href="https://docs.anthropic.com/">Anthropic</a> or <a href="https://aws.amazon.com/bedrock/claude/">AWS Bedrock</a> <!--([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))--></li>
 <li><strong>Takeaway</strong>: Best model for code generation</li>
 </ul>
 </section>
@@ -561,7 +567,7 @@
 <li><strong>Takeaway</strong>: Largest context length - good if you need to provide lots of information</li>
 </ul>
 </section>
-<section id="llama-models" class="slide level2">
+<section id="llama-models" class="slide level2 smaller">
 <h2>Llama models</h2>
 <ul>
 <li>Open weights: you can download the model</li>
@@ -573,7 +579,7 @@
 <li><strong>Takeaway</strong>: Good models if you want to keep all information on premises.</li>
 </ul>
 </section>
-<section id="deepseek-models" class="slide level2">
+<section id="deepseek-models" class="slide level2 smaller">
 <h2>DeepSeek models</h2>
 <ul>
 <li>Open weights</li>
@@ -584,7 +590,7 @@
 </ul>
 </section></section>
 <section>
-<section id="customizing-behavior-and-adding-knowledge" class="title-slide slide level1 center">
+<section id="customizing-behavior-and-adding-knowledge" class="title-slide slide level1 smaller center">
 <h1>Customizing behavior and adding knowledge</h1>
 <ul>
 <li><strong>The problem</strong>
@@ -683,7 +689,7 @@ Example Output:
 </ul></li>
 </ul>
 </section>
-<section id="rag-retrieval-augmented-generation" class="slide level2">
+<section id="rag-retrieval-augmented-generation" class="slide level2 smaller">
 <h2>RAG: Retrieval Augmented Generation</h2>
 <ul>
 <li>Useful when documents don’t fit into context window</li>
@@ -762,7 +768,7 @@ Example Output:
 <li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
-<p>Ask <code>#hackathon-18</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+<p>Ask <code>#academy-ai-2</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
 </section></section>
 <section>
 <section id="vision" class="title-slide slide level1 center">
@@ -778,7 +784,6 @@ Example Output:
 <li>See docs for <a href="https://python.langchain.com/docs/how_to/multimodal_inputs/">LangChain multimodal</a>, <a href="https://platform.openai.com/docs/guides/vision">OpenAI vision</a></li>
 </ul>
 </section></section>
-<section>
 <section id="brainstorming" class="title-slide slide level1 center">
 <h1>Brainstorming</h1>
 <!--
@@ -798,37 +803,34 @@ Example Output:
   - Dataset exploring assistant.
 - **API integrations:** GitHub, Posit Connect, Zendesk, Fusion360, Disney theme park wait times.
 -->
-</section>
-<section id="past-cohort-projects" class="slide level2">
-<h2>Past cohort projects</h2>
-<ul>
-<li><a href="https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing">Cohort 1</a></li>
-<li><a href="https://docs.google.com/presentation/d/1j15NfbrRDfHIbnO7Jt3gS63CafArboe70AUJw4hFn8E/edit?usp=sharing">Cohort 2</a></li>
-<li><a href="https://docs.google.com/presentation/d/1NmgeTgzs31r8g8-b2liOzKXDmYU_iXSIA8Ih8Z4ZzMM/edit?usp=sharing">Cohort 3</a></li>
-<li><a href="https://docs.google.com/presentation/d/157q63jIrrTLHwO5SSN9RINs5FxN-9o1YcffKnefs_wg/edit#slide=id.p">Cohort 4</a></li>
-<li><a href="https://docs.google.com/presentation/d/1taHrsRcjHcFI0bTXEZjP3fNs5beiDkaiKTcMHonWGfQ/edit#slide=id.p">Cohort 5</a></li>
-<li><a href="https://docs.google.com/presentation/d/1e7oGe_I6yp69m111b5BjGnguo7AQRua6pXBS3WaP7FY/edit?usp=sharing">Cohort 6</a></li>
-<li><a href="https://docs.google.com/presentation/d/1DZVC7d-ycbnwh6nbDyNZEGwdtPMD3FB4NoIf0dd915o/edit?usp=sharing">Cohort 7</a></li>
-<li><a href="https://docs.google.com/presentation/d/1OMj8S4-nH-bM_1QZ-1aztZw0hc5gMuxO4vDKngrUYxQ/edit?usp=sharing">Cohort 8</a></li>
-<li><a href="https://docs.google.com/presentation/d/1MUiSctRtiMF9N8tGLRvtbWrNl49Ur0ty8soX0NO1v_Y/edit?usp=sharing">Cohort 9</a></li>
-<li><a href="https://docs.google.com/presentation/d/1ArrYMvHCIDrgfj4xFsUkBNE1T0kt2mCPUtLJ4kiPYIY/edit?usp=sharing">Cohort 10</a></li>
-<li><a href="https://docs.google.com/presentation/d/1nPCWVG1jKgmxvXQsvWgkOlZsgWrHawD5Dp3qF2j0Rpg/edit?usp=sharing">Cohort 11</a></li>
-<li><a href="https://docs.google.com/presentation/d/17RRsGauC7TfiRLCJh40VnEsawwv727eK5np9F0SzmN8/edit?usp=sharing">Cohort 12</a></li>
-<li><a href="https://docs.google.com/presentation/d/1JnViUBV_AzkSU35vAOklg60OLPsL2BsAk8iy6H_lBbM/edit?usp=sharing">Cohort 13</a></li>
-<li><a href="https://docs.google.com/presentation/d/1Svl7XZOHD_g21NZ0jX8hICmIKUHRyoCEirzDMDeh3UM/edit?usp=sharing">Cohort 14</a></li>
-<li><a href="https://docs.google.com/presentation/d/1TfGWfH2ck9s5Y71XrLc-7hIn7m9evFTEtkVg-GEs6G8/edit?usp=sharing">Cohort 15</a></li>
-<li><a href="https://docs.google.com/presentation/d/1ZR5klcr20WSuJEI2EmYIQan9DffUNMBMp_L6Ik0sBl0/edit?usp=sharing">Cohort 16</a></li>
-</ul>
-</section>
-<section id="interesting-tools-that-dont-require-coding" class="slide level2">
-<h2>Interesting tools that don’t require coding</h2>
-<ul>
-<li><a href="https://notebooklm.google/">Google NotebookLM</a></li>
-<li><a href="https://claude.ai/projects">Claude Projects</a> (requires Claude subscription)</li>
-</ul>
+<!--
+## Past cohort projects
+
+- [Cohort 1](https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing)
+- [Cohort 2](https://docs.google.com/presentation/d/1j15NfbrRDfHIbnO7Jt3gS63CafArboe70AUJw4hFn8E/edit?usp=sharing)
+- [Cohort 3](https://docs.google.com/presentation/d/1NmgeTgzs31r8g8-b2liOzKXDmYU_iXSIA8Ih8Z4ZzMM/edit?usp=sharing)
+- [Cohort 4](https://docs.google.com/presentation/d/157q63jIrrTLHwO5SSN9RINs5FxN-9o1YcffKnefs_wg/edit#slide=id.p)
+- [Cohort 5](https://docs.google.com/presentation/d/1taHrsRcjHcFI0bTXEZjP3fNs5beiDkaiKTcMHonWGfQ/edit#slide=id.p)
+- [Cohort 6](https://docs.google.com/presentation/d/1e7oGe_I6yp69m111b5BjGnguo7AQRua6pXBS3WaP7FY/edit?usp=sharing)
+- [Cohort 7](https://docs.google.com/presentation/d/1DZVC7d-ycbnwh6nbDyNZEGwdtPMD3FB4NoIf0dd915o/edit?usp=sharing)
+- [Cohort 8](https://docs.google.com/presentation/d/1OMj8S4-nH-bM_1QZ-1aztZw0hc5gMuxO4vDKngrUYxQ/edit?usp=sharing)
+- [Cohort 9](https://docs.google.com/presentation/d/1MUiSctRtiMF9N8tGLRvtbWrNl49Ur0ty8soX0NO1v_Y/edit?usp=sharing)
+- [Cohort 10](https://docs.google.com/presentation/d/1ArrYMvHCIDrgfj4xFsUkBNE1T0kt2mCPUtLJ4kiPYIY/edit?usp=sharing)
+- [Cohort 11](https://docs.google.com/presentation/d/1nPCWVG1jKgmxvXQsvWgkOlZsgWrHawD5Dp3qF2j0Rpg/edit?usp=sharing)
+- [Cohort 12](https://docs.google.com/presentation/d/17RRsGauC7TfiRLCJh40VnEsawwv727eK5np9F0SzmN8/edit?usp=sharing)
+- [Cohort 13](https://docs.google.com/presentation/d/1JnViUBV_AzkSU35vAOklg60OLPsL2BsAk8iy6H_lBbM/edit?usp=sharing)
+- [Cohort 14](https://docs.google.com/presentation/d/1Svl7XZOHD_g21NZ0jX8hICmIKUHRyoCEirzDMDeh3UM/edit?usp=sharing)
+- [Cohort 15](https://docs.google.com/presentation/d/1TfGWfH2ck9s5Y71XrLc-7hIn7m9evFTEtkVg-GEs6G8/edit?usp=sharing)
+- [Cohort 16](https://docs.google.com/presentation/d/1ZR5klcr20WSuJEI2EmYIQan9DffUNMBMp_L6Ik0sBl0/edit?usp=sharing)
+
+## Interesting tools that don't require coding
+
+- [Google NotebookLM](https://notebooklm.google/)
+- [Claude Projects](https://claude.ai/projects) (requires Claude subscription)
+-->
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
