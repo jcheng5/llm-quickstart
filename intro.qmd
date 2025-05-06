@@ -25,7 +25,7 @@ slack_channel <- "#academy-ai-2"
 
 We are:
 
-- **Andrew Holz** - Head of Engineering, Open Source
+- **Andrew Holz** - Director of Engineering, Open Source
 - **Joe Cheng** - CTO
 - **Winston Chang** - Principal Software Engineer
 
