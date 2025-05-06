@@ -11,12 +11,11 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-18"
+slack_channel <- "#academy-ai-2"
 ```
 
 ## Setup {.smaller}
 
-<!--
 #### Option 1: Cloud
 
 - Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
@@ -25,7 +24,6 @@ slack_channel <- "#hackathon-18"
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
 
 #### Option 2: Local
--->
 
 - Clone https://github.com/jcheng5/llm-quickstart
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
@@ -171,9 +169,7 @@ curl https://api.openai.com/v1/chat/completions \
     - Get help from [Ellmer Assistant](https://jcheng.shinyapps.io/ellmer-assistant/)
 - Python:
   - [`openai`](https://platform.openai.com/docs/overview?lang=python), [`anthropic`](https://docs.anthropic.com/en/home) - from LLM providers, low-level but solid 
-  - [`PydanticAI`](https://ai.pydantic.dev/) - relatively new (announced 2024-12), abstracts over providers, relatively low level. (Does not support streaming for Anthropic!)
   - [`langchain`](https://python.langchain.com/docs/introduction/) - high-level, all models, sprawling scope... but polarizing architecture, steep learning curve, and supposedly questionable code quality
-    - Evolved from v0.1, v0.2, and now [`langgraph`](https://langchain-ai.github.io/langgraphjs/)
   - [`chatlas`](https://posit-dev.github.io/chatlas/) - high-level, basically a port of R's `ellmer`
   - Many, many other options are available
 
@@ -214,8 +210,7 @@ If it works, study the code and try to understand how it maps to the low-level H
 
 [Creating chatbots](https://shiny.posit.co/py/docs/genai-chatbots.html) in Shiny for Python
 
-- Do NOT use the older ChatStream component
-- [Shiny Assistant](https://gallery.shinyapps.io/assistant/) on the web can't help you with `ui.Chat` for data privacy reasons
+- [Shiny Assistant](https://gallery.shinyapps.io/assistant/) on the web can't help you with `ui.Chat` for data privacy reasons, so instead...
 
 ## Shiny Assistant for VS Code and Positron
 
@@ -313,7 +308,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 ## Anthropic models
 
 - **Claude 3.7 Sonnet**: good general purpose model, best for code generation
-- API access via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) ([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
+- API access via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) <!--([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))-->
 - **Takeaway**: Best model for code generation
 
 ## Google models
@@ -322,7 +317,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Gemini 2.0 Pro**: 2 million token context length, smarter than Flash
 - **Takeaway**: Largest context length - good if you need to provide lots of information
 
-## Llama models
+## Llama models {.smaller}
 
 - Open weights: you can download the model
 - Can run locally, for example with [Ollama](https://ollama.com/)
@@ -332,7 +327,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - API access via [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [AWS Bedrock](https://aws.amazon.com/bedrock/llama/), others
 - **Takeaway**: Good models if you want to keep all information on premises.
 
-## DeepSeek models
+## DeepSeek models {.smaller}
 
 - Open weights
 - **DeepSeek R1 671b**: 404GB, uses chain of thought (claimed similar perf to OpenAI o1)
@@ -340,7 +335,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - API access via [DeepSeek](https://platform.deepseek.com/), [OpenRouter](https://openrouter.ai/deepseek/deepseek-r1)
 - Can run locally, but smaller models aren't really DeepSeek.
 
-# Customizing behavior and adding knowledge
+# Customizing behavior and adding knowledge {.smaller}
 
 - **The problem**
   - You want to customize how the LLM responds
@@ -449,7 +444,7 @@ Assistant response:
   - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
   - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
 
-## RAG: Retrieval Augmented Generation
+## RAG: Retrieval Augmented Generation {.smaller}
 
 - Useful when documents don't fit into context window
 - Steps:
@@ -535,6 +530,7 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 - **API integrations:** GitHub, Posit Connect, Zendesk, Fusion360, Disney theme park wait times.
 -->
 
+<!--
 ## Past cohort projects
 
 - [Cohort 1](https://docs.google.com/presentation/d/1wJKis5xUvce2PS2ZeUOp3h-L6Ul9NQ2CgNeZ9LsF5W8/edit?usp=sharing)
@@ -558,3 +554,4 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 
 - [Google NotebookLM](https://notebooklm.google/)
 - [Claude Projects](https://claude.ai/projects) (requires Claude subscription)
+-->

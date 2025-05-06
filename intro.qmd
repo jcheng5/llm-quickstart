@@ -9,16 +9,16 @@ editor:
   render-on-save: true
 ---
 
-<!-- ![](logo-academy.png) -->
+![](logo-academy.png)
 
 ### AI Hackathon {style="text-align: center; font-size: 72pt; color: #414142;"}
 
 ::: {style="text-align: center; color: #414142;"}
-Cohort 18 -- April 15, 2025
+May 6, 2025
 :::
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-18"
+slack_channel <- "#academy-ai-2"
 ```
 
 # Welcome!
@@ -41,17 +41,16 @@ And we have lots of other Posit folks who are ready to help!
 
 ::: {.incremental}
 - **Now:** Quick Start course on LLMs. You will leave having used a Chat API.
-- **Next 48 hours:** Hack on stuff! Minimum four hours of effort. "Rules" on the next slide.
+- **Next 72 hours:** Hack on stuff! Minimum four hours of effort. "Rules" on the next slide.
   - We'll be continuously monitoring `r slack_channel`
-- **Thursday:** Show & tell, share lessons learned, reflections.
+- **Friday:** Show & tell, share lessons learned, reflections.
+<!--
 - **Post-hackathon:**
   - Keep hacking! (optional)
   - Think about how AI might apply to your team
   - Be a resource for others around you
-
-<!--
-- **Post-hackathon:** Create/deploy an LLM-enabled Shiny app for your company. We can help!
 -->
+- **Post-hackathon:** Create/deploy an LLM-enabled Shiny app for your company. We can help!
 :::
 
 ## Hack On Stuff
@@ -92,14 +91,13 @@ And we have lots of other Posit folks who are ready to help!
 
 :::
 
-<!--
 ## A Note on Data Security
 
 - Please refrain from sending your proprietary code or data to any LLM, unless you are sure your company's policies allow it.
   - AWS, Azure, and Google Cloud all host frontier models—your IT might be OK with these.
 - If you absolutely must use proprietary info, consider using a local model (but expect considerably worse results).
--->
 
+<!--
 ## A Caveat From IT
 
 No _proprietary_ code or data is allowed to be sent to any LLM service, with the below exceptions.
@@ -108,5 +106,6 @@ No _proprietary_ code or data is allowed to be sent to any LLM service, with the
 - AWS Bedrock is allowed, and it has Anthropic models. ([Instructions](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
 - Running any local model is allowed, we can help you with this as well.
 - Sending open source code to any service is allowed.
+-->
 
 # Next: [Quick Start](quickstart.qmd)
