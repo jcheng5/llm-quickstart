@@ -279,7 +279,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
   - `langchain` example: `02-tools-langchain.py` (not bad)
   - `chatlas` example: `02-tools-chatlas.py` (easy, like `ellmer`)
 
-# Model Context Protocol
+# Model Context Protocol {.smaller}
 
 - tl;dr: give the LLM tools that you didn't write
 - Protocol to give LLMs access to tools that can be written in any language
@@ -292,22 +292,26 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 # Choosing a model
 
-- OpenAI ChatGPT
+- OpenAI
 - Anthropic Claude
 - Google Gemini
 - Meta Llama (can run locally)
 - DeepSeek (can run locally)
 
-## OpenAI models
+## OpenAI models {.smaller}
 
-- <s>**GPT-4o**</s> **GPT-4.1**: good general purpose model
-- **o1**: reasoning model; better for complex math and coding, but much slower and more expensive
+- **GPT-4.1**: good general purpose model, 1 million token context length
+  - **GPT-4.1-mini** and **GPT-4.1-nano** are faster, cheaper, and dumber versions
+- **o3**: reasoning model; better for complex math and coding, but much slower and more expensive
+- **o4-mini**: faster and cheaper reasoning model, not as good as o3 but cheaper than GPT-4.1
 - API access via [OpenAI](https://platform.openai.com/docs/overview/) or [Azure](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 - **Takeaway**: Good models for general purpose use
 
 ## Anthropic models
 
 - **Claude 3.7 Sonnet**: good general purpose model, best for code generation
+- **Claude 3.5 Sonnet v2**: older but still an excellent model, some prefer it to 3.7
+- **Claude 3.5 Haiku**: Faster, cheaper, and dumber version
 - API access via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) <!--([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))-->
 - **Takeaway**: Best model for code generation
 
