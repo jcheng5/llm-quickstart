@@ -226,7 +226,7 @@ If it works, study the code and try to understand how it maps to the low-level H
 - In **VS Code**, requires Copilot subscription
 - In **Positron**, requires:
   - Anthropic or OpenAI API key
-  - Enabling not-yet-documented feature in User Settings
+  - Enable Positron Assistant. [Instructions](https://connect.posit.it/positron-wiki/positron-assistant.html#using-positron-assistant)
 
 ## {querychat}
 
