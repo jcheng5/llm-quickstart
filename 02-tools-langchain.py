@@ -1,5 +1,6 @@
 import requests
 from dotenv import load_dotenv
+
 # Choose one of these two
 # from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
@@ -39,7 +40,7 @@ model = ChatAnthropic(model="claude-3-5-sonnet-latest")
 app = create_react_agent(
     model,
     tools=[get_weather],
-    state_modifier=(
+    prompt=(
         "You are a helpful assistant that can check the weather. "
         "Report results in imperial units."
     ),
