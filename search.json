@@ -179,7 +179,7 @@
     "href": "quickstart.html#shiny-assistant-requirements",
     "title": "LLM Quick Start",
     "section": "Shiny Assistant requirements",
-    "text": "Shiny Assistant requirements\n\nIn VS Code, requires Copilot subscription\nIn Positron, requires:\n\nAnthropic or OpenAI API key\nEnabling not-yet-documented feature in User Settings"
+    "text": "Shiny Assistant requirements\n\nIn VS Code, requires Copilot subscription\nIn Positron, requires:\n\nAnthropic or OpenAI API key\nEnable Positron Assistant. Instructions"
   },
   {
     "objectID": "quickstart.html#querychat",
