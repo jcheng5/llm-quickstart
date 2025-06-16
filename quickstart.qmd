@@ -18,7 +18,7 @@ slack_channel <- "#hackathon-19"
 
 #### Option 1: Cloud
 
-- Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
+- Log in to [https://workbench.posit.it/](https://workbench.posit.it/) and start a session in your IDE of choice
   - We recommend RStudio for R, and Positron for R or Python
 - Clone https://github.com/jcheng5/llm-quickstart
 - Open `llm-quickstart` as a Project (RStudio) or Folder (Positron) in your IDE

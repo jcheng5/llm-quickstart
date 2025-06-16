@@ -43,7 +43,7 @@ And we have lots of other Posit folks who are ready to help!
 - **Now:** Quick Start course on LLMs. You will leave having used a Chat API.
 - **Next 48 hours:** Hack on stuff! Minimum four hours of effort. "Rules" on the next slide.
   - We'll be continuously monitoring `r slack_channel`
-- **Friday:** Show & tell, share lessons learned, reflections.
+- **Wednesday:** Show & tell, share lessons learned, reflections.
 - **Post-hackathon:**
   - Keep hacking! (optional)
   - Think about how AI might apply to your team
