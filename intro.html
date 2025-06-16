@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -164,7 +164,7 @@
 <ul>
 <li class="fragment">We’ll be continuously monitoring #hackathon-19</li>
 </ul></li>
-<li class="fragment"><strong>Friday:</strong> Show &amp; tell, share lessons learned, reflections.</li>
+<li class="fragment"><strong>Wednesday:</strong> Show &amp; tell, share lessons learned, reflections.</li>
 <li class="fragment"><strong>Post-hackathon:</strong>
 <ul>
 <li class="fragment">Keep hacking! (optional)</li>
@@ -573,8 +573,6 @@ Negative results (“I thought LLMs could do this but turns out they can’t”)
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
