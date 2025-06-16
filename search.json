@@ -11,7 +11,7 @@
     "href": "quickstart.html#setup",
     "title": "LLM Quick Start",
     "section": "Setup",
-    "text": "Setup\nOption 1: Cloud\n\nLog in to https://dev.academy.posit.team/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-2\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #academy-ai-2\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
+    "text": "Setup\nOption 1: Cloud\n\nLog in to https://dev.academy.posit.team/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nClone https://github.com/jcheng5/llm-quickstart\nOpen llm-quickstart as a Project (RStudio) or Folder (Positron) in your IDE\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-19\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-19\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -158,28 +158,28 @@
     "href": "quickstart.html#openai-models",
     "title": "LLM Quick Start",
     "section": "OpenAI models",
-    "text": "OpenAI models\n\nGPT-4o GPT-4.1: good general purpose model\no1: reasoning model; better for complex math and coding, but much slower and more expensive\nAPI access via OpenAI or Azure\nTakeaway: Good models for general purpose use"
+    "text": "OpenAI models\n\nGPT-4.1: good general purpose model, 1 million token context length\n\nGPT-4.1-mini and GPT-4.1-nano are faster, cheaper, and dumber versions\n\no3: reasoning model; better for complex math and coding, but much slower and more expensive\no4-mini: faster and cheaper reasoning model, not as good as o3 but cheaper than GPT-4.1\nAPI access via OpenAI or Azure\nTakeaway: Good models for general purpose use"
   },
   {
     "objectID": "quickstart.html#anthropic-models",
     "href": "quickstart.html#anthropic-models",
     "title": "LLM Quick Start",
     "section": "Anthropic models",
-    "text": "Anthropic models\n\nClaude 3.7 Sonnet: good general purpose model, best for code generation\nAPI access via Anthropic or AWS Bedrock \nTakeaway: Best model for code generation"
+    "text": "Anthropic models\n\nClaude Sonnet 4: good general purpose model, best for code generation\n\nClaude Sonnet 3.7 and 3.5 are both still excellent\n\nClaude Opus 4: even stronger than Sonnet 4 (supposedly), but more expensive and slower\nClaude 3.5 Haiku: Faster, cheaper but not cheap enough\nAPI access via Anthropic or AWS Bedrock (instructions for using Bedrock at Posit)\nTakeaway: Best model for code generation"
   },
   {
     "objectID": "quickstart.html#google-models",
     "href": "quickstart.html#google-models",
     "title": "LLM Quick Start",
     "section": "Google models",
-    "text": "Google models\n\nGemini 2.0 Flash: 1 million token context length, very fast\nGemini 2.0 Pro: 2 million token context length, smarter than Flash\nTakeaway: Largest context length - good if you need to provide lots of information"
+    "text": "Google models\n\nGemini 2.5 Flash: 1 million token context length, very fast\nGemini 2.5 Pro: 1 million token context length, smarter than Flash\nTakeaway: Competitive with OpenAI and Anthropic"
   },
   {
     "objectID": "quickstart.html#llama-models",
     "href": "quickstart.html#llama-models",
     "title": "LLM Quick Start",
     "section": "Llama models",
-    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with Ollama\nLlama 3.1 405b: text, 229GB. Not quite as smart as best closed models.\nLlama 3.2 90b: text+vision, 55GB\nLlama 3.2 11b: text+vision, 7.9GB (can run comfortably on Macbook)\nAPI access via OpenRouter, Groq, AWS Bedrock, others\nTakeaway: Good models if you want to keep all information on premises."
+    "text": "Llama models\n\nOpen weights: you can download the model\nCan run locally, for example with Ollama\nLlama 3.1 405b: text, 229GB. Not quite as smart as best closed models.\nLlama 3.2 90b: text+vision, 55GB\nLlama 3.2 11b: text+vision, 7.9GB (can run comfortably on Macbook)\nAPI access via OpenRouter, Groq, AWS Bedrock, others\nTakeaway: OK models if you want to keep all information on premises."
   },
   {
     "objectID": "quickstart.html#deepseek-models",
@@ -187,6 +187,13 @@
     "title": "LLM Quick Start",
     "section": "DeepSeek models",
     "text": "DeepSeek models\n\nOpen weights\nDeepSeek R1 671b: 404GB, uses chain of thought (claimed similar perf to OpenAI o1)\nDeepSeek R1 32b, 70b: 20GB, 43GB. Not actually DeepSeek architecture - said to be significantly worse.\nAPI access via DeepSeek, OpenRouter\nCan run locally, but smaller models aren’t really DeepSeek."
+  },
+  {
+    "objectID": "quickstart.html#the-problem",
+    "href": "quickstart.html#the-problem",
+    "title": "LLM Quick Start",
+    "section": "The problem",
+    "text": "The problem\n\nYou want to customize how the LLM responds\nLLM doesn’t know your specific information\n\nSome solutions\n\nPrompt engineering\nRetrieval-Augmented Generation\nAgentic search\nFine tuning"
   },
   {
     "objectID": "quickstart.html#prompt-engineering-directing-behavioroutput",
@@ -256,7 +263,7 @@
     "href": "quickstart.html#takeaways",
     "title": "LLM Quick Start",
     "section": "Takeaways",
-    "text": "Takeaways\n\nFirst try pompting, then RAG, and then fine tuning.\nOther resources\n\nOpenAI’s prompt engineering guide\nAnthropic’s prompt engineering guide\nFine-tuning vs. RAG article"
+    "text": "Takeaways\n\nFirst try prompting, then RAG or agentic search, and then fine tuning.\nOther resources\n\nOpenAI’s prompt engineering guide\nAnthropic’s prompt engineering guide\nFine-tuning vs. RAG article"
   },
   {
     "objectID": "quickstart.html#going-beyond-chat",
@@ -270,14 +277,14 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #academy-ai-2 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-19 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",
     "href": "quickstart.html#using-images-as-input",
     "title": "LLM Quick Start",
     "section": "Using images as input",
-    "text": "Using images as input\n\nModern models are pretty good at this\nCan understand both photographs and plots\nExamples for R and Chatlas are in your repo as 05-vision*\nSee docs for LangChain multimodal, OpenAI vision"
+    "text": "Using images as input\n\nModern models are pretty good at this—but this frontier is especially jagged\nCan understand both photographs and plots\nExamples for R and Chatlas are in your repo as 05-vision*\nSee docs for LangChain multimodal, OpenAI vision"
   },
   {
     "objectID": "intro.html#your-turn",
@@ -291,7 +298,7 @@
     "href": "intro.html#the-plan",
     "title": "",
     "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 72 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #academy-ai-2\n\nFriday: Show & tell, share lessons learned, reflections. \nPost-hackathon: Create/deploy an LLM-enabled Shiny app for your company. We can help!"
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #hackathon-19\n\nFriday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
   },
   {
     "objectID": "intro.html#hack-on-stuff",
@@ -322,11 +329,11 @@
     "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
   },
   {
-    "objectID": "intro.html#a-note-on-data-security",
-    "href": "intro.html#a-note-on-data-security",
+    "objectID": "intro.html#a-caveat-from-it",
+    "href": "intro.html#a-caveat-from-it",
     "title": "",
-    "section": "A Note on Data Security",
-    "text": "A Note on Data Security\n\nPlease refrain from sending your proprietary code or data to any LLM, unless you are sure your company’s policies allow it.\n\nAWS, Azure, and Google Cloud all host frontier models—your IT might be OK with these.\n\nIf you absolutely must use proprietary info, consider using a local model (but expect considerably worse results)."
+    "section": "A Caveat From IT",
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. (Instructions)\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
   },
   {
     "objectID": "all-projects.html",

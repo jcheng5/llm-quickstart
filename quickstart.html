@@ -208,12 +208,13 @@
 <li>We recommend RStudio for R, and Positron for R or Python</li>
 </ul></li>
 <li>Clone https://github.com/jcheng5/llm-quickstart</li>
-<li>Grab your OpenAI/Anthropic API keys; see the thread in <code>#academy-ai-2</code></li>
+<li>Open <code>llm-quickstart</code> as a Project (RStudio) or Folder (Positron) in your IDE</li>
+<li>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-19</code></li>
 </ul>
 <h4 id="option-2-local">Option 2: Local</h4>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#academy-ai-2</code></p></li>
+<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-19</code></p></li>
 <li><p>For R: <code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny", "paws.common", "magick", "beepr"))</code></p></li>
 <li><p>For Python: <code>pip install -r requirements.txt</code></p></li>
 </ul>
@@ -515,11 +516,11 @@
 </ul>
 </section>
 
-<section id="model-context-protocol" class="title-slide slide level1 center">
+<section id="model-context-protocol" class="title-slide slide level1 smaller center">
 <h1>Model Context Protocol</h1>
 <ul>
-<li>tl;dr: give the LLM tools that you didn’t write</li>
-<li>Protocol to give LLMs access to tools that can be written in any language</li>
+<li>A standardized way for tools to make themselves available to LLM apps, without writing more code</li>
+<li>RPC protocol, so tools can be written in any language</li>
 <li>The application that uses the tool is an MCP client</li>
 <li>MCP Servers provide the tools. <a href="https://github.com/modelcontextprotocol/servers">Examples</a>:
 <ul>
@@ -535,18 +536,22 @@
 <section id="choosing-a-model" class="title-slide slide level1 center">
 <h1>Choosing a model</h1>
 <ul>
-<li>OpenAI ChatGPT</li>
+<li>OpenAI</li>
 <li>Anthropic Claude</li>
 <li>Google Gemini</li>
 <li>Meta Llama (can run locally)</li>
 <li>DeepSeek (can run locally)</li>
 </ul>
 </section>
-<section id="openai-models" class="slide level2">
+<section id="openai-models" class="slide level2 smaller">
 <h2>OpenAI models</h2>
 <ul>
-<li><s><strong>GPT-4o</strong></s> <strong>GPT-4.1</strong>: good general purpose model</li>
-<li><strong>o1</strong>: reasoning model; better for complex math and coding, but much slower and more expensive</li>
+<li><strong>GPT-4.1</strong>: good general purpose model, 1 million token context length
+<ul>
+<li><strong>GPT-4.1-mini</strong> and <strong>GPT-4.1-nano</strong> are faster, cheaper, and dumber versions</li>
+</ul></li>
+<li><strong>o3</strong>: reasoning model; better for complex math and coding, but much slower <del>and more expensive</del></li>
+<li><strong>o4-mini</strong>: faster and cheaper reasoning model, not as good as o3 but cheaper than GPT-4.1</li>
 <li>API access via <a href="https://platform.openai.com/docs/overview/">OpenAI</a> or <a href="https://azure.microsoft.com/en-us/products/ai-services/openai-service">Azure</a></li>
 <li><strong>Takeaway</strong>: Good models for general purpose use</li>
 </ul>
@@ -554,17 +559,22 @@
 <section id="anthropic-models" class="slide level2">
 <h2>Anthropic models</h2>
 <ul>
-<li><strong>Claude 3.7 Sonnet</strong>: good general purpose model, best for code generation</li>
-<li>API access via <a href="https://docs.anthropic.com/">Anthropic</a> or <a href="https://aws.amazon.com/bedrock/claude/">AWS Bedrock</a> <!--([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))--></li>
+<li><strong>Claude Sonnet 4</strong>: good general purpose model, best for code generation
+<ul>
+<li><strong>Claude Sonnet 3.7</strong> and <strong>3.5</strong> are both still excellent</li>
+</ul></li>
+<li><strong>Claude Opus 4</strong>: even stronger than Sonnet 4 (supposedly), but more expensive and slower</li>
+<li><strong>Claude 3.5 Haiku</strong>: Faster, cheaper but not cheap enough</li>
+<li>API access via <a href="https://docs.anthropic.com/">Anthropic</a> or <a href="https://aws.amazon.com/bedrock/claude/">AWS Bedrock</a> (<a href="https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit">instructions for using Bedrock at Posit</a>)</li>
 <li><strong>Takeaway</strong>: Best model for code generation</li>
 </ul>
 </section>
 <section id="google-models" class="slide level2">
 <h2>Google models</h2>
 <ul>
-<li><strong>Gemini 2.0 Flash</strong>: 1 million token context length, very fast</li>
-<li><strong>Gemini 2.0 Pro</strong>: 2 million token context length, smarter than Flash</li>
-<li><strong>Takeaway</strong>: Largest context length - good if you need to provide lots of information</li>
+<li><strong>Gemini 2.5 Flash</strong>: 1 million token context length, very fast</li>
+<li><strong>Gemini 2.5 Pro</strong>: 1 million token context length, smarter than Flash</li>
+<li><strong>Takeaway</strong>: Competitive with OpenAI and Anthropic</li>
 </ul>
 </section>
 <section id="llama-models" class="slide level2 smaller">
@@ -576,7 +586,7 @@
 <li><strong>Llama 3.2 90b</strong>: text+vision, 55GB</li>
 <li><strong>Llama 3.2 11b</strong>: text+vision, 7.9GB (can run comfortably on Macbook)</li>
 <li>API access via <a href="https://openrouter.ai/">OpenRouter</a>, <a href="https://groq.com/">Groq</a>, <a href="https://aws.amazon.com/bedrock/llama/">AWS Bedrock</a>, others</li>
-<li><strong>Takeaway</strong>: Good models if you want to keep all information on premises.</li>
+<li><strong>Takeaway</strong>: OK models if you want to keep all information on premises.</li>
 </ul>
 </section>
 <section id="deepseek-models" class="slide level2 smaller">
@@ -590,20 +600,22 @@
 </ul>
 </section></section>
 <section>
-<section id="customizing-behavior-and-adding-knowledge" class="title-slide slide level1 smaller center">
+<section id="customizing-behavior-and-adding-knowledge" class="title-slide slide level1 center">
 <h1>Customizing behavior and adding knowledge</h1>
-<ul>
-<li><strong>The problem</strong>
+
+</section>
+<section id="the-problem" class="slide level2">
+<h2>The problem</h2>
 <ul>
 <li>You want to customize how the LLM responds</li>
 <li>LLM doesn’t know your specific information</li>
-</ul></li>
-<li><strong>Some solutions</strong>
+</ul>
+<p><strong>Some solutions</strong></p>
 <ul>
 <li>Prompt engineering</li>
 <li>Retrieval-Augmented Generation</li>
+<li>Agentic search</li>
 <li>Fine tuning</li>
-</ul></li>
 </ul>
 </section>
 <section id="prompt-engineering-directing-behavioroutput" class="slide level2">
@@ -737,7 +749,7 @@ Example Output:
 <section id="takeaways" class="slide level2">
 <h2>Takeaways</h2>
 <ul>
-<li><strong>First try pompting, then RAG, and then fine tuning.</strong></li>
+<li><strong>First try prompting, then RAG or agentic search, and then fine tuning.</strong></li>
 <li>Other resources
 <ul>
 <li>OpenAI’s <a href="https://platform.openai.com/docs/guides/prompt-engineering">prompt engineering guide</a></li>
@@ -768,7 +780,7 @@ Example Output:
 <li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
-<p>Ask <code>#academy-ai-2</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+<p>Ask <code>#hackathon-19</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
 </section></section>
 <section>
 <section id="vision" class="title-slide slide level1 center">
@@ -778,7 +790,7 @@ Example Output:
 <section id="using-images-as-input" class="slide level2">
 <h2>Using images as input</h2>
 <ul>
-<li>Modern models are pretty good at this</li>
+<li>Modern models are pretty good at this—but this frontier is <em>especially</em> jagged</li>
 <li>Can understand both photographs and plots</li>
 <li>Examples for R and Chatlas are in your repo as <code>05-vision*</code></li>
 <li>See docs for <a href="https://python.langchain.com/docs/how_to/multimodal_inputs/">LangChain multimodal</a>, <a href="https://platform.openai.com/docs/guides/vision">OpenAI vision</a></li>
