@@ -297,7 +297,6 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - Anthropic Claude
 - Google Gemini
 - Meta Llama (can run locally)
-- DeepSeek (can run locally)
 
 ## OpenAI models {.smaller}
 
@@ -332,14 +331,6 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Llama 3.2 11b**: text+vision, 7.9GB (can run comfortably on Macbook)
 - API access via [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [AWS Bedrock](https://aws.amazon.com/bedrock/llama/), others
 - **Takeaway**: OK models if you want to keep all information on premises.
-
-## DeepSeek models {.smaller}
-
-- Open weights
-- **DeepSeek R1 671b**: 404GB, uses chain of thought (claimed similar perf to OpenAI o1)
-- **DeepSeek R1 32b, 70b**: 20GB, 43GB. Not actually DeepSeek architecture - said to be significantly worse.
-- API access via [DeepSeek](https://platform.deepseek.com/), [OpenRouter](https://openrouter.ai/deepseek/deepseek-r1)
-- Can run locally, but smaller models aren't really DeepSeek.
 
 # Customizing behavior and adding knowledge
 
