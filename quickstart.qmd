@@ -11,7 +11,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#academy-ai-2"
+slack_channel <- "#hackathon-19"
 ```
 
 ## Setup {.smaller}
@@ -21,6 +21,7 @@ slack_channel <- "#academy-ai-2"
 - Log in to [https://dev.academy.posit.team/](https://dev.academy.posit.team/) and start a session in your IDE of choice
   - We recommend RStudio for R, and Positron for R or Python
 - Clone https://github.com/jcheng5/llm-quickstart
+- Open `llm-quickstart` as a Project (RStudio) or Folder (Positron) in your IDE
 - Grab your OpenAI/Anthropic API keys; see the thread in <code>`r slack_channel`</code>
 
 #### Option 2: Local
@@ -281,8 +282,8 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 # Model Context Protocol {.smaller}
 
-- tl;dr: give the LLM tools that you didn't write
-- Protocol to give LLMs access to tools that can be written in any language
+- A standardized way for tools to make themselves available to LLM apps, without writing more code
+- RPC protocol, so tools can be written in any language
 - The application that uses the tool is an MCP client
 - MCP Servers provide the tools. [Examples](https://github.com/modelcontextprotocol/servers):
   - [Google Maps](https://github.com/modelcontextprotocol/servers/blob/main/src/google-maps)
@@ -302,24 +303,25 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 
 - **GPT-4.1**: good general purpose model, 1 million token context length
   - **GPT-4.1-mini** and **GPT-4.1-nano** are faster, cheaper, and dumber versions
-- **o3**: reasoning model; better for complex math and coding, but much slower and more expensive
+- **o3**: reasoning model; better for complex math and coding, but much slower ~~and more expensive~~
 - **o4-mini**: faster and cheaper reasoning model, not as good as o3 but cheaper than GPT-4.1
 - API access via [OpenAI](https://platform.openai.com/docs/overview/) or [Azure](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 - **Takeaway**: Good models for general purpose use
 
 ## Anthropic models
 
-- **Claude 3.7 Sonnet**: good general purpose model, best for code generation
-- **Claude 3.5 Sonnet v2**: older but still an excellent model, some prefer it to 3.7
-- **Claude 3.5 Haiku**: Faster, cheaper, and dumber version
-- API access via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) <!--([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))-->
+- **Claude Sonnet 4**: good general purpose model, best for code generation
+  - **Claude Sonnet 3.7** and **3.5** are both still excellent
+- **Claude Opus 4**: even stronger than Sonnet 4 (supposedly), but more expensive and slower
+- **Claude 3.5 Haiku**: Faster, cheaper but not cheap enough
+- API access via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) ([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
 - **Takeaway**: Best model for code generation
 
 ## Google models
 
-- **Gemini 2.0 Flash**: 1 million token context length, very fast
-- **Gemini 2.0 Pro**: 2 million token context length, smarter than Flash
-- **Takeaway**: Largest context length - good if you need to provide lots of information
+- **Gemini 2.5 Flash**: 1 million token context length, very fast
+- **Gemini 2.5 Pro**: 1 million token context length, smarter than Flash
+- **Takeaway**: Competitive with OpenAI and Anthropic
 
 ## Llama models {.smaller}
 
@@ -329,7 +331,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Llama 3.2 90b**: text+vision, 55GB
 - **Llama 3.2 11b**: text+vision, 7.9GB (can run comfortably on Macbook)
 - API access via [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [AWS Bedrock](https://aws.amazon.com/bedrock/llama/), others
-- **Takeaway**: Good models if you want to keep all information on premises.
+- **Takeaway**: OK models if you want to keep all information on premises.
 
 ## DeepSeek models {.smaller}
 
@@ -339,14 +341,18 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - API access via [DeepSeek](https://platform.deepseek.com/), [OpenRouter](https://openrouter.ai/deepseek/deepseek-r1)
 - Can run locally, but smaller models aren't really DeepSeek.
 
-# Customizing behavior and adding knowledge {.smaller}
+# Customizing behavior and adding knowledge
 
-- **The problem**
-  - You want to customize how the LLM responds
-  - LLM doesn't know your specific information
-- **Some solutions**
+## The problem
+
+- You want to customize how the LLM responds
+- LLM doesn't know your specific information
+
+**Some solutions**
+
   - Prompt engineering
   - Retrieval-Augmented Generation
+  - Agentic search
   - Fine tuning
 
 ## Prompt engineering: Directing behavior/output
@@ -479,7 +485,7 @@ Assistant response:
 
 ## Takeaways
 
-- **First try pompting, then RAG, and then fine tuning.**
+- **First try prompting, then RAG or agentic search, and then fine tuning.**
 - Other resources
   - OpenAI's [prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering)
   - Anthropic's [prompt engineering guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
@@ -509,7 +515,7 @@ Ask <code>`r slack_channel`</code> for help if you're stuck! (Or ask ChatGPT/Cla
 
 ## Using images as input
 
-- Modern models are pretty good at this
+- Modern models are pretty good at this—but this frontier is _especially_ jagged
 - Can understand both photographs and plots
 - Examples for R and Chatlas are in your repo as `05-vision*`
 - See docs for [LangChain multimodal](https://python.langchain.com/docs/how_to/multimodal_inputs/), [OpenAI vision](https://platform.openai.com/docs/guides/vision)
