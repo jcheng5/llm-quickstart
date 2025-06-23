@@ -36,4 +36,4 @@ chat$register_tool(tool(
 ))
 
 chat$chat("Begin", echo = TRUE) # Jump-start the conversation
-live_console(chat, quiet = TRUE) # Continue the conversation
+live_browser(chat, quiet = TRUE) # Continue the conversation
