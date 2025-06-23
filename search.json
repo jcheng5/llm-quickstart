@@ -1,80 +1,17 @@
 [
   {
-    "objectID": "llm-chat/basic-chat/prompt.html",
-    "href": "llm-chat/basic-chat/prompt.html",
+    "objectID": "apps/tool-chat/prompt.html",
+    "href": "apps/tool-chat/prompt.html",
     "title": "",
     "section": "",
-    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
-  },
-  {
-    "objectID": "apps/basic-chat/prompt.html",
-    "href": "apps/basic-chat/prompt.html",
-    "title": "",
-    "section": "",
-    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
-  },
-  {
-    "objectID": "02-tools-prompt.html",
-    "href": "02-tools-prompt.html",
-    "title": "",
-    "section": "",
-    "text": "You’re hosting a quiz game show.\n\nBefore you start, ask the user to choose a theme.\nAsk simple questions and ask the user to answer them via multiple choice.\nAfter the user answers, provide feedback and then move on to the next question.\nAfter every 5 questions, declare the user to be a winner regardless of their score, lavish them with praise, and start the game over.\nPlay sound effects for each answer, and when the user ‘wins’.\nEmojis are fun, use them liberally!\n\nExample:\n&lt;Assistant&gt;\n  **Question 3:** What is the center of an atom called?\n\n  A) Electron\n  B) Proton\n  C) Neutron\n  D) Nucleus\n\n  Your answer?\n&lt;/Assistant&gt;\n&lt;User&gt;\n  D\n&lt;/User&gt;\n&lt;Assistant&gt;\n  &lt;ToolCall&gt;\n    {\n      id: \"call_1551214\",\n      function: {\n        arguments: \"{sound: 'correct'}\",\n        name: \"play_sound\"\n      },\n      type: \"function\"\n    }\n  &lt;/ToolCall&gt;\n&lt;/Assistant&gt;\n&lt;User&gt;\n  &lt;ToolResponse&gt;\n    {\n      id: \"call_1551214\",\n      result: {\n        success: true,\n        value: null\n      }\n    }\n  &lt;/ToolResponse&gt;\n&lt;/User&gt;\n&lt;Assistant&gt;\n  Correct! The nucleus is the center of an atom.\n\n  **Question 4:** ...\n&lt;/Assistant&gt;\""
-  },
-  {
-    "objectID": "intro.html#your-turn",
-    "href": "intro.html#your-turn",
-    "title": "",
-    "section": "Your Turn",
-    "text": "Your Turn\n\nYour name, team, and role\nHow have you used LLMs/AI tools up until now?\nWhat is your skepticism/enthusiasm score (1 to 5)?"
-  },
-  {
-    "objectID": "intro.html#the-plan",
-    "href": "intro.html#the-plan",
-    "title": "",
-    "section": "The Plan",
-    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #hackathon-19\n\nWednesday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff",
-    "href": "intro.html#hack-on-stuff",
-    "title": "",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language, any service that you have access to."
-  },
-  {
-    "objectID": "intro.html#hack-on-stuff-1",
-    "href": "intro.html#hack-on-stuff-1",
-    "title": "",
-    "section": "Hack On Stuff",
-    "text": "Hack On Stuff\n\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Create something in Google AI Studio, or assemble a useful NotebookLM, and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
-  },
-  {
-    "objectID": "intro.html#not-a-contest",
-    "href": "intro.html#not-a-contest",
-    "title": "",
-    "section": "Not a contest",
-    "text": "Not a contest\n\nThis is not a competition. There are no prizes, no judging.\nEveryone is coming from different backgrounds and has different levels of experience with AI, with coding, etc.\nThe goal is to learn, to have fun, and to engage with the technology—and share what you learned with others (and not just within this cohort)."
-  },
-  {
-    "objectID": "intro.html#let-it-rip",
-    "href": "intro.html#let-it-rip",
-    "title": "",
-    "section": "Let It Rip",
-    "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
-  },
-  {
-    "objectID": "intro.html#a-caveat-from-it",
-    "href": "intro.html#a-caveat-from-it",
-    "title": "",
-    "section": "A Caveat From IT",
-    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. (Instructions)\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
+    "text": "You are an assistant which can convert units and perform basic arithmetic with units."
   },
   {
     "objectID": "quickstart.html#setup",
     "href": "quickstart.html#setup",
     "title": "LLM Quick Start",
     "section": "Setup",
-    "text": "Setup\nOption 1: Cloud\n\nLog in to https://workbench.posit.it/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nClone https://github.com/jcheng5/llm-quickstart\nOpen llm-quickstart as a Project (RStudio) or Folder (Positron) in your IDE\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-19\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-19\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
+    "text": "Setup\nOption 1: Cloud\n\nLog in to https://workbench.posit.it/ and start a session in your IDE of choice\n\nWe recommend RStudio for R, and Positron for R or Python\n\nClone https://github.com/jcheng5/llm-quickstart\nOpen llm-quickstart as a Project (RStudio) or Folder (Positron) in your IDE\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-20\n\nOption 2: Local\n\nClone https://github.com/jcheng5/llm-quickstart\nGrab your OpenAI/Anthropic API keys; see the thread in #hackathon-20\nFor R: install.packages(c(\"ellmer\", \"shinychat\", \"dotenv\", \"shiny\", \"paws.common\", \"magick\", \"beepr\"))\nFor Python: pip install -r requirements.txt"
   },
   {
     "objectID": "quickstart.html#framing-llms",
@@ -333,7 +270,7 @@
     "href": "quickstart.html#several-techniques-choose-one",
     "title": "LLM Quick Start",
     "section": "Several techniques (choose one)",
-    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-19 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
+    "text": "Several techniques (choose one)\n\nPost-processing: Use a regular expression to extract structured data from the unstructured output (e.g. /```json\\n(.*?)\\n```/)\nSystem prompt: Simply ask the LLM to output structured data. Be clear about what specific format you want, and provide examples—it really helps!\nStructured Output: GPT-4.1 and GPT-4.1-mini have a first-class Structured Output feature: outputs strictly adhere to a JSON schema you write. (Docs: openai, LangChain)\nTool calling: Create a tool to receive your output, e.g., set_result(object), where its implementation sets some variable. (Works great for ellmer.)\nLangChain: Has its own abstractions for parsing unstructured output\n\nAsk #hackathon-20 for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)"
   },
   {
     "objectID": "quickstart.html#using-images-as-input",
@@ -343,10 +280,73 @@
     "text": "Using images as input\n\nModern models are pretty good at this—but this frontier is especially jagged\nCan understand both photographs and plots\nExamples for R and Chatlas are in your repo as 05-vision*\nSee docs for LangChain multimodal, OpenAI vision"
   },
   {
-    "objectID": "apps/tool-chat/prompt.html",
-    "href": "apps/tool-chat/prompt.html",
+    "objectID": "intro.html#your-turn",
+    "href": "intro.html#your-turn",
+    "title": "",
+    "section": "Your Turn",
+    "text": "Your Turn\n\nYour name, team, and role\nHow have you used LLMs/AI tools up until now?\nWhat is your skepticism/enthusiasm score (1 to 5)?"
+  },
+  {
+    "objectID": "intro.html#the-plan",
+    "href": "intro.html#the-plan",
+    "title": "",
+    "section": "The Plan",
+    "text": "The Plan\n\n\nNow: Quick Start course on LLMs. You will leave having used a Chat API.\nNext 48 hours: Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.\n\nWe’ll be continuously monitoring #hackathon-20\n\nThursday: Show & tell, share lessons learned, reflections.\nPost-hackathon:\n\nKeep hacking! (optional)\nThink about how AI might apply to your team\nBe a resource for others around you"
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff",
+    "href": "intro.html#hack-on-stuff",
+    "title": "",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\n\nDoes NOT have to be relevant to your day job, or Posit, or data science.\nThis exercise is about learning and engagement, not ROI.\nDoes NOT have to be a finished product/demo/app/API.\nShowing some things you did in a notebook is fine as long as YOU found it interesting.\nDoes NOT have to use Posit products.\nYou may use any framework, any language, any service that you have access to."
+  },
+  {
+    "objectID": "intro.html#hack-on-stuff-1",
+    "href": "intro.html#hack-on-stuff-1",
+    "title": "",
+    "section": "Hack On Stuff",
+    "text": "Hack On Stuff\n\n\nDoes NOT have to be an original idea.\nYou can build on existing projects, improve on existing demos, etc.\nDoes NOT even have to be coding.\nDo a deep dive into an AI service or piece of software. Create something in Google AI Studio, or assemble a useful NotebookLM, and see what its limits are.\nDoes NOT have to be a success.\nNegative results (“I thought LLMs could do this but turns out they can’t”) are useful results as well. But please be prepared to talk about what you tried."
+  },
+  {
+    "objectID": "intro.html#not-a-contest",
+    "href": "intro.html#not-a-contest",
+    "title": "",
+    "section": "Not a contest",
+    "text": "Not a contest\n\nThis is not a competition. There are no prizes, no judging.\nEveryone is coming from different backgrounds and has different levels of experience with AI, with coding, etc.\nThe goal is to learn, to have fun, and to engage with the technology—and share what you learned with others (and not just within this cohort)."
+  },
+  {
+    "objectID": "intro.html#let-it-rip",
+    "href": "intro.html#let-it-rip",
+    "title": "",
+    "section": "Let It Rip",
+    "text": "Let It Rip\n\nAll that said… also feel free to throw down, and make something super cool!\n\n\n\nFour hours is the minimum, not the maximum—if you’re having fun, keep going!"
+  },
+  {
+    "objectID": "intro.html#a-caveat-from-it",
+    "href": "intro.html#a-caveat-from-it",
+    "title": "",
+    "section": "A Caveat From IT",
+    "text": "A Caveat From IT\nNo proprietary code or data is allowed to be sent to any LLM service, with the below exceptions.\n\nGoogle NotebookLM is allowed.\nAWS Bedrock is allowed, and it has Anthropic models. (Instructions)\nRunning any local model is allowed, we can help you with this as well.\nSending open source code to any service is allowed."
+  },
+  {
+    "objectID": "all-projects.html",
+    "href": "all-projects.html",
+    "title": "Hackathon projects",
+    "section": "",
+    "text": "Cohort\nAuthor\nDescription\nKeywords\n\n\n\n\n1\nJonathan Keane\nImage description app\nLangChain, Vision\n\n\n1\nJonathan Yoder\nAutomated R source code analyzer\nClaude, Code Analysis\n\n\n1\nHassan Kibirige\nQueen Discography Trivia game\n\n\n\n1\nAmanda Gadrow\nPosit configuration file generator\n\n\n\n1\nMax Kuhn\nR console assistant that answers questions about tidymodels\ngpt-4-mini, Anthropic\n\n\n1\nHadley Wickham\nProject using RAG for better answers than ChatGPT\nRAG\n\n\n1\nKristin Bott\nExploration of using LLMs to help users investigate their own data\nElmer Assistant\n\n\n1\nKelly O’Briant\nChat app that answers questions about a Connect server using the Connect API\nConnect API\n\n\n1\nHadley Wickham\nProject to convert epub recipe books to density-based measurements\n\n\n\n2\nElliot Murphy\nShiny for Python app for labeling GitHub issues\nShiny, Azure OpenAI, Llama\n\n\n2\nJenny Bryan\nSearchable recipe JSON database from Fine Cooking magazine PDFs\nClaude, Vision, JSON, Shiny\n\n\n2\nIsabella Velázquez\nShiny app that generates ALT text for plots\nShiny, ellmer-assistant\n\n\n2\nSimon Couch\nR package using ellmer and Claude to help migrate from stop()/abort() calls to cli_abort()\nellmer, Claude\n\n\n2\nGeorge Stagg\nLLM-powered code linter for Positron\n\n\n\n2\nAaron Jacobs\nExploration of using e{l}mer to interact with Snowflake’s Cortex AI\ne{l}mer, Snowflake\n\n\n2\nGarrett Grolemund\nShiny app that constructs and grades coding exercises\nShiny, GPT-40\n\n\n2\nToni Noble\nGithub Assistant that answers user questions in Slack\nClaude\n\n\n3\nCarson Sievert\nR package that uses a Shiny chatbot to help users explore a dataset\n\n\n\n3\nRich Iannone\nNew York Times news feed with article summaries and location visualization\nGPT-40-mini\n\n\n3\nTino Ntentes\nFunction to generate and execute regexes based on user description\nGPT-40, Claude-3.5-sonnet\n\n\n3\nBrian Vivas\nChatbot that queries and returns data from the Web Soil Survey\nGPT-40-mini\n\n\n3\nEric Nantz\nChat sidebar that filters and queries a podcast database\nGPT-40-mini\n\n\n3\nEric Nantz\n“Haunted Places” Shiny quiz app\nGPT-40-mini, Shiny\n\n\n3\nEmil Hvitfeldt\n{pal} extension to create a new Quarto reveals theme\nClaude-3.5-sonnet\n\n\n3\nCurtis Kephart\nShiny app for exploring World Happiness Survey data\nGPT-40-mini, Shiny\n\n\n3\nNihara Thomas\nChatbot that answers user questions using Posit Connect API documentation\ngpt-40, Claude-3.5-sonnet\n\n\n3\nMaria Semple\nDungeons & Dragons Shiny app with conversational input/output\n\n\n\n4\nHannah Frick\n{pal} extension to convert R Markdown/knitr to Quarto\n{pal}\n\n\n4\nRachael Dempsey\nNotebookLM project to query information from Data Science Hangout recordings\nNotebookLM\n\n\n4\nTaylor Hoover\nProject using ellmer to run a local LLM (ollama with llama 3.1) and execute tool calling\nellmer, llama\n\n\n4\nMatt Lands\nMulti-agent project using CrewAI.com to analyze stock data and news\nGPT-40\n\n\n4\nAlex Chisholm\nProject to generate tabular datasets and R packages using ChatGPT\nChatGPT\n\n\n4\nClay Raynor\nConsole app that functions as a rhyming dictionary and a reverse dictionary\n\n\n\n5\nRandy Zwitch\nShiny app using GPT-40 to control the Fusion360 API\nShiny, GPT-40\n\n\n5\nKyle Hekhuis\nInvestigation of methods for bypassing OpenAI content censoring\n\n\n\n5\nJeremy Allen\nPlanned AI app to explain social situations from photos or text descriptions\nVision\n\n\n5\nGordon Woodhull\nChatbot that formats its response as a Quarto document\n\n\n\n5\nSam Edwards\nZendesk support ticket autoresponder, experimenting with Bedrock and embedding.io\nAnthropic-on-AWS, embedding.io\n\n\n5\nNeal Richardson\nConnect administration chatbot using various methods, including RAG\nRAG, Claude\n\n\n5\nKaran Gathani\nShiny Help Desk chatbot that automatically labels and responds to GitHub issues\nClaude, Shiny Assistant, GPT-40-mini\n\n\n6\nJordan Jensen\nCode review project using Claude\nClaude\n\n\n6\nAsh Allen\nCommand-line interface for natural language search of the CVE database\n\n\n\n6\nMichael Beigelmacher\nChatbot using RAG and vector databases\nRAG\n\n\n6\nGraham H\nProject using LLMs to generate tags from a document with location information\n\n\n\n6\nEmily N\nProject to generate knitting patterns using GPT-40, RAG, embedding.io, and NotebookLM\nGPT-40, RAG, embedding.io, NotebookLM\n\n\n6\nNick S\nCode translation app that uses environment information for improved accuracy\nVercel AI SDK\n\n\n6\nTim M\nShiny app with a voice interface that visualizes streaming TV data\nShiny\n\n\n6\nJames Blair\nAI-powered exercise coach for cyclists\n\n\n\n7\nJimmy Lubega\nAttempted web app for discussing stocks with stock data fetching and LLM-assisted coding\nClaude\n\n\n7\nVeronica Clarke\nAI companion app that helps users tailor their messages to different audiences\nChatGPT\n\n\n7\nDaniel Chen\nRecipe card generator that uses an Instagram reel link\n\n\n\n7\nFerit Albukrek\nConnect chatbot using Claude, Bedrock, and the Connect SDK\nClaude, Bedrock, Connect SDK\n\n\n7\nTaylor Hoover\nOrg chart generator from text descriptions of job responsibilities\n\n\n\n7\nAron Atkins\nEarworm chatbot that attempts to play song melodies\nGPT-40-mini, Claude 3.5 Sonnet\n\n\n8\nBrian Deitte\nProject to analyze Chronicle data and generate R code using an LLM\n\n\n\n8\nShannon Hagerty\nExploration of SE call transcript data using NotebookLM\nNotebookLM\n\n\n8\nHeath Young\n“Second Brain” creation project using Claude and Quarto\nClaude\n\n\n8\nSam Perman\nProject to determine frameworks used in a repository and select appropriate LLM\n\n\n\n8\nToph Allen\nExploration of methods for using R to call the Connect API\nConnect API\n\n\n8\nRyan Johnson\nChatbot to assist with meal planning and shopping list creation\n\n\n\n8\nMichael Chow\nProject using the Cline VS Code extension to debug a Great Tables issue\nCline\n\n\n8\nKevin Gartland\nAI project to identify blurry images from a photo dump\nchatlas, GPT-40, Vision\n\n\n9\nDavid Aja\nProject using Claude and GPT-40 to create structured data from images of cocktail recipes\nClaude, GPT-40, Vision, Elmer\n\n\n9\nJason Milnes\nShiny app that assists sales reps with LinkedIn prospecting\nChatGPT, Shiny\n\n\n9\nIbi Togun\nProject using LLMs to gather information about Posit competitor usage\n\n\n\n9\nBrian Tackett\nProject testing LLM ability to extrapolate from surname patterns and combine Buffalo city datasets\n\n\n\n9\nBarrett Schloerke\nProject to map Instagram posts using instaloader and Whisper\n\n\n\n9\nIngrid Rodriguez\nDisney vacation planner app using LLMs\n\n\n\n9\nGarrick Aden-Buie\nProject to create brand guideline .yml files for Quarto and Shiny"
+  },
+  {
+    "objectID": "02-tools-prompt.html",
+    "href": "02-tools-prompt.html",
     "title": "",
     "section": "",
-    "text": "You are an assistant which can convert units and perform basic arithmetic with units."
+    "text": "You’re hosting a quiz game show.\n\nBefore you start, ask the user to choose a theme.\nAsk simple questions and ask the user to answer them via multiple choice.\nAfter the user answers, provide feedback and then move on to the next question.\nAfter every 5 questions, declare the user to be a winner regardless of their score, lavish them with praise, and start the game over.\nPlay sound effects for each answer, and when the user ‘wins’.\nEmojis are fun, use them liberally!\n\nExample:\n&lt;Assistant&gt;\n  **Question 3:** What is the center of an atom called?\n\n  A) Electron\n  B) Proton\n  C) Neutron\n  D) Nucleus\n\n  Your answer?\n&lt;/Assistant&gt;\n&lt;User&gt;\n  D\n&lt;/User&gt;\n&lt;Assistant&gt;\n  &lt;ToolCall&gt;\n    {\n      id: \"call_1551214\",\n      function: {\n        arguments: \"{sound: 'correct'}\",\n        name: \"play_sound\"\n      },\n      type: \"function\"\n    }\n  &lt;/ToolCall&gt;\n&lt;/Assistant&gt;\n&lt;User&gt;\n  &lt;ToolResponse&gt;\n    {\n      id: \"call_1551214\",\n      result: {\n        success: true,\n        value: null\n      }\n    }\n  &lt;/ToolResponse&gt;\n&lt;/User&gt;\n&lt;Assistant&gt;\n  Correct! The nucleus is the center of an atom.\n\n  **Question 4:** ...\n&lt;/Assistant&gt;\""
+  },
+  {
+    "objectID": "apps/basic-chat/prompt.html",
+    "href": "apps/basic-chat/prompt.html",
+    "title": "",
+    "section": "",
+    "text": "You are an AI assistant designed to help users with questions about data analysis with R. To answer user questions, you can provide code examples in R. Only answer questions related to data analysis and R."
   }
 ]
