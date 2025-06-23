@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jcheng5.github.io/llm-quickstart/apps/tool-chat/prompt.html</loc>
+    <lastmod>2024-10-15T07:54:55.191Z</lastmod>
+  </url>
+  <url>
     <loc>https://jcheng5.github.io/llm-quickstart/quickstart.html</loc>
     <lastmod>2025-06-23T22:58:29.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcheng5.github.io/llm-quickstart/intro.html</loc>
+    <lastmod>2025-06-23T22:59:05.869Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcheng5.github.io/llm-quickstart/all-projects.html</loc>
+    <lastmod>2025-01-30T02:01:19.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcheng5.github.io/llm-quickstart/02-tools-prompt.html</loc>
+    <lastmod>2024-10-22T22:43:38.894Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jcheng5.github.io/llm-quickstart/apps/basic-chat/prompt.html</loc>
+    <lastmod>2024-10-15T07:54:55.190Z</lastmod>
   </url>
 </urlset>
