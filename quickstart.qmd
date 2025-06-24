@@ -288,7 +288,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - MCP Servers provide the tools. [Examples](https://github.com/modelcontextprotocol/servers):
   - [Google Maps](https://github.com/modelcontextprotocol/servers/blob/main/src/google-maps)
   - [Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) - access to files on disk
-  - [Browser MCP](https://browsermcp.io/) - control web browser
+  - [Playwright MCP](https://github.com/microsoft/playwright-mcp) - control a web browser
 - Clients use the tools. [Examples](https://modelcontextprotocol.io/clients): Claude Desktop app, Claude Code, Continue, Cursor, many others
 
 # Choosing a model
