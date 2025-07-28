@@ -25,7 +25,7 @@ def get_weather(latitude: float, longitude: float):
 
 
 chat = ChatAnthropic(
-    model="claude-3-5-sonnet-latest",
+    model="claude-sonnet-4-0",
     system_prompt=(
         "You are a helpful assistant that can check the weather. "
         "Report results in imperial units."

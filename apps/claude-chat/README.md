@@ -1,7 +1,7 @@
 Shiny + Claude Chat app
 =======================
 
-This is a Shiny application which provides a chat interface for Claude 3.5 Sonnet, similar to the one available at [claude.ai](https://claude.ai/).
+This is a Shiny application which provides a chat interface for Claude Sonnet 4, similar to the one available at [claude.ai](https://claude.ai/).
 
 This application is deployed at https://gallery.shinyapps.io/shiny-claude/.
 

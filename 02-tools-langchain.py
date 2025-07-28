@@ -34,7 +34,7 @@ memory = MemorySaver()
 
 # Choose one of these two
 # model = ChatOpenAI(model="gpt-4")
-model = ChatAnthropic(model="claude-3-5-sonnet-latest")
+model = ChatAnthropic(model="claude-sonnet-4-0")
 
 # Create the agent with the weather tool
 app = create_react_agent(
