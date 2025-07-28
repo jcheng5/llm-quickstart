@@ -158,7 +158,7 @@ curl https://api.openai.com/v1/chat/completions \
 - Example with [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
 - Important for:
   - Model input/output limits
-  - API pricing is usually by token (see [calculator](https://gptforwork.com/tools/openai-chatgpt-api-pricing-calculator))
+  - API pricing is usually by token (see [comparison](https://pricepertoken.com/))
 :::
 
 # Choose a Package {.smaller}
