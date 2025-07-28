@@ -7,4 +7,3 @@ venv
 __pycache__
 rsconnect-python
 logs/
-__pycache__/
