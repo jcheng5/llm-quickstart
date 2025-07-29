@@ -306,21 +306,24 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **o4-mini**: faster and cheaper reasoning model, not as good as o3 but cheaper than GPT-4.1
 - API access via [OpenAI](https://platform.openai.com/docs/overview/) or [Azure](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 - **Takeaway**: Good models for general purpose use
+- [All OpenAI models](https://platform.openai.com/docs/models)
 
-## Anthropic models
+## Anthropic models {.smaller}
 
-- **Claude Sonnet 4**: good general purpose model, best for code generation
+- **Claude Sonnet 4**: good general purpose model, best for code generation. Has thinking mode.
   - **Claude Sonnet 3.7** and **3.5** are both still excellent
-- **Claude Opus 4**: even stronger than Sonnet 4 (supposedly), but more expensive and slower
-- **Claude 3.5 Haiku**: Faster, cheaper but not cheap enough
+- **Claude Opus 4**: even stronger than Sonnet 4 (supposedly), but more expensive and slower. Has thinking mode.
+- **Claude Haiku 3.5**: Faster, cheaper, but not cheap enough
 - API access via [Anthropic](https://docs.anthropic.com/) or [AWS Bedrock](https://aws.amazon.com/bedrock/claude/) ([instructions for using Bedrock at Posit](https://positpbc.atlassian.net/wiki/spaces/SE/pages/1376550915/Using+Claude+via+Bedrock+at+Posit))
 - **Takeaway**: Best model for code generation
+- [All Anthropic models](https://docs.anthropic.com/en/docs/about-claude/models/overview)
 
 ## Google models
 
-- **Gemini 2.5 Flash**: 1 million token context length, very fast
-- **Gemini 2.5 Pro**: 1 million token context length, smarter than Flash
+- **Gemini 2.5 Pro**: 1 million token context length. Has thinking mode.
+- **Gemini 2.5 Flash**: 1 million token context length, very fast. Has thinking mode.
 - **Takeaway**: Competitive with OpenAI and Anthropic
+- [All Gemini models](https://ai.google.dev/gemini-api/docs/models)
 
 ## Llama models {.smaller}
 
@@ -331,6 +334,13 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - **Llama 3.2 11b**: text+vision, 7.9GB (can run comfortably on Macbook)
 - API access via [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [AWS Bedrock](https://aws.amazon.com/bedrock/llama/), others
 - **Takeaway**: OK models if you want to keep all information on premises.
+
+## Other local model families
+
+- [Gemma](https://deepmind.google/models/gemma/) (Google)
+- [Qwen](https://qwen.ai/home) (Alibaba)
+- [DeepSeek](https://www.deepseek.com/en)
+- [Mistral](https://mistral.ai/models)
 
 # Customizing behavior and adding knowledge
 
