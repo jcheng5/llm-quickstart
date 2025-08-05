@@ -1,0 +1,20 @@
+[project]
+name = "llm-quickstart"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic[bedrock]>=0.60.0",
+    "boto3>=1.40.2",
+    "chatlas>=0.9.1",
+    "jupyter>=1.1.1",
+    "langchain>=0.3.27",
+    "langchain-anthropic>=0.3.18",
+    "langchain-openai>=0.3.28",
+    "langgraph>=0.6.3",
+    "openai>=1.98.0",
+    "pillow>=11.3.0",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.4",
+    "shiny>=1.4.0",
+    "tokenizers>=0.21.4",
+]

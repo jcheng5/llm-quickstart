@@ -29,11 +29,13 @@ chat <- chat_openai(
 chat$register_tool(tool(
   play_sound,
   "Plays a sound effect.",
-  sound = type_string(
-    "Which sound effect to play. Options are 'correct', 'incorrect', 'you-win'. Defaults to 'correct'.",
-    required = FALSE
+  arguments = list(
+    sound = type_string(
+      "Which sound effect to play. Options are 'correct', 'incorrect', 'you-win'. Defaults to 'correct'.",
+      required = FALSE
+    )
   )
 ))
 
-chat$chat("Begin", echo = TRUE) # Jump-start the conversation
+chat$chat("Begin", echo = FALSE) # Jump-start the conversation
 live_browser(chat, quiet = TRUE) # Continue the conversation

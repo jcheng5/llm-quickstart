@@ -38,13 +38,14 @@ chat <- chat_openai(
 # Created using `ellmer::create_tool_def(get_weather)`
 chat$register_tool(tool(
   get_weather,
-  "Fetches weather information for a specified location given by latitude and 
-longitude.",
-  latitude = type_number(
-    "The latitude of the location for which weather information is requested."
-  ),
-  longitude = type_number(
-    "The longitude of the location for which weather information is requested."
+  "Fetches weather information for a specified location given by latitude and longitude.",
+  arguments = list(
+    latitude = type_number(
+      "The latitude of the location for which weather information is requested."
+    ),
+    longitude = type_number(
+      "The longitude of the location for which weather information is requested."
+    )
   )
 ))
 

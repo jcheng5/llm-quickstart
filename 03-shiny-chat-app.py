@@ -2,7 +2,7 @@
 # or in Positron/VS Code with the Shiny extension, use the Run button-menu's
 # "Run Shiny App" option.
 
-from chatlas import ChatAnthropic
+from chatlas import ChatOpenAI
 from dotenv import load_dotenv
 from shiny.express import input, ui
 

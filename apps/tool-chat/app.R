@@ -20,50 +20,58 @@ server <- function(input, output, session) {
   chat$register_tool(tool(
     convert_length,
     "Converts a length from one unit to another.",
-    value = type_number(
-      "The numerical value of the length to be converted."
-    ),
-    from_unit = type_string(
-      "input unit (meters, kilometers, miles, feet, inches, centimeters)."
-    ),
-    to_unit = type_string(
-      "output unit (meters, kilometers, miles, feet, inches, centimeters)."
+    arguments = list(
+      value = type_number(
+        "The numerical value of the length to be converted."
+      ),
+      from_unit = type_string(
+        "input unit (meters, kilometers, miles, feet, inches, centimeters)."
+      ),
+      to_unit = type_string(
+        "output unit (meters, kilometers, miles, feet, inches, centimeters)."
+      )
     )
   ))
 
   chat$register_tool(tool(
     convert_mass,
     "Converts a mass from one unit to another.",
-    value = type_number(
-      "The numerical value of the mass to be converted."
-    ),
-    from_unit = type_string(
-      "input unit (grams, kilograms, pounds, ounces)."
-    ),
-    to_unit = type_string(
-      "output unit (grams, kilograms, pounds, ounces)."
+    arguments = list(
+      value = type_number(
+        "The numerical value of the mass to be converted."
+      ),
+      from_unit = type_string(
+        "input unit (grams, kilograms, pounds, ounces)."
+      ),
+      to_unit = type_string(
+        "output unit (grams, kilograms, pounds, ounces)."
+      )
     )
   ))
 
   chat$register_tool(tool(
     add,
     "Calculates the sum of two numbers.",
-    x = type_number(
-      "The first number to be added."
-    ),
-    y = type_number(
-      "The second number to be added."
+    arguments = list(
+      x = type_number(
+        "The first number to be added."
+      ),
+      y = type_number(
+        "The second number to be added."
+      )
     )
   ))
 
   chat$register_tool(tool(
     multiply,
     "Calculates the product of two numbers.",
-    x = type_number(
-      "The first number to be multiplied."
-    ),
-    y = type_number(
-      "The second number to be multiplied."
+    arguments = list(
+      x = type_number(
+        "The first number to be multiplied."
+      ),
+      y = type_number(
+        "The second number to be multiplied."
+      )
     )
   ))
 

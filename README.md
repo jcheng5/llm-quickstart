@@ -16,6 +16,12 @@ Please create and activate a virtualenv (or conda env), then:
 pip install -r requirements.txt
 ```
 
+Or if using uv, you can instead run:
+
+```
+uv sync
+```
+
 ## If you plan to use Go
 
 You can try the [official (alpha) OpenAI client](https://github.com/openai/openai-go) or [this unofficial but popular one](https://github.com/sashabaranov/go-openai).
