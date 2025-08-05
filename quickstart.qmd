@@ -11,7 +11,7 @@ editor:
 ---
 
 ```{r include=FALSE}
-slack_channel <- "#hackathon-21"
+slack_channel <- "#hackathon-22"
 ```
 
 ## Setup {.smaller}
@@ -296,7 +296,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - OpenAI
 - Anthropic Claude
 - Google Gemini
-- Meta Llama (can run locally)
+- Open weights models (can run locally)
 
 ## OpenAI models {.smaller}
 
@@ -335,12 +335,14 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - API access via [OpenRouter](https://openrouter.ai/), [Groq](https://groq.com/), [AWS Bedrock](https://aws.amazon.com/bedrock/llama/), others
 - **Takeaway**: OK models if you want to keep all information on premises.
 
-## Other local model families
+## Other open weights model families
 
-- [Gemma](https://deepmind.google/models/gemma/) (Google)
-- [Qwen](https://qwen.ai/home) (Alibaba)
-- [DeepSeek](https://www.deepseek.com/en)
-- [Mistral](https://mistral.ai/models)
+- [🇺🇸 Gemma 3](https://deepmind.google/models/gemma/) (Google)
+- [🇨🇳 Qwen3](https://qwen.ai/home) (Alibaba)
+- [🇨🇳 DeepSeek R1](https://www.deepseek.com/en)
+- [🇫🇷 Mistral 3.2 Small](https://mistral.ai/models)
+- [🇨🇳 Kimi K2](https://www.kimi.ai/) (MoonshotAI)
+- [🇨🇳 GLM-4.5 Air](https://github.com/zai-org/GLM-4.5) (Z.ai)
 
 # Customizing behavior and adding knowledge
 
