@@ -1,6 +1,6 @@
 library(ellmer)
 
-chat <- chat_bedrock(
+chat <- chat_aws_bedrock(
   model = "us.anthropic.claude-sonnet-4-20250514-v1:0",
   system_prompt = "You are a terse assistant.",
 )
