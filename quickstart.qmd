@@ -344,9 +344,7 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
 - [🇨🇳 Kimi K2](https://www.kimi.ai/) (MoonshotAI)
 - [🇨🇳 GLM-4.5 Air](https://github.com/zai-org/GLM-4.5) (Z.ai)
 
-# Customizing behavior and adding knowledge
-
-## The problem
+# Customizing behavior and knowledge {.smaller}
 
 - You want to customize how the LLM responds
 - LLM doesn't know your specific information
@@ -358,14 +356,16 @@ Take a minute to look at _one of_ the following docs. See if you can get them to
   - Agentic search
   - Fine tuning
 
-## Prompt engineering: Directing behavior/output
+## Prompt engineering: Directing behavior
+
+::: {.incremental}
 
 - "Respond with just the minimal information necessary."
 - "Think through this step-by-step."
-- "Carefully read and follow these instructions..."
-- "If the user asks a question related to data processing, produce R code to accomplish that task."
-- "Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so."
+- "If the user asks a data-related question, produce R code to accomplish that task."
+- "Only provide answers that you are sure about. If you are uncertain about an answer, say so."
 
+:::
 
 ## Prompt engineering: Using examples to guide behavior
 
@@ -449,13 +449,17 @@ Assistant response:
 
 ## Adding context/knowledge to prompt
 
+::: {.incremental}
+
 - Add documentation files to prompt
-- Add positive examples (negative examples don't work well)
-- Docs must fit in context window
 - Examples
   - [Ellmer assistant](https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md) uses README files in prompt
-  - [Sidebot](https://github.com/jcheng5/py-sidebot/blob/main/prompt.md)
-  - [FastHTML LLM prompt](https://docs.fastht.ml/llms-ctx.txt)
+  - [Querychat](https://github.com/posit-dev/querychat/blob/main/pkg-r/inst/prompt/prompt.md?plain=1)
+  - [FastHTML LLM prompt](https://www.fastht.ml/docs/llms-ctx.txt)
+- Docs must fit in context window
+- Add positive examples (negative examples don't work well)
+
+:::
 
 ## RAG: Retrieval Augmented Generation {.smaller}
 
