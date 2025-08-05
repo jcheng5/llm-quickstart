@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -209,12 +209,12 @@
 </ul></li>
 <li>Clone https://github.com/jcheng5/llm-quickstart</li>
 <li>Open <code>llm-quickstart</code> as a Project (RStudio) or Folder (Positron) in your IDE</li>
-<li>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-21</code></li>
+<li>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-22</code></li>
 </ul>
 <h4 id="option-2-local">Option 2: Local</h4>
 <ul>
 <li><p>Clone https://github.com/jcheng5/llm-quickstart</p></li>
-<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-21</code></p></li>
+<li><p>Grab your OpenAI/Anthropic API keys; see the thread in <code>#hackathon-22</code></p></li>
 <li><p>For R: <code>install.packages(c("ellmer", "shinychat", "dotenv", "shiny", "paws.common", "magick", "beepr"))</code></p></li>
 <li><p>For Python: <code>pip install -r requirements.txt</code></p></li>
 </ul>
@@ -539,7 +539,7 @@
 <li>OpenAI</li>
 <li>Anthropic Claude</li>
 <li>Google Gemini</li>
-<li>Meta Llama (can run locally)</li>
+<li>Open weights models (can run locally)</li>
 </ul>
 </section>
 <section id="openai-models" class="slide level2 smaller">
@@ -591,13 +591,15 @@
 <li><strong>Takeaway</strong>: OK models if you want to keep all information on premises.</li>
 </ul>
 </section>
-<section id="other-local-model-families" class="slide level2">
-<h2>Other local model families</h2>
+<section id="other-open-weights-model-families" class="slide level2">
+<h2>Other open weights model families</h2>
 <ul>
-<li><a href="https://deepmind.google/models/gemma/">Gemma</a> (Google)</li>
-<li><a href="https://qwen.ai/home">Qwen</a> (Alibaba)</li>
-<li><a href="https://www.deepseek.com/en">DeepSeek</a></li>
-<li><a href="https://mistral.ai/models">Mistral</a></li>
+<li><a href="https://deepmind.google/models/gemma/">🇺🇸 Gemma 3</a> (Google)</li>
+<li><a href="https://qwen.ai/home">🇨🇳 Qwen3</a> (Alibaba)</li>
+<li><a href="https://www.deepseek.com/en">🇨🇳 DeepSeek R1</a></li>
+<li><a href="https://mistral.ai/models">🇫🇷 Mistral 3.2 Small</a></li>
+<li><a href="https://www.kimi.ai/">🇨🇳 Kimi K2</a> (MoonshotAI)</li>
+<li><a href="https://github.com/zai-org/GLM-4.5">🇨🇳 GLM-4.5 Air</a> (Z.ai)</li>
 </ul>
 </section></section>
 <section>
@@ -781,7 +783,7 @@ Example Output:
 <li><strong>Tool calling:</strong> Create a tool to receive your output, e.g., <code>set_result(object)</code>, where its implementation sets some variable. (Works great for ellmer.)</li>
 <li><strong>LangChain:</strong> Has its own <a href="https://python.langchain.com/docs/how_to/#output-parsers">abstractions</a> for parsing unstructured output</li>
 </ul>
-<p>Ask <code>#hackathon-21</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
+<p>Ask <code>#hackathon-22</code> for help if you’re stuck! (Or ask ChatGPT/Claude to make an example.)</p>
 </section></section>
 <section>
 <section id="vision" class="title-slide slide level1 center">
@@ -1178,6 +1180,8 @@ Example Output:
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')

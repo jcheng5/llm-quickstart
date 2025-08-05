@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,9 +131,9 @@
 <section class="slide level2">
 
 <!-- ![](logo-academy.png) -->
-<h3 style="text-align: center; font-size: 72pt; color: #414142;" id="ai-hackathon-cohort-21">AI Hackathon Cohort 21</h3>
+<h3 style="text-align: center; font-size: 72pt; color: #414142;" id="ai-hackathon-cohort-22">AI Hackathon Cohort 22</h3>
 <div style="text-align: center; color: #414142;">
-<p>July 29, 2025</p>
+<p>August 4, 2025</p>
 </div>
 </section>
 <section>
@@ -151,7 +151,7 @@
 <h2>Your Turn</h2>
 <ul>
 <li>Your name, team, and role</li>
-<li>How have you used LLMs/AI tools up until now?</li>
+<li>Have you used LLM APIs? (including LangChain, Ellmer, Chatlas)</li>
 <li>What is your skepticism/enthusiasm score (1 to 5)?</li>
 </ul>
 </section>
@@ -162,7 +162,7 @@
 <li class="fragment"><strong>Now:</strong> Quick Start course on LLMs. You will leave having used a Chat API.</li>
 <li class="fragment"><strong>Next 48 hours:</strong> Hack on stuff! Minimum four hours of effort. “Rules” on the next slide.
 <ul>
-<li class="fragment">We’ll be continuously monitoring #hackathon-21</li>
+<li class="fragment">We’ll be continuously monitoring #hackathon-22</li>
 </ul></li>
 <li class="fragment"><strong>Thursday:</strong> Show &amp; tell, share lessons learned, reflections.</li>
 <li class="fragment"><strong>Post-hackathon:</strong>
@@ -573,6 +573,8 @@ Negative results (“I thought LLMs could do this but turns out they can’t”)
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
