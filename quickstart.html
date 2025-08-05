@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-077ed0fd3b2b6c9aff5defd058debd56.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-423d414d36ce366a9d05f36d06304417.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -603,12 +603,8 @@
 </ul>
 </section></section>
 <section>
-<section id="customizing-behavior-and-adding-knowledge" class="title-slide slide level1 center">
-<h1>Customizing behavior and adding knowledge</h1>
-
-</section>
-<section id="the-problem" class="slide level2">
-<h2>The problem</h2>
+<section id="customizing-behavior-and-knowledge" class="title-slide slide level1 smaller center">
+<h1>Customizing behavior and knowledge</h1>
 <ul>
 <li>You want to customize how the LLM responds</li>
 <li>LLM doesn’t know your specific information</li>
@@ -621,15 +617,16 @@
 <li>Fine tuning</li>
 </ul>
 </section>
-<section id="prompt-engineering-directing-behavioroutput" class="slide level2">
-<h2>Prompt engineering: Directing behavior/output</h2>
+<section id="prompt-engineering-directing-behavior" class="slide level2">
+<h2>Prompt engineering: Directing behavior</h2>
+<div>
 <ul>
-<li>“Respond with just the minimal information necessary.”</li>
-<li>“Think through this step-by-step.”</li>
-<li>“Carefully read and follow these instructions…”</li>
-<li>“If the user asks a question related to data processing, produce R code to accomplish that task.”</li>
-<li>“Be careful to only provide answers that you are sure about. If you are uncertain about an answer, say so.”</li>
+<li class="fragment">“Respond with just the minimal information necessary.”</li>
+<li class="fragment">“Think through this step-by-step.”</li>
+<li class="fragment">“If the user asks a data-related question, produce R code to accomplish that task.”</li>
+<li class="fragment">“Only provide answers that you are sure about. If you are uncertain about an answer, say so.”</li>
 </ul>
+</div>
 </section>
 <section id="prompt-engineering-using-examples-to-guide-behavior" class="slide level2">
 <h2>Prompt engineering: Using examples to guide behavior</h2>
@@ -692,17 +689,19 @@ Example Output:
 </section>
 <section id="adding-contextknowledge-to-prompt" class="slide level2">
 <h2>Adding context/knowledge to prompt</h2>
+<div>
 <ul>
-<li>Add documentation files to prompt</li>
-<li>Add positive examples (negative examples don’t work well)</li>
-<li>Docs must fit in context window</li>
-<li>Examples
+<li class="fragment">Add documentation files to prompt</li>
+<li class="fragment">Examples
 <ul>
-<li><a href="https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md">Ellmer assistant</a> uses README files in prompt</li>
-<li><a href="https://github.com/jcheng5/py-sidebot/blob/main/prompt.md">Sidebot</a></li>
-<li><a href="https://docs.fastht.ml/llms-ctx.txt">FastHTML LLM prompt</a></li>
+<li class="fragment"><a href="https://github.com/jcheng5/ellmer-assistant/blob/main/prompt.generated.md">Ellmer assistant</a> uses README files in prompt</li>
+<li class="fragment"><a href="https://github.com/posit-dev/querychat/blob/main/pkg-r/inst/prompt/prompt.md?plain=1">Querychat</a></li>
+<li class="fragment"><a href="https://www.fastht.ml/docs/llms-ctx.txt">FastHTML LLM prompt</a></li>
 </ul></li>
+<li class="fragment">Docs must fit in context window</li>
+<li class="fragment">Add positive examples (negative examples don’t work well)</li>
 </ul>
+</div>
 </section>
 <section id="rag-retrieval-augmented-generation" class="slide level2 smaller">
 <h2>RAG: Retrieval Augmented Generation</h2>
@@ -1180,8 +1179,6 @@ Example Output:
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
